@@ -1,0 +1,434 @@
+---
+import FileLibrary from "./FileLibrary.astro";
+import EditorIcon from "./EditorIcon.astro";
+import { stickerPacks } from "../lib/markdown/stickers";
+import { mediaSize } from "../lib/storage/media";
+import { fileIcon, fileSize } from "../lib/downloads";
+import type { Post } from "../lib/posts/repo";
+import { postMedia, postAudio, postVideo, postFiles } from "../lib/posts/repo";
+interface Props {
+  post?: Post;
+}
+const { post } = Astro.props;
+const images = post ? postMedia(post.id) : [];
+const audio = post ? postAudio(post.id) : [];
+const videos = post ? postVideo(post.id) : [];
+const files = post ? postFiles(post.id) : [];
+---
+
+<form
+  class="composer"
+  id="composer"
+  data-post-id={post?.id}
+  data-post-status={post?.status ?? "draft"}
+  data-updated-at={post?.updatedAt}
+>
+  <label class="sr-only" for="post-body">
+    动态正文，支持 Markdown
+  </label>
+  <div class="markdown-toolbar" role="toolbar" aria-label="Markdown 编辑工具栏">
+    {[
+      ["bold", "粗体", "bold"],
+      ["italic", "斜体", "italic"],
+      ["strike", "删除线", "strikethrough"],
+      ["heading", "标题", "heading"],
+      ["quote", "引用", "quote"],
+      ["unordered", "无序列表", "list"],
+      ["ordered", "有序列表", "list-ordered"],
+      ["task", "任务列表", "list-checks"],
+      ["link", "链接", "link"],
+      ["code", "行内代码", "code"],
+      ["block", "代码块", "square-code"],
+      ["table", "表格", "table"],
+      ["rule", "分割线", "minus"],
+    ].map(([command, label, icon]) => (
+      <button
+        class="editor-tool icon-only"
+        type="button"
+        data-md={command}
+        title={label}
+        aria-label={label}
+      >
+        <EditorIcon name={icon} />
+      </button>
+    ))}
+    <details class="sticker-picker">
+      <summary class="editor-tool icon-only" title="表情包" aria-label="表情包">
+        <EditorIcon name="smile" />
+      </summary>
+      <div class="sticker-panel">
+        <div class="sticker-tabs" role="group" aria-label="表情分组">
+          {stickerPacks.map((pack, index) => (
+            <button
+              type="button"
+              class="sticker-tab"
+              data-sticker-pack={index}
+              aria-pressed={index === 0 ? "true" : "false"}
+            >
+              {pack.name}
+            </button>
+          ))}
+        </div>
+        {stickerPacks.map((pack, index) => (
+          <div
+            class="sticker-grid"
+            data-sticker-group={index}
+            hidden={index !== 0}
+          >
+            {pack.items.map((item) => (
+              <button
+                type="button"
+                data-sticker={item.src}
+                data-sticker-code={item.code}
+                data-sticker-label={item.label}
+                aria-label={item.label}
+              >
+                <img
+                  src={item.src}
+                  alt={item.label}
+                  width="80"
+                  height="80"
+                  loading="lazy"
+                />
+              </button>
+            ))}
+          </div>
+        ))}
+      </div>
+    </details>
+  </div>
+  <textarea
+    id="post-body"
+    name="body"
+    maxlength="100000"
+    placeholder="写点什么……"
+  >{post?.body??''}</textarea>
+  <div class="preview-pane" hidden>
+    <div class="prose" id="preview-body"></div>
+    <div id="preview-images" class="gallery"></div>
+    <div id="preview-audio"></div>
+    <div id="preview-files"></div>
+  </div>
+  <dialog id="composer-library" class="library-dialog">
+    <div class="library-dialog-heading"><h2>文件库</h2><button class="button" type="button" id="library-close">关闭</button></div>
+    <FileLibrary picker />
+  </dialog>
+  <div class="composer-tools" role="toolbar" aria-label="添加媒体">
+    <button type="button" class="editor-tool" id="library-open"><EditorIcon name="folder-library" /><span>文件库</span></button>
+    <button
+      type="button"
+      class="editor-tool"
+      data-pick="image-files"
+      title="添加图片 / Live Photo"
+    >
+      <EditorIcon name="image-plus" />
+      <span>图片</span>
+    </button>
+    <button
+      type="button"
+      class="editor-tool"
+      id="music-toggle"
+      aria-expanded="false"
+      aria-controls="music-editor"
+      title="添加音频、音乐或歌单"
+    >
+      <EditorIcon name="music" />
+      <span>音乐</span>
+    </button>
+    <button
+      type="button"
+      class="editor-tool"
+      data-pick="video-files"
+      title="添加视频"
+    >
+      <EditorIcon name="video" />
+      <span>视频</span>
+    </button>
+    <button
+      type="button"
+      class="editor-tool"
+      data-pick="attachment-files"
+      title="上传文件"
+    >
+      <EditorIcon name="paperclip" />
+      <span>附件</span>
+    </button>
+    <button
+      type="button"
+      class="editor-tool"
+      id="download-link-toggle"
+      aria-expanded="false"
+      aria-controls="download-link-editor"
+      title="添加网盘或下载链接"
+    >
+      <EditorIcon name="cloud-download" />
+      <span>网盘</span>
+    </button>
+
+  </div>
+  <input
+    id="image-files"
+    type="file"
+    accept="image/jpeg,image/png,image/webp,image/gif,image/heic,image/heif,.heic,.heif,video/quicktime,video/mp4,.mov,.mp4"
+    multiple
+    hidden
+  />
+  <input
+    id="video-files"
+    type="file"
+    accept="video/*,.mp4,.m4v,.mov,.webm,.mkv,.ogv"
+    multiple
+    hidden
+  />
+  <input id="attachment-files" type="file" multiple hidden />
+  <div id="music-editor" class="media-link-editor" hidden>
+    <label class="sr-only" for="music-source">
+      音频、歌曲或歌单链接
+    </label>
+    <textarea
+      id="music-source"
+      maxlength="100000"
+      placeholder="粘贴音频网址、歌曲分享、歌单链接，或每行一个歌曲链接"
+    ></textarea>
+    <div class="media-link-actions">
+      <button type="button" class="editor-tool" data-pick="audio-files">
+        <EditorIcon name="file-audio" />
+        <span>上传音频</span>
+      </button>
+      <button type="button" class="editor-tool" data-pick="playlist-file">
+        <EditorIcon name="file-up" />
+        <span>选择歌单文件</span>
+      </button>
+      <button class="button" type="button" id="music-add">
+        解析并添加
+      </button>
+    </div>
+    <input
+      id="audio-files"
+      type="file"
+      accept="audio/*,.mp3,.m4a,.aac,.wav,.ogg,.opus,.flac,.aif,.aiff,.webm,.mka,.wma"
+      multiple
+      hidden
+    />
+    <input
+      id="playlist-file"
+      type="file"
+      accept=".m3u,.m3u8,.json,text/plain"
+      hidden
+    />
+  </div>
+  <div class="download-link-editor" id="download-link-editor" hidden>
+    <label class="sr-only" for="download-source">
+      网盘或下载链接
+    </label>
+    <textarea
+      id="download-source"
+      maxlength="4096"
+      placeholder="网盘分享链接或 HTTPS 下载地址"
+    ></textarea>
+    <label class="sr-only" for="download-name">
+      下载名称
+    </label>
+    <input
+      id="download-name"
+      maxlength="255"
+      placeholder="文件或资源名称（可选）"
+    />
+    <label class="sr-only" for="download-code">
+      提取码
+    </label>
+    <input id="download-code" maxlength="40" placeholder="提取码（可选）" />
+    <button class="button" type="button" id="download-link-add">
+      添加
+    </button>
+  </div>
+  <div class="file-editor" id="file-editor">
+    {files.map((item) => (
+      <div
+        class="file-row"
+        data-file-id={item.id}
+        data-file-size={mediaSize(item.key)}
+      >
+        <img src={fileIcon(item.alt)} alt="" width="32" height="32" />
+        <div class="file-row-info">
+          <label class="sr-only" for={`file-name-${item.id}`}>
+            文件名称
+          </label>
+          <input
+            id={`file-name-${item.id}`}
+            data-file-name
+            value={item.alt}
+            maxlength="255"
+          />
+          <span class="download-detail">{fileSize(mediaSize(item.key))}</span>
+        </div>
+        <button class="text-button" type="button" data-file-remove>
+          移除文件
+        </button>
+      </div>
+    ))}
+  </div>
+  <div class="audio-editor" id="audio-editor">
+    {audio.map((item) => (
+      <div class="audio-row" data-audio-id={item.id}>
+        <label class="sr-only" for={`audio-title-${item.id}`}>
+          音频名称
+        </label>
+        <input
+          id={`audio-title-${item.id}`}
+          data-audio-title
+          value={item.alt}
+          placeholder="音频名称"
+          maxlength="120"
+        />
+        <audio
+          src={`/media/${item.id}`}
+          controls
+          preload="none"
+          aria-label={item.alt || "音频预览"}
+        ></audio>
+        <button class="text-button" type="button" data-audio-remove>
+          移除音频
+        </button>
+      </div>
+    ))}
+  </div>
+  <div class="audio-editor" id="video-editor">
+    {videos.map((item) => (
+      <div class="audio-row" data-audio-id={item.id}>
+        <label class="sr-only" for={`video-title-${item.id}`}>
+          视频名称
+        </label>
+        <input
+          id={`video-title-${item.id}`}
+          data-audio-title
+          value={item.alt}
+          placeholder="视频名称"
+          maxlength="120"
+        />
+        <video
+          src={`/media/${item.id}`}
+          controls
+          playsinline
+          preload="none"
+          aria-label={item.alt || "视频预览"}
+        ></video>
+        <button class="text-button" type="button" data-audio-remove>
+          移除视频
+        </button>
+      </div>
+    ))}
+  </div>
+  <div class="image-editor" id="image-editor">
+    {images.map((image) => (
+      <div
+        class="image-row"
+        data-image-id={image.id}
+        data-live-id={image.liveId}
+      >
+        <img src={`/media/${image.id}`} alt="" width="64" height="64" />
+        <div>
+          {image.liveId && <span class="badge">Live Photo</span>}
+          <label class="sr-only" for={`alt-${image.id}`}>
+            图片替代文本
+          </label>
+          <input
+            id={`alt-${image.id}`}
+            data-image-alt
+            value={image.alt}
+            placeholder="描述图片内容（替代文本）"
+            maxlength="500"
+          />
+          <label class="sr-only" for={`link-${image.id}`}>
+            图片链接
+          </label>
+          <input
+            id={`link-${image.id}`}
+            data-image-link
+            value={image.linkUrl}
+            placeholder="点击图片跳转到的网址（可选）"
+            maxlength="2048"
+            inputmode="url"
+          />
+          <div class="image-actions">
+            <button
+              type="button"
+              class="text-button"
+              data-image-up
+              aria-label="图片向前移动"
+            >
+              前移
+            </button>
+            <button
+              type="button"
+              class="text-button"
+              data-image-down
+              aria-label="图片向后移动"
+            >
+              后移
+            </button>
+            <button type="button" class="text-button" data-image-remove>
+              移除
+            </button>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+  <div class="composer-options">
+    <fieldset class="visibility-field">
+      <legend>可见性</legend>
+      <div class="visibility-options">
+        {(
+          [
+            ["public", "公开"],
+            ["unlisted", "不列出"],
+            ["private", "私密"],
+          ] as const
+        ).map(([value, label]) => (
+          <label class="visibility-option">
+            <input
+              class="sr-only"
+              type="radio"
+              name="visibility"
+              value={value}
+              checked={(post?.visibility ?? "public") === value}
+              required
+            />
+            <span>{label}</span>
+          </label>
+        ))}
+      </div>
+    </fieldset>
+    <label class="pin-option">
+      <input name="pinned" type="checkbox" checked={post?.pinned} />
+      置顶
+    </label>
+  </div>
+  <div class="form-actions" style="margin-top:24px">
+    <button
+      class="button primary"
+      type="submit"
+      name="action"
+      value="published"
+    >
+      <EditorIcon name="send" />
+      {post?.status === "published" ? "保存修改" : "发布动态"}
+    </button>
+    <button class="button" type="submit" name="action" value="draft">
+      <EditorIcon name="file-pen" />
+      {post?.status === "published" ? "转为草稿" : "保存草稿"}
+    </button>
+    <button
+      type="button"
+      class="button preview-tool"
+      id="preview-toggle"
+      aria-pressed="false"
+      title="预览"
+    >
+      <EditorIcon name="eye" />
+      <span data-tool-label>预览</span>
+    </button>
+  </div>
+  <p class="notice" aria-live="polite" id="composer-notice"></p>
+</form>

@@ -1,0 +1,17 @@
+---
+import SiteLayout from "../../../layouts/SiteLayout.astro";
+import Composer from "../../../components/Composer.astro";
+import { getPost } from "../../../lib/posts/repo";
+const post = getPost(Astro.params.id!);
+if (!post) Astro.response.status = 404;
+---
+
+<SiteLayout title="编辑动态" noindex>
+  {post ? (
+    <>
+      <Composer post={post} />
+    </>
+  ) : (
+    <p class="empty">动态不存在。</p>
+  )}
+</SiteLayout>

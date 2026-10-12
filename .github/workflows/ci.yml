@@ -1,0 +1,24 @@
+name: Quality checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  acceptance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run lint
+      - run: npm run check
+      - run: npm run build
+      - run: npm test
+      - run: npm run test:storage
+      - run: npm run build:worker
+      - run: npm run test:worker
+      - run: npm audit --omit=dev

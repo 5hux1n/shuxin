@@ -1,0 +1,1 @@
+ALTER TABLE media ADD COLUMN live_id TEXT;

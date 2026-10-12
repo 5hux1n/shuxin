@@ -1,0 +1,53 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+const person = Astro.locals.owner!;
+---
+
+<SiteLayout title="系统设置" noindex>
+  <div class="system-settings">
+    <section class="form-section">
+      <h2>修改用户名</h2>
+      <form class="form" id="login-name-form">
+        <div class="system-field-row">
+          <label>
+            用户名
+            <input name="username" value={person.username} autocomplete="username" pattern="[a-zA-Z0-9_.\-]{3,40}" required maxlength="40" />
+          </label>
+          <label>
+            当前密码
+            <input name="current" type="password" autocomplete="current-password" maxlength="128" />
+          </label>
+          <button class="button" type="submit">保存用户名</button>
+        </div>
+        <p class="hint">修改时填写当前密码，保存后需要重新登录。</p>
+        <p class="notice" aria-live="polite"></p>
+      </form>
+    </section>
+    <section class="form-section">
+      <h2>修改密码</h2>
+      <form class="form" data-api-form="/api/auth/password">
+        <div class="system-field-row">
+          <label>
+            当前密码
+            <input name="current" type="password" autocomplete="current-password" required maxlength="128" />
+          </label>
+          <label>
+            新密码
+            <input name="password" type="password" autocomplete="new-password" required maxlength="128" />
+          </label>
+          <button class="button" type="submit">保存密码</button>
+        </div>
+        <p class="hint">保存后所有设备都会退出，需要重新登录。</p>
+        <p class="notice" aria-live="polite"></p>
+      </form>
+    </section>
+    <section class="form-section system-export">
+      <div>
+        <h2>导出数据</h2>
+        <p class="hint">包含动态、草稿、私密内容、媒体和数据库，请妥善保管。</p>
+      </div>
+      <button class="button" type="button" id="export-button">下载完整备份</button>
+      <p class="notice" id="export-notice" aria-live="polite"></p>
+    </section>
+  </div>
+</SiteLayout>

@@ -1,0 +1,23 @@
+---
+import type { media } from "../lib/db/schema";
+interface Props {
+  items: (typeof media.$inferSelect)[];
+}
+const { items } = Astro.props;
+---
+
+{items.map((item, index) => (
+  <figure class="audio-player video-player">
+    <figcaption>{item.alt || `视频 ${index + 1}`}</figcaption>
+    <video
+      src={`/media/${item.id}`}
+      controls
+      playsinline
+      preload="none"
+      aria-label={item.alt || "视频"}
+    ></video>
+    <p class="audio-error" hidden>
+      当前浏览器无法播放此视频。
+    </p>
+  </figure>
+))}

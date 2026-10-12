@@ -1,0 +1,18 @@
+WMA upload conversion uses unmodified @ffmpeg/ffmpeg 0.12.15 (MIT) and
+@ffmpeg/core 0.12.10 (GPL-2.0-or-later, distributed under GPL v3 here).
+FFmpeg and its bundled codec libraries retain their respective copyrights.
+The conversion engine is a separate Web Worker, loaded only for WMA uploads.
+See /licenses/GPL-3.0.txt for the license.
+
+Upstream source and build instructions:
+https://github.com/ffmpegwasm/ffmpeg.wasm/tree/v12.15
+https://github.com/ffmpegwasm/ffmpeg.wasm/tree/v12.15/build
+https://github.com/ffmpegwasm/ffmpeg.wasm/blob/v12.15/Dockerfile
+https://github.com/ffmpegwasm/ffmpeg.wasm/archive/refs/tags/v12.15.tar.gz
+https://github.com/FFmpeg/FFmpeg/tree/n5.1.4
+https://registry.npmjs.org/@ffmpeg/core/-/core-0.12.10.tgz
+
+The reproducible asset packaging script is scripts/prepare-audio-codec.mjs.
+It copies the upstream JavaScript without changes and splits the upstream
+WASM into chunks only to comply with hosting asset size limits; the browser
+reassembles the exact original bytes. No user file is sent to another service.

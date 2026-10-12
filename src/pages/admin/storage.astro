@@ -1,0 +1,116 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import { storageSettings } from "../../lib/storage/config";
+const storage = storageSettings();
+---
+
+<SiteLayout title="存储设置" noindex>
+  <section class="form-section">
+    <h2>文件存储</h2>
+    <form class="form" id="storage-form">
+      <label>
+        当前存储
+        <select id="storage-profile">
+          <option value="" selected={!storage.active}>
+            默认存储
+          </option>
+          {storage.profiles.map((profile) => (
+            <option value={profile.id} selected={profile.id === storage.active}>
+              {profile.name}
+            </option>
+          ))}
+          <option value="new">新增对象存储</option>
+        </select>
+      </label>
+      <p class="hint">
+        默认存储使用服务器目录或 Cloudflare
+        数据库。切换只影响新上传，已有文件保留原存储位置。
+      </p>
+      <div id="storage-fields" class="form" hidden>
+        <label>
+          配置名称
+          <input name="name" maxlength="80" />
+        </label>
+        <label>
+          服务商
+          <select name="provider">
+            <option value="s3">S3 兼容 / AWS / MinIO</option>
+            <option value="oss">阿里云 OSS</option>
+            <option value="cos">腾讯云 COS</option>
+            <option value="qiniu">七牛云 Kodo</option>
+            <option value="r2">Cloudflare R2</option>
+          </select>
+        </label>
+        <label>
+          Endpoint（HTTPS）
+          <input name="endpoint" type="url" />
+        </label>
+        <label>
+          区域 Region
+          <input name="region" maxlength="80" />
+        </label>
+        <label>
+          存储桶 Bucket
+          <input name="bucket" maxlength="63" />
+        </label>
+        <label>
+          文件前缀
+          <input name="prefix" maxlength="160" value="shuxin" />
+        </label>
+        <label class="hint">
+          <input name="pathStyle" type="checkbox" />
+          使用 Path-style 寻址
+        </label>
+        <div id="qiniu-fields" class="form" hidden>
+          <label>
+            下载域名（HTTPS）
+            <input name="downloadDomain" type="url" />
+          </label>
+          <label>
+            管理 Endpoint（可选）
+            <input name="managementEndpoint" type="url" />
+          </label>
+        </div>
+        <label>
+          Access Key / Secret ID
+          <input
+            name="accessKey"
+            type="password"
+            autocomplete="off"
+            maxlength="256"
+          />
+        </label>
+        <label>
+          Secret Key / AccessKey Secret
+          <input
+            name="secretKey"
+            type="password"
+            autocomplete="new-password"
+            maxlength="256"
+          />
+        </label>
+        <p class="hint" id="storage-credentials-hint">
+          请使用私有存储桶。凭据仅保存于服务端，现有配置留空表示保留原凭据。
+        </p>
+        <p class="hint" id="storage-provider-hint"></p>
+      </div>
+      <div class="form-actions">
+        <button class="button primary" type="submit">
+          保存存储设置
+        </button>
+        <button class="button" type="button" id="storage-test" hidden>
+          测试连接
+        </button>
+        <button class="button" type="button" id="storage-cleanup">
+          重试文件清理
+        </button>
+      </div>
+      <p class="notice" aria-live="polite"></p>
+    </form>
+    <script
+      type="application/json"
+      id="storage-data"
+      set:html={JSON.stringify(storage).replace(/</g, "\\u003c")}
+    />
+  </section>
+</SiteLayout>

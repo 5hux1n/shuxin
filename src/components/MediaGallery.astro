@@ -1,0 +1,59 @@
+---
+import type { media } from "../lib/db/schema";
+interface Props {
+  images: (typeof media.$inferSelect)[];
+}
+const { images } = Astro.props;
+---
+
+{images.length > 0 && (
+  <div
+    class:list={[
+      "gallery",
+      { single: images.length === 1, two: images.length === 2 },
+    ]}
+  >
+    {images.map((image, index) =>
+      image.liveId ? (
+        <div class="live-photo">
+          <video
+            controls
+            playsinline
+            muted
+            loop
+            preload="none"
+            poster={`/media/${image.id}`}
+            aria-label={image.alt || `Live Photo ${index + 1}`}
+            width={image.width}
+            height={image.height}
+          >
+            <source src={`/media/${image.liveId}`} type="video/mp4" />
+          </video>
+          <span class="live-badge">Live Photo</span>
+          <p class="live-error" hidden>
+            当前浏览器无法播放此动态片段。
+          </p>
+        </div>
+      ) : (
+        <a
+          href={image.linkUrl || `/media/${image.id}`}
+          target={image.linkUrl ? "_blank" : undefined}
+          rel={image.linkUrl ? "noopener noreferrer" : undefined}
+          data-lightbox={image.linkUrl ? undefined : true}
+          class:list={[{ "linked-image": Boolean(image.linkUrl) }]}
+          data-caption={image.alt}
+          aria-label={`查看图片 ${index + 1}${image.alt ? `：${image.alt}` : ""}`}
+        >
+          <img
+            src={`/media/${image.id}`}
+            width={image.width}
+            height={image.height}
+            alt={image.alt}
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+      ),
+    )}
+  </div>
+)}

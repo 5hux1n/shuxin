@@ -1,0 +1,223 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import { db } from "../../lib/db";
+import { posts, media } from "../../lib/db/schema";
+import { and, desc, eq, lt, or, inArray } from "drizzle-orm";
+import { adminPreview } from "../../lib/posts/preview";
+const filter = Astro.url.searchParams.get("status");
+const cursor = Astro.url.searchParams.get("cursor");
+let after;
+let invalid = false;
+if (cursor) {
+  try {
+    const [time, id] = JSON.parse(Buffer.from(cursor, "base64url").toString());
+    if (
+      !Number.isSafeInteger(time) ||
+      time < 0 ||
+      typeof id !== "string" ||
+      id.length > 64
+    )
+      throw new Error();
+    after = or(
+      lt(posts.createdAt, time),
+      and(eq(posts.createdAt, time), lt(posts.id, id)),
+    );
+  } catch {
+    invalid = true;
+    Astro.response.status = 400;
+  }
+}
+const rows = invalid
+  ? []
+  : db
+      .select()
+      .from(posts)
+      .where(
+        and(eq(posts.status, filter === "draft" ? "draft" : "published"), after),
+      )
+      .orderBy(desc(posts.createdAt), desc(posts.id))
+      .limit(31)
+      .all();
+const entries = rows.slice(0, 30);
+const attachments = entries.length
+  ? db
+      .select()
+      .from(media)
+      .where(
+        inArray(
+          media.postId,
+          entries.map((entry) => entry.id),
+        ),
+      )
+      .all()
+  : [];
+const previews = new Map(
+  entries.map((post) => {
+    const items = attachments.filter((item) => item.postId === post.id);
+    const liveIds = new Set(items.map((item) => item.liveId).filter(Boolean));
+    const images = items.filter((item) => item.mime.startsWith("image/"));
+    const audio = items.filter((item) => item.mime.startsWith("audio/"));
+    const video = items.filter(
+      (item) => item.mime.startsWith("video/") && !liveIds.has(item.id),
+    );
+    const files = items.filter(
+      (item) => item.mime === "application/octet-stream",
+    );
+    const preview = adminPreview(post.body);
+    const labels = [
+      images.filter((item) => !item.liveId).length
+        ? `${images.filter((item) => !item.liveId).length} 张图片`
+        : "",
+      liveIds.size ? `${liveIds.size} 张 Live Photo` : "",
+      audio.length ? `${audio.length} 段音频` : "",
+      video.length ? `${video.length} 段视频` : "",
+      files.length ? `${files.length} 个文件` : "",
+      preview.stickers.length ? `${preview.stickers.length} 个表情` : "",
+      preview.download ? "下载链接" : "",
+      preview.playlist ? "歌单" : "",
+      preview.code ? "代码块" : "",
+    ].filter(Boolean);
+    return [
+      post.id,
+      {
+        ...preview,
+        title:
+          preview.title ||
+          (images.length
+            ? "图片动态"
+            : audio.length
+              ? "音频动态"
+              : video.length
+                ? "视频动态"
+                : preview.playlist
+                  ? "歌单动态"
+                  : preview.code
+                    ? "代码动态"
+                    : files.length || preview.download
+                      ? "文件动态"
+                      : "动态"),
+        image: images[0],
+        labels,
+      },
+    ] as const;
+  }),
+);
+const last = entries.at(-1);
+const next =
+  rows.length > 30 && last
+    ? Buffer.from(JSON.stringify([last.createdAt, last.id])).toString(
+        "base64url",
+      )
+    : null;
+---
+
+<SiteLayout title="动态管理" noindex>
+  <p class="notice" id="admin-notice" aria-live="polite"></p>
+  {entries.map((post) => {
+    const preview = previews.get(post.id)!;
+    const date = new Date(
+      post.status === "published"
+        ? (post.publishedAt ?? post.createdAt)
+        : post.createdAt,
+    );
+    return (
+      <article class="admin-row">
+        <div class="entry-meta">
+          <time datetime={date.toISOString()}>
+            {date.toLocaleString("zh-CN", {
+              timeZone: "Asia/Shanghai",
+              year: "numeric",
+              month: "2-digit",
+              day: "2-digit",
+              hour: "2-digit",
+              minute: "2-digit",
+              hour12: false,
+            })}
+          </time>
+          <span class="badge">
+            {post.status === "draft" ? "草稿" : "已发布"}
+          </span>
+          <span class="badge">
+            {
+              { public: "公开", unlisted: "不列出", private: "私密" }[
+                post.visibility
+              ]
+            }
+          </span>
+          {post.pinned && <span class="badge">置顶</span>}
+        </div>
+        <div class="admin-preview">
+          <div class="admin-preview-text">
+            <h2 class="admin-preview-title">
+              <a href={`/admin/edit/${post.id}`}>{preview.title}</a>
+            </h2>
+            {preview.summary && (
+              <p class="admin-preview-summary">{preview.summary}</p>
+            )}
+            {preview.labels.length > 0 && (
+              <p class="admin-preview-media">{preview.labels.join(" · ")}</p>
+            )}
+          </div>
+          {preview.image && (
+            <a
+              class="admin-preview-thumbnail"
+              href={`/admin/edit/${post.id}`}
+              aria-label="编辑图片动态"
+            >
+              <img
+                src={`/media/${preview.image.id}`}
+                alt=""
+                width="80"
+                height="80"
+                loading="lazy"
+              />
+            </a>
+          )}
+          {!preview.image && preview.stickers[0] && (
+            <a class="admin-preview-thumbnail admin-preview-sticker" href={`/admin/edit/${post.id}`} aria-label="编辑表情动态">
+              <img src={preview.stickers[0].src} alt={preview.stickers[0].label} width="80" height="80" loading="lazy" />
+            </a>
+          )}
+        </div>
+        <div class="admin-row-actions">
+          <a class="button compact" href={`/admin/edit/${post.id}`}>
+            编辑
+          </a>
+          <a class="button compact" href={`/p/${post.id}`}>
+            查看
+          </a>
+          <button
+            class="button compact pin-button"
+            aria-pressed={post.pinned}
+            data-pin={post.id}
+            data-pinned={String(post.pinned)}
+          >
+            {post.pinned ? "取消置顶" : "置顶"}
+          </button>
+          <button class="button compact danger" data-delete={post.id}>
+            删除
+          </button>
+        </div>
+      </article>
+    );
+  })}
+  {!entries.length && (
+    <p class="empty">
+      {invalid
+        ? "分页链接无效，请返回管理列表。"
+        : filter === "draft"
+          ? "还没有草稿。"
+          : "还没有动态，写下第一条吧。"}
+    </p>
+  )}
+  {next && (
+    <div class="pagination">
+      <a
+        class="button"
+        href={`/admin?${filter === "draft" ? "status=draft&" : ""}cursor=${next}`}
+      >
+        加载更多
+      </a>
+    </div>
+  )}
+</SiteLayout>

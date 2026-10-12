@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "shuxin",
+  "workers_dev": true,
+  "main": "./src/worker.ts",
+  "compatibility_date": "2026-10-10",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./dist-worker",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+  },
+  "durable_objects": {
+    "bindings": [{ "name": "SITE", "class_name": "ShuxinSite" }],
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["ShuxinSite"] }],
+  "vars": { "SITE_URL": "https://your-site.example" },
+  "observability": { "enabled": true },
+}

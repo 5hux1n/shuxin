@@ -1,0 +1,5462 @@
+[
+  {
+    "name": "微信",
+    "items": [
+      {
+        "id": "wechat-001",
+        "label": "发抖",
+        "src": "/stickers/wechat/wechat-001.png"
+      },
+      {
+        "id": "wechat-002",
+        "label": "猪头",
+        "src": "/stickers/wechat/wechat-002.png"
+      },
+      {
+        "id": "wechat-003",
+        "label": "跳跳",
+        "src": "/stickers/wechat/wechat-003.png"
+      },
+      {
+        "id": "wechat-004",
+        "label": "转圈",
+        "src": "/stickers/wechat/wechat-004.png"
+      },
+      {
+        "id": "wechat-005",
+        "label": "庆祝",
+        "src": "/stickers/wechat/wechat-005.png"
+      },
+      {
+        "id": "wechat-006",
+        "label": "烟花",
+        "src": "/stickers/wechat/wechat-006.png"
+      },
+      {
+        "id": "wechat-007",
+        "label": "爆竹",
+        "src": "/stickers/wechat/wechat-007.png"
+      },
+      {
+        "id": "wechat-008",
+        "label": "發",
+        "src": "/stickers/wechat/wechat-008.png"
+      },
+      {
+        "id": "wechat-009",
+        "label": "礼物",
+        "src": "/stickers/wechat/wechat-009.png"
+      },
+      {
+        "id": "wechat-010",
+        "label": "福",
+        "src": "/stickers/wechat/wechat-010.png"
+      },
+      {
+        "id": "wechat-011",
+        "label": "红包",
+        "src": "/stickers/wechat/wechat-011.png"
+      },
+      {
+        "id": "wechat-012",
+        "label": "666",
+        "src": "/stickers/wechat/wechat-012.png"
+      },
+      {
+        "id": "wechat-013",
+        "label": "Emm",
+        "src": "/stickers/wechat/wechat-013.png"
+      },
+      {
+        "id": "wechat-014",
+        "label": "亲亲",
+        "src": "/stickers/wechat/wechat-014.png"
+      },
+      {
+        "id": "wechat-015",
+        "label": "偷笑",
+        "src": "/stickers/wechat/wechat-015.png"
+      },
+      {
+        "id": "wechat-016",
+        "label": "傲慢",
+        "src": "/stickers/wechat/wechat-016.png"
+      },
+      {
+        "id": "wechat-017",
+        "label": "再见",
+        "src": "/stickers/wechat/wechat-017.png"
+      },
+      {
+        "id": "wechat-018",
+        "label": "加油",
+        "src": "/stickers/wechat/wechat-018.png"
+      },
+      {
+        "id": "wechat-019",
+        "label": "发呆",
+        "src": "/stickers/wechat/wechat-019.png"
+      },
+      {
+        "id": "wechat-020",
+        "label": "发怒",
+        "src": "/stickers/wechat/wechat-020.png"
+      },
+      {
+        "id": "wechat-021",
+        "label": "可怜",
+        "src": "/stickers/wechat/wechat-021.png"
+      },
+      {
+        "id": "wechat-022",
+        "label": "右哼哼",
+        "src": "/stickers/wechat/wechat-022.png"
+      },
+      {
+        "id": "wechat-023",
+        "label": "叹气",
+        "src": "/stickers/wechat/wechat-023.png"
+      },
+      {
+        "id": "wechat-024",
+        "label": "吃瓜",
+        "src": "/stickers/wechat/wechat-024.png"
+      },
+      {
+        "id": "wechat-025",
+        "label": "吐",
+        "src": "/stickers/wechat/wechat-025.png"
+      },
+      {
+        "id": "wechat-026",
+        "label": "呲牙",
+        "src": "/stickers/wechat/wechat-026.png"
+      },
+      {
+        "id": "wechat-027",
+        "label": "咒骂",
+        "src": "/stickers/wechat/wechat-027.png"
+      },
+      {
+        "id": "wechat-028",
+        "label": "哇",
+        "src": "/stickers/wechat/wechat-028.png"
+      },
+      {
+        "id": "wechat-029",
+        "label": "嘘",
+        "src": "/stickers/wechat/wechat-029.png"
+      },
+      {
+        "id": "wechat-030",
+        "label": "嘿哈",
+        "src": "/stickers/wechat/wechat-030.png"
+      },
+      {
+        "id": "wechat-031",
+        "label": "囧",
+        "src": "/stickers/wechat/wechat-031.png"
+      },
+      {
+        "id": "wechat-032",
+        "label": "困",
+        "src": "/stickers/wechat/wechat-032.png"
+      },
+      {
+        "id": "wechat-033",
+        "label": "坏笑",
+        "src": "/stickers/wechat/wechat-033.png"
+      },
+      {
+        "id": "wechat-034",
+        "label": "大哭",
+        "src": "/stickers/wechat/wechat-034.png"
+      },
+      {
+        "id": "wechat-035",
+        "label": "天啊",
+        "src": "/stickers/wechat/wechat-035.png"
+      },
+      {
+        "id": "wechat-036",
+        "label": "失望",
+        "src": "/stickers/wechat/wechat-036.png"
+      },
+      {
+        "id": "wechat-037",
+        "label": "奸笑",
+        "src": "/stickers/wechat/wechat-037.png"
+      },
+      {
+        "id": "wechat-038",
+        "label": "好的",
+        "src": "/stickers/wechat/wechat-038.png"
+      },
+      {
+        "id": "wechat-039",
+        "label": "委屈",
+        "src": "/stickers/wechat/wechat-039.png"
+      },
+      {
+        "id": "wechat-040",
+        "label": "害羞",
+        "src": "/stickers/wechat/wechat-040.png"
+      },
+      {
+        "id": "wechat-041",
+        "label": "尴尬",
+        "src": "/stickers/wechat/wechat-041.png"
+      },
+      {
+        "id": "wechat-042",
+        "label": "得意",
+        "src": "/stickers/wechat/wechat-042.png"
+      },
+      {
+        "id": "wechat-043",
+        "label": "微笑",
+        "src": "/stickers/wechat/wechat-043.png"
+      },
+      {
+        "id": "wechat-044",
+        "label": "快哭了",
+        "src": "/stickers/wechat/wechat-044.png"
+      },
+      {
+        "id": "wechat-045",
+        "label": "恐惧",
+        "src": "/stickers/wechat/wechat-045.png"
+      },
+      {
+        "id": "wechat-046",
+        "label": "悠闲",
+        "src": "/stickers/wechat/wechat-046.png"
+      },
+      {
+        "id": "wechat-047",
+        "label": "惊恐",
+        "src": "/stickers/wechat/wechat-047.png"
+      },
+      {
+        "id": "wechat-048",
+        "label": "惊讶",
+        "src": "/stickers/wechat/wechat-048.png"
+      },
+      {
+        "id": "wechat-049",
+        "label": "愉快",
+        "src": "/stickers/wechat/wechat-049.png"
+      },
+      {
+        "id": "wechat-050",
+        "label": "憨笑",
+        "src": "/stickers/wechat/wechat-050.png"
+      },
+      {
+        "id": "wechat-051",
+        "label": "打脸",
+        "src": "/stickers/wechat/wechat-051.png"
+      },
+      {
+        "id": "wechat-052",
+        "label": "抓狂",
+        "src": "/stickers/wechat/wechat-052.png"
+      },
+      {
+        "id": "wechat-053",
+        "label": "抠鼻",
+        "src": "/stickers/wechat/wechat-053.png"
+      },
+      {
+        "id": "wechat-054",
+        "label": "捂脸",
+        "src": "/stickers/wechat/wechat-054.png"
+      },
+      {
+        "id": "wechat-055",
+        "label": "撇嘴",
+        "src": "/stickers/wechat/wechat-055.png"
+      },
+      {
+        "id": "wechat-056",
+        "label": "擦汗",
+        "src": "/stickers/wechat/wechat-056.png"
+      },
+      {
+        "id": "wechat-057",
+        "label": "敲打",
+        "src": "/stickers/wechat/wechat-057.png"
+      },
+      {
+        "id": "wechat-058",
+        "label": "无语",
+        "src": "/stickers/wechat/wechat-058.png"
+      },
+      {
+        "id": "wechat-059",
+        "label": "旺柴",
+        "src": "/stickers/wechat/wechat-059.png"
+      },
+      {
+        "id": "wechat-060",
+        "label": "晕",
+        "src": "/stickers/wechat/wechat-060.png"
+      },
+      {
+        "id": "wechat-061",
+        "label": "机智",
+        "src": "/stickers/wechat/wechat-061.png"
+      },
+      {
+        "id": "wechat-062",
+        "label": "汗",
+        "src": "/stickers/wechat/wechat-062.png"
+      },
+      {
+        "id": "wechat-063",
+        "label": "流泪",
+        "src": "/stickers/wechat/wechat-063.png"
+      },
+      {
+        "id": "wechat-064",
+        "label": "生病",
+        "src": "/stickers/wechat/wechat-064.png"
+      },
+      {
+        "id": "wechat-065",
+        "label": "疑问",
+        "src": "/stickers/wechat/wechat-065.png"
+      },
+      {
+        "id": "wechat-066",
+        "label": "白眼",
+        "src": "/stickers/wechat/wechat-066.png"
+      },
+      {
+        "id": "wechat-067",
+        "label": "皱眉",
+        "src": "/stickers/wechat/wechat-067.png"
+      },
+      {
+        "id": "wechat-068",
+        "label": "睡",
+        "src": "/stickers/wechat/wechat-068.png"
+      },
+      {
+        "id": "wechat-069",
+        "label": "破涕为笑",
+        "src": "/stickers/wechat/wechat-069.png"
+      },
+      {
+        "id": "wechat-070",
+        "label": "社会社会",
+        "src": "/stickers/wechat/wechat-070.png"
+      },
+      {
+        "id": "wechat-071",
+        "label": "笑脸",
+        "src": "/stickers/wechat/wechat-071.png"
+      },
+      {
+        "id": "wechat-072",
+        "label": "翻白眼",
+        "src": "/stickers/wechat/wechat-072.png"
+      },
+      {
+        "id": "wechat-073",
+        "label": "耶",
+        "src": "/stickers/wechat/wechat-073.png"
+      },
+      {
+        "id": "wechat-074",
+        "label": "脸红",
+        "src": "/stickers/wechat/wechat-074.png"
+      },
+      {
+        "id": "wechat-075",
+        "label": "色",
+        "src": "/stickers/wechat/wechat-075.png"
+      },
+      {
+        "id": "wechat-076",
+        "label": "苦涩",
+        "src": "/stickers/wechat/wechat-076.png"
+      },
+      {
+        "id": "wechat-077",
+        "label": "衰",
+        "src": "/stickers/wechat/wechat-077.png"
+      },
+      {
+        "id": "wechat-078",
+        "label": "裂开",
+        "src": "/stickers/wechat/wechat-078.png"
+      },
+      {
+        "id": "wechat-079",
+        "label": "让我看看",
+        "src": "/stickers/wechat/wechat-079.png"
+      },
+      {
+        "id": "wechat-080",
+        "label": "调皮",
+        "src": "/stickers/wechat/wechat-080.png"
+      },
+      {
+        "id": "wechat-081",
+        "label": "鄙视",
+        "src": "/stickers/wechat/wechat-081.png"
+      },
+      {
+        "id": "wechat-082",
+        "label": "闭嘴",
+        "src": "/stickers/wechat/wechat-082.png"
+      },
+      {
+        "id": "wechat-083",
+        "label": "阴险",
+        "src": "/stickers/wechat/wechat-083.png"
+      },
+      {
+        "id": "wechat-084",
+        "label": "难过",
+        "src": "/stickers/wechat/wechat-084.png"
+      },
+      {
+        "id": "wechat-085",
+        "label": "骷髅",
+        "src": "/stickers/wechat/wechat-085.png"
+      },
+      {
+        "id": "wechat-086",
+        "label": "鼓掌",
+        "src": "/stickers/wechat/wechat-086.png"
+      },
+      {
+        "id": "wechat-087",
+        "label": "OK",
+        "src": "/stickers/wechat/wechat-087.png"
+      },
+      {
+        "id": "wechat-088",
+        "label": "勾引",
+        "src": "/stickers/wechat/wechat-088.png"
+      },
+      {
+        "id": "wechat-089",
+        "label": "合十",
+        "src": "/stickers/wechat/wechat-089.png"
+      },
+      {
+        "id": "wechat-090",
+        "label": "弱",
+        "src": "/stickers/wechat/wechat-090.png"
+      },
+      {
+        "id": "wechat-091",
+        "label": "强",
+        "src": "/stickers/wechat/wechat-091.png"
+      },
+      {
+        "id": "wechat-092",
+        "label": "抱拳",
+        "src": "/stickers/wechat/wechat-092.png"
+      },
+      {
+        "id": "wechat-093",
+        "label": "拥抱",
+        "src": "/stickers/wechat/wechat-093.png"
+      },
+      {
+        "id": "wechat-094",
+        "label": "拳头",
+        "src": "/stickers/wechat/wechat-094.png"
+      },
+      {
+        "id": "wechat-095",
+        "label": "握手",
+        "src": "/stickers/wechat/wechat-095.png"
+      },
+      {
+        "id": "wechat-096",
+        "label": "胜利",
+        "src": "/stickers/wechat/wechat-096.png"
+      },
+      {
+        "id": "wechat-097",
+        "label": "便便",
+        "src": "/stickers/wechat/wechat-097.png"
+      },
+      {
+        "id": "wechat-098",
+        "label": "凋谢",
+        "src": "/stickers/wechat/wechat-098.png"
+      },
+      {
+        "id": "wechat-099",
+        "label": "咖啡",
+        "src": "/stickers/wechat/wechat-099.png"
+      },
+      {
+        "id": "wechat-100",
+        "label": "啤酒",
+        "src": "/stickers/wechat/wechat-100.png"
+      },
+      {
+        "id": "wechat-101",
+        "label": "嘴唇",
+        "src": "/stickers/wechat/wechat-101.png"
+      },
+      {
+        "id": "wechat-102",
+        "label": "太阳",
+        "src": "/stickers/wechat/wechat-102.png"
+      },
+      {
+        "id": "wechat-103",
+        "label": "心碎",
+        "src": "/stickers/wechat/wechat-103.png"
+      },
+      {
+        "id": "wechat-104",
+        "label": "月亮",
+        "src": "/stickers/wechat/wechat-104.png"
+      },
+      {
+        "id": "wechat-105",
+        "label": "炸弹",
+        "src": "/stickers/wechat/wechat-105.png"
+      },
+      {
+        "id": "wechat-106",
+        "label": "爱心",
+        "src": "/stickers/wechat/wechat-106.png"
+      },
+      {
+        "id": "wechat-107",
+        "label": "玫瑰",
+        "src": "/stickers/wechat/wechat-107.png"
+      },
+      {
+        "id": "wechat-108",
+        "label": "菜刀",
+        "src": "/stickers/wechat/wechat-108.png"
+      },
+      {
+        "id": "wechat-109",
+        "label": "蛋糕",
+        "src": "/stickers/wechat/wechat-109.png"
+      }
+    ]
+  },
+  {
+    "name": "AC娘",
+    "items": [
+      {
+        "id": "ac-001",
+        "label": "AC娘 1",
+        "src": "/stickers/ac/ac-001.gif"
+      },
+      {
+        "id": "ac-002",
+        "label": "AC娘 2",
+        "src": "/stickers/ac/ac-002.gif"
+      },
+      {
+        "id": "ac-003",
+        "label": "AC娘 3",
+        "src": "/stickers/ac/ac-003.gif"
+      },
+      {
+        "id": "ac-004",
+        "label": "AC娘 4",
+        "src": "/stickers/ac/ac-004.gif"
+      },
+      {
+        "id": "ac-005",
+        "label": "AC娘 5",
+        "src": "/stickers/ac/ac-005.gif"
+      },
+      {
+        "id": "ac-006",
+        "label": "AC娘 6",
+        "src": "/stickers/ac/ac-006.gif"
+      },
+      {
+        "id": "ac-007",
+        "label": "AC娘 7",
+        "src": "/stickers/ac/ac-007.gif"
+      },
+      {
+        "id": "ac-008",
+        "label": "AC娘 8",
+        "src": "/stickers/ac/ac-008.gif"
+      },
+      {
+        "id": "ac-009",
+        "label": "AC娘 9",
+        "src": "/stickers/ac/ac-009.gif"
+      },
+      {
+        "id": "ac-010",
+        "label": "AC娘 10",
+        "src": "/stickers/ac/ac-010.gif"
+      },
+      {
+        "id": "ac-011",
+        "label": "AC娘 11",
+        "src": "/stickers/ac/ac-011.gif"
+      },
+      {
+        "id": "ac-012",
+        "label": "AC娘 12",
+        "src": "/stickers/ac/ac-012.gif"
+      },
+      {
+        "id": "ac-013",
+        "label": "AC娘 13",
+        "src": "/stickers/ac/ac-013.gif"
+      },
+      {
+        "id": "ac-014",
+        "label": "AC娘 14",
+        "src": "/stickers/ac/ac-014.gif"
+      },
+      {
+        "id": "ac-015",
+        "label": "AC娘 15",
+        "src": "/stickers/ac/ac-015.gif"
+      },
+      {
+        "id": "ac-016",
+        "label": "AC娘 16",
+        "src": "/stickers/ac/ac-016.gif"
+      },
+      {
+        "id": "ac-017",
+        "label": "AC娘 17",
+        "src": "/stickers/ac/ac-017.gif"
+      },
+      {
+        "id": "ac-018",
+        "label": "AC娘 18",
+        "src": "/stickers/ac/ac-018.gif"
+      },
+      {
+        "id": "ac-019",
+        "label": "AC娘 19",
+        "src": "/stickers/ac/ac-019.gif"
+      },
+      {
+        "id": "ac-020",
+        "label": "AC娘 20",
+        "src": "/stickers/ac/ac-020.gif"
+      },
+      {
+        "id": "ac-021",
+        "label": "AC娘 21",
+        "src": "/stickers/ac/ac-021.gif"
+      },
+      {
+        "id": "ac-022",
+        "label": "AC娘 22",
+        "src": "/stickers/ac/ac-022.gif"
+      },
+      {
+        "id": "ac-023",
+        "label": "AC娘 23",
+        "src": "/stickers/ac/ac-023.gif"
+      },
+      {
+        "id": "ac-024",
+        "label": "AC娘 24",
+        "src": "/stickers/ac/ac-024.gif"
+      },
+      {
+        "id": "ac-025",
+        "label": "AC娘 25",
+        "src": "/stickers/ac/ac-025.gif"
+      },
+      {
+        "id": "ac-026",
+        "label": "AC娘 26",
+        "src": "/stickers/ac/ac-026.gif"
+      },
+      {
+        "id": "ac-027",
+        "label": "AC娘 27",
+        "src": "/stickers/ac/ac-027.gif"
+      },
+      {
+        "id": "ac-028",
+        "label": "AC娘 28",
+        "src": "/stickers/ac/ac-028.gif"
+      },
+      {
+        "id": "ac-029",
+        "label": "AC娘 29",
+        "src": "/stickers/ac/ac-029.gif"
+      },
+      {
+        "id": "ac-030",
+        "label": "AC娘 30",
+        "src": "/stickers/ac/ac-030.gif"
+      },
+      {
+        "id": "ac-031",
+        "label": "AC娘 31",
+        "src": "/stickers/ac/ac-031.gif"
+      },
+      {
+        "id": "ac-032",
+        "label": "AC娘 32",
+        "src": "/stickers/ac/ac-032.gif"
+      },
+      {
+        "id": "ac-033",
+        "label": "AC娘 33",
+        "src": "/stickers/ac/ac-033.gif"
+      },
+      {
+        "id": "ac-034",
+        "label": "AC娘 34",
+        "src": "/stickers/ac/ac-034.gif"
+      },
+      {
+        "id": "ac-035",
+        "label": "AC娘 35",
+        "src": "/stickers/ac/ac-035.gif"
+      },
+      {
+        "id": "ac-036",
+        "label": "AC娘 36",
+        "src": "/stickers/ac/ac-036.gif"
+      },
+      {
+        "id": "ac-037",
+        "label": "AC娘 37",
+        "src": "/stickers/ac/ac-037.gif"
+      },
+      {
+        "id": "ac-038",
+        "label": "AC娘 38",
+        "src": "/stickers/ac/ac-038.gif"
+      },
+      {
+        "id": "ac-039",
+        "label": "AC娘 39",
+        "src": "/stickers/ac/ac-039.gif"
+      },
+      {
+        "id": "ac-040",
+        "label": "AC娘 40",
+        "src": "/stickers/ac/ac-040.gif"
+      },
+      {
+        "id": "ac-041",
+        "label": "AC娘 41",
+        "src": "/stickers/ac/ac-041.gif"
+      },
+      {
+        "id": "ac-042",
+        "label": "AC娘 42",
+        "src": "/stickers/ac/ac-042.gif"
+      },
+      {
+        "id": "ac-043",
+        "label": "AC娘 43",
+        "src": "/stickers/ac/ac-043.gif"
+      },
+      {
+        "id": "ac-044",
+        "label": "AC娘 44",
+        "src": "/stickers/ac/ac-044.gif"
+      },
+      {
+        "id": "ac-045",
+        "label": "AC娘 45",
+        "src": "/stickers/ac/ac-045.gif"
+      },
+      {
+        "id": "ac-046",
+        "label": "AC娘 46",
+        "src": "/stickers/ac/ac-046.gif"
+      },
+      {
+        "id": "ac-047",
+        "label": "AC娘 47",
+        "src": "/stickers/ac/ac-047.gif"
+      },
+      {
+        "id": "ac-048",
+        "label": "AC娘 48",
+        "src": "/stickers/ac/ac-048.gif"
+      },
+      {
+        "id": "ac-049",
+        "label": "AC娘 49",
+        "src": "/stickers/ac/ac-049.gif"
+      },
+      {
+        "id": "ac-050",
+        "label": "AC娘 50",
+        "src": "/stickers/ac/ac-050.gif"
+      },
+      {
+        "id": "ac-051",
+        "label": "AC娘 51",
+        "src": "/stickers/ac/ac-051.gif"
+      }
+    ]
+  },
+  {
+    "name": "洋葱头",
+    "items": [
+      {
+        "id": "onion-001",
+        "label": "洋葱头 1",
+        "src": "/stickers/onion/onion-001.gif"
+      },
+      {
+        "id": "onion-002",
+        "label": "洋葱头 2",
+        "src": "/stickers/onion/onion-002.gif"
+      },
+      {
+        "id": "onion-003",
+        "label": "洋葱头 3",
+        "src": "/stickers/onion/onion-003.gif"
+      },
+      {
+        "id": "onion-004",
+        "label": "洋葱头 4",
+        "src": "/stickers/onion/onion-004.gif"
+      },
+      {
+        "id": "onion-005",
+        "label": "洋葱头 5",
+        "src": "/stickers/onion/onion-005.gif"
+      },
+      {
+        "id": "onion-006",
+        "label": "洋葱头 6",
+        "src": "/stickers/onion/onion-006.gif"
+      },
+      {
+        "id": "onion-007",
+        "label": "洋葱头 7",
+        "src": "/stickers/onion/onion-007.gif"
+      },
+      {
+        "id": "onion-008",
+        "label": "洋葱头 8",
+        "src": "/stickers/onion/onion-008.gif"
+      },
+      {
+        "id": "onion-009",
+        "label": "洋葱头 9",
+        "src": "/stickers/onion/onion-009.gif"
+      },
+      {
+        "id": "onion-010",
+        "label": "洋葱头 10",
+        "src": "/stickers/onion/onion-010.gif"
+      },
+      {
+        "id": "onion-011",
+        "label": "洋葱头 11",
+        "src": "/stickers/onion/onion-011.gif"
+      },
+      {
+        "id": "onion-012",
+        "label": "洋葱头 12",
+        "src": "/stickers/onion/onion-012.gif"
+      },
+      {
+        "id": "onion-013",
+        "label": "洋葱头 13",
+        "src": "/stickers/onion/onion-013.gif"
+      },
+      {
+        "id": "onion-014",
+        "label": "洋葱头 14",
+        "src": "/stickers/onion/onion-014.gif"
+      },
+      {
+        "id": "onion-015",
+        "label": "洋葱头 15",
+        "src": "/stickers/onion/onion-015.gif"
+      },
+      {
+        "id": "onion-016",
+        "label": "洋葱头 16",
+        "src": "/stickers/onion/onion-016.gif"
+      },
+      {
+        "id": "onion-017",
+        "label": "洋葱头 17",
+        "src": "/stickers/onion/onion-017.gif"
+      },
+      {
+        "id": "onion-018",
+        "label": "洋葱头 18",
+        "src": "/stickers/onion/onion-018.gif"
+      },
+      {
+        "id": "onion-019",
+        "label": "洋葱头 19",
+        "src": "/stickers/onion/onion-019.gif"
+      },
+      {
+        "id": "onion-020",
+        "label": "洋葱头 20",
+        "src": "/stickers/onion/onion-020.gif"
+      },
+      {
+        "id": "onion-021",
+        "label": "洋葱头 21",
+        "src": "/stickers/onion/onion-021.gif"
+      },
+      {
+        "id": "onion-022",
+        "label": "洋葱头 22",
+        "src": "/stickers/onion/onion-022.gif"
+      },
+      {
+        "id": "onion-023",
+        "label": "洋葱头 23",
+        "src": "/stickers/onion/onion-023.gif"
+      },
+      {
+        "id": "onion-024",
+        "label": "洋葱头 24",
+        "src": "/stickers/onion/onion-024.gif"
+      },
+      {
+        "id": "onion-025",
+        "label": "洋葱头 25",
+        "src": "/stickers/onion/onion-025.gif"
+      },
+      {
+        "id": "onion-026",
+        "label": "洋葱头 26",
+        "src": "/stickers/onion/onion-026.gif"
+      },
+      {
+        "id": "onion-027",
+        "label": "洋葱头 27",
+        "src": "/stickers/onion/onion-027.gif"
+      },
+      {
+        "id": "onion-028",
+        "label": "洋葱头 28",
+        "src": "/stickers/onion/onion-028.gif"
+      },
+      {
+        "id": "onion-029",
+        "label": "洋葱头 29",
+        "src": "/stickers/onion/onion-029.gif"
+      },
+      {
+        "id": "onion-030",
+        "label": "洋葱头 30",
+        "src": "/stickers/onion/onion-030.gif"
+      },
+      {
+        "id": "onion-031",
+        "label": "洋葱头 31",
+        "src": "/stickers/onion/onion-031.gif"
+      },
+      {
+        "id": "onion-032",
+        "label": "洋葱头 32",
+        "src": "/stickers/onion/onion-032.gif"
+      },
+      {
+        "id": "onion-033",
+        "label": "洋葱头 33",
+        "src": "/stickers/onion/onion-033.gif"
+      },
+      {
+        "id": "onion-034",
+        "label": "洋葱头 34",
+        "src": "/stickers/onion/onion-034.gif"
+      },
+      {
+        "id": "onion-035",
+        "label": "洋葱头 35",
+        "src": "/stickers/onion/onion-035.gif"
+      },
+      {
+        "id": "onion-036",
+        "label": "洋葱头 36",
+        "src": "/stickers/onion/onion-036.gif"
+      },
+      {
+        "id": "onion-037",
+        "label": "洋葱头 37",
+        "src": "/stickers/onion/onion-037.gif"
+      },
+      {
+        "id": "onion-038",
+        "label": "洋葱头 38",
+        "src": "/stickers/onion/onion-038.gif"
+      },
+      {
+        "id": "onion-039",
+        "label": "洋葱头 39",
+        "src": "/stickers/onion/onion-039.gif"
+      },
+      {
+        "id": "onion-040",
+        "label": "洋葱头 40",
+        "src": "/stickers/onion/onion-040.gif"
+      },
+      {
+        "id": "onion-041",
+        "label": "洋葱头 41",
+        "src": "/stickers/onion/onion-041.gif"
+      },
+      {
+        "id": "onion-042",
+        "label": "洋葱头 42",
+        "src": "/stickers/onion/onion-042.gif"
+      },
+      {
+        "id": "onion-043",
+        "label": "洋葱头 43",
+        "src": "/stickers/onion/onion-043.gif"
+      },
+      {
+        "id": "onion-044",
+        "label": "洋葱头 44",
+        "src": "/stickers/onion/onion-044.gif"
+      },
+      {
+        "id": "onion-045",
+        "label": "洋葱头 45",
+        "src": "/stickers/onion/onion-045.gif"
+      },
+      {
+        "id": "onion-046",
+        "label": "洋葱头 46",
+        "src": "/stickers/onion/onion-046.gif"
+      },
+      {
+        "id": "onion-047",
+        "label": "洋葱头 47",
+        "src": "/stickers/onion/onion-047.gif"
+      },
+      {
+        "id": "onion-048",
+        "label": "洋葱头 48",
+        "src": "/stickers/onion/onion-048.gif"
+      },
+      {
+        "id": "onion-049",
+        "label": "洋葱头 49",
+        "src": "/stickers/onion/onion-049.gif"
+      },
+      {
+        "id": "onion-050",
+        "label": "洋葱头 50",
+        "src": "/stickers/onion/onion-050.gif"
+      },
+      {
+        "id": "onion-051",
+        "label": "洋葱头 51",
+        "src": "/stickers/onion/onion-051.gif"
+      },
+      {
+        "id": "onion-052",
+        "label": "洋葱头 52",
+        "src": "/stickers/onion/onion-052.gif"
+      },
+      {
+        "id": "onion-053",
+        "label": "洋葱头 53",
+        "src": "/stickers/onion/onion-053.gif"
+      },
+      {
+        "id": "onion-054",
+        "label": "洋葱头 54",
+        "src": "/stickers/onion/onion-054.gif"
+      },
+      {
+        "id": "onion-055",
+        "label": "洋葱头 55",
+        "src": "/stickers/onion/onion-055.gif"
+      },
+      {
+        "id": "onion-056",
+        "label": "洋葱头 56",
+        "src": "/stickers/onion/onion-056.gif"
+      },
+      {
+        "id": "onion-057",
+        "label": "洋葱头 57",
+        "src": "/stickers/onion/onion-057.gif"
+      },
+      {
+        "id": "onion-058",
+        "label": "洋葱头 58",
+        "src": "/stickers/onion/onion-058.gif"
+      },
+      {
+        "id": "onion-059",
+        "label": "洋葱头 59",
+        "src": "/stickers/onion/onion-059.gif"
+      },
+      {
+        "id": "onion-060",
+        "label": "洋葱头 60",
+        "src": "/stickers/onion/onion-060.gif"
+      },
+      {
+        "id": "onion-061",
+        "label": "洋葱头 61",
+        "src": "/stickers/onion/onion-061.gif"
+      },
+      {
+        "id": "onion-062",
+        "label": "洋葱头 62",
+        "src": "/stickers/onion/onion-062.gif"
+      },
+      {
+        "id": "onion-063",
+        "label": "洋葱头 63",
+        "src": "/stickers/onion/onion-063.gif"
+      },
+      {
+        "id": "onion-064",
+        "label": "洋葱头 64",
+        "src": "/stickers/onion/onion-064.gif"
+      },
+      {
+        "id": "onion-065",
+        "label": "洋葱头 65",
+        "src": "/stickers/onion/onion-065.gif"
+      },
+      {
+        "id": "onion-066",
+        "label": "洋葱头 66",
+        "src": "/stickers/onion/onion-066.gif"
+      },
+      {
+        "id": "onion-067",
+        "label": "洋葱头 67",
+        "src": "/stickers/onion/onion-067.gif"
+      },
+      {
+        "id": "onion-068",
+        "label": "洋葱头 68",
+        "src": "/stickers/onion/onion-068.gif"
+      },
+      {
+        "id": "onion-069",
+        "label": "洋葱头 69",
+        "src": "/stickers/onion/onion-069.gif"
+      },
+      {
+        "id": "onion-070",
+        "label": "洋葱头 70",
+        "src": "/stickers/onion/onion-070.gif"
+      },
+      {
+        "id": "onion-071",
+        "label": "洋葱头 71",
+        "src": "/stickers/onion/onion-071.gif"
+      },
+      {
+        "id": "onion-072",
+        "label": "洋葱头 72",
+        "src": "/stickers/onion/onion-072.gif"
+      },
+      {
+        "id": "onion-073",
+        "label": "洋葱头 73",
+        "src": "/stickers/onion/onion-073.gif"
+      },
+      {
+        "id": "onion-074",
+        "label": "洋葱头 74",
+        "src": "/stickers/onion/onion-074.gif"
+      },
+      {
+        "id": "onion-075",
+        "label": "洋葱头 75",
+        "src": "/stickers/onion/onion-075.gif"
+      },
+      {
+        "id": "onion-076",
+        "label": "洋葱头 76",
+        "src": "/stickers/onion/onion-076.gif"
+      },
+      {
+        "id": "onion-077",
+        "label": "洋葱头 77",
+        "src": "/stickers/onion/onion-077.gif"
+      },
+      {
+        "id": "onion-078",
+        "label": "洋葱头 78",
+        "src": "/stickers/onion/onion-078.gif"
+      },
+      {
+        "id": "onion-079",
+        "label": "洋葱头 79",
+        "src": "/stickers/onion/onion-079.gif"
+      },
+      {
+        "id": "onion-080",
+        "label": "洋葱头 80",
+        "src": "/stickers/onion/onion-080.gif"
+      },
+      {
+        "id": "onion-081",
+        "label": "洋葱头 81",
+        "src": "/stickers/onion/onion-081.gif"
+      },
+      {
+        "id": "onion-082",
+        "label": "洋葱头 82",
+        "src": "/stickers/onion/onion-082.gif"
+      },
+      {
+        "id": "onion-083",
+        "label": "洋葱头 83",
+        "src": "/stickers/onion/onion-083.gif"
+      },
+      {
+        "id": "onion-084",
+        "label": "洋葱头 84",
+        "src": "/stickers/onion/onion-084.gif"
+      },
+      {
+        "id": "onion-085",
+        "label": "洋葱头 85",
+        "src": "/stickers/onion/onion-085.gif"
+      },
+      {
+        "id": "onion-086",
+        "label": "洋葱头 86",
+        "src": "/stickers/onion/onion-086.gif"
+      },
+      {
+        "id": "onion-087",
+        "label": "洋葱头 87",
+        "src": "/stickers/onion/onion-087.gif"
+      },
+      {
+        "id": "onion-088",
+        "label": "洋葱头 88",
+        "src": "/stickers/onion/onion-088.gif"
+      },
+      {
+        "id": "onion-089",
+        "label": "洋葱头 89",
+        "src": "/stickers/onion/onion-089.gif"
+      },
+      {
+        "id": "onion-090",
+        "label": "洋葱头 90",
+        "src": "/stickers/onion/onion-090.gif"
+      },
+      {
+        "id": "onion-091",
+        "label": "洋葱头 91",
+        "src": "/stickers/onion/onion-091.gif"
+      },
+      {
+        "id": "onion-092",
+        "label": "洋葱头 92",
+        "src": "/stickers/onion/onion-092.gif"
+      },
+      {
+        "id": "onion-093",
+        "label": "洋葱头 93",
+        "src": "/stickers/onion/onion-093.gif"
+      },
+      {
+        "id": "onion-094",
+        "label": "洋葱头 94",
+        "src": "/stickers/onion/onion-094.gif"
+      },
+      {
+        "id": "onion-095",
+        "label": "洋葱头 95",
+        "src": "/stickers/onion/onion-095.gif"
+      },
+      {
+        "id": "onion-096",
+        "label": "洋葱头 96",
+        "src": "/stickers/onion/onion-096.gif"
+      },
+      {
+        "id": "onion-097",
+        "label": "洋葱头 97",
+        "src": "/stickers/onion/onion-097.gif"
+      },
+      {
+        "id": "onion-098",
+        "label": "洋葱头 98",
+        "src": "/stickers/onion/onion-098.gif"
+      },
+      {
+        "id": "onion-099",
+        "label": "洋葱头 99",
+        "src": "/stickers/onion/onion-099.gif"
+      },
+      {
+        "id": "onion-100",
+        "label": "洋葱头 100",
+        "src": "/stickers/onion/onion-100.gif"
+      },
+      {
+        "id": "onion-101",
+        "label": "洋葱头 101",
+        "src": "/stickers/onion/onion-101.gif"
+      },
+      {
+        "id": "onion-102",
+        "label": "洋葱头 102",
+        "src": "/stickers/onion/onion-102.gif"
+      },
+      {
+        "id": "onion-103",
+        "label": "洋葱头 103",
+        "src": "/stickers/onion/onion-103.gif"
+      },
+      {
+        "id": "onion-104",
+        "label": "洋葱头 104",
+        "src": "/stickers/onion/onion-104.gif"
+      },
+      {
+        "id": "onion-105",
+        "label": "洋葱头 105",
+        "src": "/stickers/onion/onion-105.gif"
+      },
+      {
+        "id": "onion-106",
+        "label": "洋葱头 106",
+        "src": "/stickers/onion/onion-106.gif"
+      },
+      {
+        "id": "onion-107",
+        "label": "洋葱头 107",
+        "src": "/stickers/onion/onion-107.gif"
+      },
+      {
+        "id": "onion-108",
+        "label": "洋葱头 108",
+        "src": "/stickers/onion/onion-108.gif"
+      },
+      {
+        "id": "onion-109",
+        "label": "洋葱头 109",
+        "src": "/stickers/onion/onion-109.gif"
+      },
+      {
+        "id": "onion-110",
+        "label": "洋葱头 110",
+        "src": "/stickers/onion/onion-110.gif"
+      },
+      {
+        "id": "onion-111",
+        "label": "洋葱头 111",
+        "src": "/stickers/onion/onion-111.gif"
+      },
+      {
+        "id": "onion-112",
+        "label": "洋葱头 112",
+        "src": "/stickers/onion/onion-112.gif"
+      },
+      {
+        "id": "onion-113",
+        "label": "洋葱头 113",
+        "src": "/stickers/onion/onion-113.gif"
+      },
+      {
+        "id": "onion-114",
+        "label": "洋葱头 114",
+        "src": "/stickers/onion/onion-114.gif"
+      },
+      {
+        "id": "onion-115",
+        "label": "洋葱头 115",
+        "src": "/stickers/onion/onion-115.gif"
+      },
+      {
+        "id": "onion-116",
+        "label": "洋葱头 116",
+        "src": "/stickers/onion/onion-116.gif"
+      },
+      {
+        "id": "onion-117",
+        "label": "洋葱头 117",
+        "src": "/stickers/onion/onion-117.gif"
+      },
+      {
+        "id": "onion-118",
+        "label": "洋葱头 118",
+        "src": "/stickers/onion/onion-118.gif"
+      },
+      {
+        "id": "onion-119",
+        "label": "洋葱头 119",
+        "src": "/stickers/onion/onion-119.gif"
+      },
+      {
+        "id": "onion-120",
+        "label": "洋葱头 120",
+        "src": "/stickers/onion/onion-120.gif"
+      },
+      {
+        "id": "onion-121",
+        "label": "洋葱头 121",
+        "src": "/stickers/onion/onion-121.gif"
+      },
+      {
+        "id": "onion-122",
+        "label": "洋葱头 122",
+        "src": "/stickers/onion/onion-122.gif"
+      },
+      {
+        "id": "onion-123",
+        "label": "洋葱头 123",
+        "src": "/stickers/onion/onion-123.gif"
+      },
+      {
+        "id": "onion-124",
+        "label": "洋葱头 124",
+        "src": "/stickers/onion/onion-124.gif"
+      },
+      {
+        "id": "onion-125",
+        "label": "洋葱头 125",
+        "src": "/stickers/onion/onion-125.gif"
+      },
+      {
+        "id": "onion-126",
+        "label": "洋葱头 126",
+        "src": "/stickers/onion/onion-126.gif"
+      },
+      {
+        "id": "onion-127",
+        "label": "洋葱头 127",
+        "src": "/stickers/onion/onion-127.gif"
+      },
+      {
+        "id": "onion-128",
+        "label": "洋葱头 128",
+        "src": "/stickers/onion/onion-128.gif"
+      },
+      {
+        "id": "onion-129",
+        "label": "洋葱头 129",
+        "src": "/stickers/onion/onion-129.gif"
+      },
+      {
+        "id": "onion-130",
+        "label": "洋葱头 130",
+        "src": "/stickers/onion/onion-130.gif"
+      },
+      {
+        "id": "onion-131",
+        "label": "洋葱头 131",
+        "src": "/stickers/onion/onion-131.gif"
+      },
+      {
+        "id": "onion-132",
+        "label": "洋葱头 132",
+        "src": "/stickers/onion/onion-132.gif"
+      },
+      {
+        "id": "onion-133",
+        "label": "洋葱头 133",
+        "src": "/stickers/onion/onion-133.gif"
+      },
+      {
+        "id": "onion-134",
+        "label": "洋葱头 134",
+        "src": "/stickers/onion/onion-134.gif"
+      },
+      {
+        "id": "onion-135",
+        "label": "洋葱头 135",
+        "src": "/stickers/onion/onion-135.gif"
+      },
+      {
+        "id": "onion-136",
+        "label": "洋葱头 136",
+        "src": "/stickers/onion/onion-136.gif"
+      },
+      {
+        "id": "onion-137",
+        "label": "洋葱头 137",
+        "src": "/stickers/onion/onion-137.gif"
+      },
+      {
+        "id": "onion-138",
+        "label": "洋葱头 138",
+        "src": "/stickers/onion/onion-138.gif"
+      },
+      {
+        "id": "onion-139",
+        "label": "洋葱头 139",
+        "src": "/stickers/onion/onion-139.gif"
+      },
+      {
+        "id": "onion-140",
+        "label": "洋葱头 140",
+        "src": "/stickers/onion/onion-140.gif"
+      },
+      {
+        "id": "onion-141",
+        "label": "洋葱头 141",
+        "src": "/stickers/onion/onion-141.gif"
+      },
+      {
+        "id": "onion-142",
+        "label": "洋葱头 142",
+        "src": "/stickers/onion/onion-142.gif"
+      },
+      {
+        "id": "onion-143",
+        "label": "洋葱头 143",
+        "src": "/stickers/onion/onion-143.gif"
+      },
+      {
+        "id": "onion-144",
+        "label": "洋葱头 144",
+        "src": "/stickers/onion/onion-144.gif"
+      },
+      {
+        "id": "onion-145",
+        "label": "洋葱头 145",
+        "src": "/stickers/onion/onion-145.gif"
+      },
+      {
+        "id": "onion-146",
+        "label": "洋葱头 146",
+        "src": "/stickers/onion/onion-146.gif"
+      },
+      {
+        "id": "onion-147",
+        "label": "洋葱头 147",
+        "src": "/stickers/onion/onion-147.gif"
+      },
+      {
+        "id": "onion-148",
+        "label": "洋葱头 148",
+        "src": "/stickers/onion/onion-148.gif"
+      },
+      {
+        "id": "onion-149",
+        "label": "洋葱头 149",
+        "src": "/stickers/onion/onion-149.gif"
+      },
+      {
+        "id": "onion-150",
+        "label": "洋葱头 150",
+        "src": "/stickers/onion/onion-150.gif"
+      },
+      {
+        "id": "onion-151",
+        "label": "洋葱头 151",
+        "src": "/stickers/onion/onion-151.gif"
+      },
+      {
+        "id": "onion-152",
+        "label": "洋葱头 152",
+        "src": "/stickers/onion/onion-152.gif"
+      },
+      {
+        "id": "onion-153",
+        "label": "洋葱头 153",
+        "src": "/stickers/onion/onion-153.gif"
+      },
+      {
+        "id": "onion-154",
+        "label": "洋葱头 154",
+        "src": "/stickers/onion/onion-154.gif"
+      },
+      {
+        "id": "onion-155",
+        "label": "洋葱头 155",
+        "src": "/stickers/onion/onion-155.gif"
+      },
+      {
+        "id": "onion-156",
+        "label": "洋葱头 156",
+        "src": "/stickers/onion/onion-156.gif"
+      },
+      {
+        "id": "onion-157",
+        "label": "洋葱头 157",
+        "src": "/stickers/onion/onion-157.gif"
+      },
+      {
+        "id": "onion-158",
+        "label": "洋葱头 158",
+        "src": "/stickers/onion/onion-158.gif"
+      },
+      {
+        "id": "onion-159",
+        "label": "洋葱头 159",
+        "src": "/stickers/onion/onion-159.gif"
+      }
+    ]
+  },
+  {
+    "name": "小黄鸡",
+    "items": [
+      {
+        "id": "chick-001",
+        "label": "小黄鸡 1",
+        "src": "/stickers/chick/chick-001.gif"
+      },
+      {
+        "id": "chick-002",
+        "label": "小黄鸡 2",
+        "src": "/stickers/chick/chick-002.gif"
+      },
+      {
+        "id": "chick-003",
+        "label": "小黄鸡 3",
+        "src": "/stickers/chick/chick-003.gif"
+      },
+      {
+        "id": "chick-004",
+        "label": "小黄鸡 4",
+        "src": "/stickers/chick/chick-004.gif"
+      },
+      {
+        "id": "chick-005",
+        "label": "小黄鸡 5",
+        "src": "/stickers/chick/chick-005.png"
+      },
+      {
+        "id": "chick-006",
+        "label": "小黄鸡 6",
+        "src": "/stickers/chick/chick-006.jpg"
+      },
+      {
+        "id": "chick-007",
+        "label": "小黄鸡 7",
+        "src": "/stickers/chick/chick-007.png"
+      },
+      {
+        "id": "chick-008",
+        "label": "小黄鸡 8",
+        "src": "/stickers/chick/chick-008.png"
+      },
+      {
+        "id": "chick-009",
+        "label": "小黄鸡 9",
+        "src": "/stickers/chick/chick-009.gif"
+      },
+      {
+        "id": "chick-010",
+        "label": "小黄鸡 10",
+        "src": "/stickers/chick/chick-010.gif"
+      },
+      {
+        "id": "chick-011",
+        "label": "小黄鸡 11",
+        "src": "/stickers/chick/chick-011.gif"
+      },
+      {
+        "id": "chick-012",
+        "label": "小黄鸡 12",
+        "src": "/stickers/chick/chick-012.png"
+      },
+      {
+        "id": "chick-013",
+        "label": "小黄鸡 13",
+        "src": "/stickers/chick/chick-013.gif"
+      },
+      {
+        "id": "chick-014",
+        "label": "小黄鸡 14",
+        "src": "/stickers/chick/chick-014.png"
+      },
+      {
+        "id": "chick-015",
+        "label": "小黄鸡 15",
+        "src": "/stickers/chick/chick-015.gif"
+      },
+      {
+        "id": "chick-016",
+        "label": "小黄鸡 16",
+        "src": "/stickers/chick/chick-016.gif"
+      },
+      {
+        "id": "chick-017",
+        "label": "小黄鸡 17",
+        "src": "/stickers/chick/chick-017.png"
+      },
+      {
+        "id": "chick-018",
+        "label": "小黄鸡 18",
+        "src": "/stickers/chick/chick-018.gif"
+      },
+      {
+        "id": "chick-019",
+        "label": "小黄鸡 19",
+        "src": "/stickers/chick/chick-019.gif"
+      },
+      {
+        "id": "chick-020",
+        "label": "小黄鸡 20",
+        "src": "/stickers/chick/chick-020.gif"
+      },
+      {
+        "id": "chick-021",
+        "label": "小黄鸡 21",
+        "src": "/stickers/chick/chick-021.gif"
+      },
+      {
+        "id": "chick-022",
+        "label": "小黄鸡 22",
+        "src": "/stickers/chick/chick-022.gif"
+      },
+      {
+        "id": "chick-023",
+        "label": "小黄鸡 23",
+        "src": "/stickers/chick/chick-023.gif"
+      },
+      {
+        "id": "chick-024",
+        "label": "小黄鸡 24",
+        "src": "/stickers/chick/chick-024.png"
+      },
+      {
+        "id": "chick-025",
+        "label": "小黄鸡 25",
+        "src": "/stickers/chick/chick-025.gif"
+      },
+      {
+        "id": "chick-026",
+        "label": "小黄鸡 26",
+        "src": "/stickers/chick/chick-026.gif"
+      },
+      {
+        "id": "chick-027",
+        "label": "小黄鸡 27",
+        "src": "/stickers/chick/chick-027.gif"
+      },
+      {
+        "id": "chick-028",
+        "label": "小黄鸡 28",
+        "src": "/stickers/chick/chick-028.png"
+      },
+      {
+        "id": "chick-029",
+        "label": "小黄鸡 29",
+        "src": "/stickers/chick/chick-029.gif"
+      },
+      {
+        "id": "chick-030",
+        "label": "小黄鸡 30",
+        "src": "/stickers/chick/chick-030.gif"
+      },
+      {
+        "id": "chick-031",
+        "label": "小黄鸡 31",
+        "src": "/stickers/chick/chick-031.png"
+      },
+      {
+        "id": "chick-032",
+        "label": "小黄鸡 32",
+        "src": "/stickers/chick/chick-032.gif"
+      },
+      {
+        "id": "chick-033",
+        "label": "小黄鸡 33",
+        "src": "/stickers/chick/chick-033.png"
+      },
+      {
+        "id": "chick-034",
+        "label": "小黄鸡 34",
+        "src": "/stickers/chick/chick-034.gif"
+      },
+      {
+        "id": "chick-035",
+        "label": "小黄鸡 35",
+        "src": "/stickers/chick/chick-035.gif"
+      },
+      {
+        "id": "chick-036",
+        "label": "小黄鸡 36",
+        "src": "/stickers/chick/chick-036.gif"
+      },
+      {
+        "id": "chick-037",
+        "label": "小黄鸡 37",
+        "src": "/stickers/chick/chick-037.gif"
+      },
+      {
+        "id": "chick-038",
+        "label": "小黄鸡 38",
+        "src": "/stickers/chick/chick-038.gif"
+      },
+      {
+        "id": "chick-039",
+        "label": "小黄鸡 39",
+        "src": "/stickers/chick/chick-039.png"
+      },
+      {
+        "id": "chick-040",
+        "label": "小黄鸡 40",
+        "src": "/stickers/chick/chick-040.gif"
+      },
+      {
+        "id": "chick-041",
+        "label": "小黄鸡 41",
+        "src": "/stickers/chick/chick-041.gif"
+      },
+      {
+        "id": "chick-042",
+        "label": "小黄鸡 42",
+        "src": "/stickers/chick/chick-042.gif"
+      },
+      {
+        "id": "chick-043",
+        "label": "小黄鸡 43",
+        "src": "/stickers/chick/chick-043.gif"
+      },
+      {
+        "id": "chick-044",
+        "label": "小黄鸡 44",
+        "src": "/stickers/chick/chick-044.png"
+      },
+      {
+        "id": "chick-045",
+        "label": "小黄鸡 45",
+        "src": "/stickers/chick/chick-045.gif"
+      },
+      {
+        "id": "chick-046",
+        "label": "小黄鸡 46",
+        "src": "/stickers/chick/chick-046.gif"
+      },
+      {
+        "id": "chick-047",
+        "label": "小黄鸡 47",
+        "src": "/stickers/chick/chick-047.png"
+      },
+      {
+        "id": "chick-048",
+        "label": "小黄鸡 48",
+        "src": "/stickers/chick/chick-048.gif"
+      },
+      {
+        "id": "chick-049",
+        "label": "小黄鸡 49",
+        "src": "/stickers/chick/chick-049.gif"
+      },
+      {
+        "id": "chick-050",
+        "label": "小黄鸡 50",
+        "src": "/stickers/chick/chick-050.gif"
+      },
+      {
+        "id": "chick-051",
+        "label": "小黄鸡 51",
+        "src": "/stickers/chick/chick-051.gif"
+      },
+      {
+        "id": "chick-052",
+        "label": "小黄鸡 52",
+        "src": "/stickers/chick/chick-052.gif"
+      },
+      {
+        "id": "chick-053",
+        "label": "小黄鸡 53",
+        "src": "/stickers/chick/chick-053.png"
+      },
+      {
+        "id": "chick-054",
+        "label": "小黄鸡 54",
+        "src": "/stickers/chick/chick-054.gif"
+      },
+      {
+        "id": "chick-055",
+        "label": "小黄鸡 55",
+        "src": "/stickers/chick/chick-055.png"
+      },
+      {
+        "id": "chick-056",
+        "label": "小黄鸡 56",
+        "src": "/stickers/chick/chick-056.gif"
+      },
+      {
+        "id": "chick-057",
+        "label": "小黄鸡 57",
+        "src": "/stickers/chick/chick-057.gif"
+      },
+      {
+        "id": "chick-058",
+        "label": "小黄鸡 58",
+        "src": "/stickers/chick/chick-058.png"
+      },
+      {
+        "id": "chick-059",
+        "label": "小黄鸡 59",
+        "src": "/stickers/chick/chick-059.png"
+      },
+      {
+        "id": "chick-060",
+        "label": "小黄鸡 60",
+        "src": "/stickers/chick/chick-060.png"
+      },
+      {
+        "id": "chick-061",
+        "label": "小黄鸡 61",
+        "src": "/stickers/chick/chick-061.gif"
+      },
+      {
+        "id": "chick-062",
+        "label": "小黄鸡 62",
+        "src": "/stickers/chick/chick-062.gif"
+      },
+      {
+        "id": "chick-063",
+        "label": "小黄鸡 63",
+        "src": "/stickers/chick/chick-063.gif"
+      },
+      {
+        "id": "chick-064",
+        "label": "小黄鸡 64",
+        "src": "/stickers/chick/chick-064.gif"
+      },
+      {
+        "id": "chick-065",
+        "label": "小黄鸡 65",
+        "src": "/stickers/chick/chick-065.png"
+      },
+      {
+        "id": "chick-066",
+        "label": "小黄鸡 66",
+        "src": "/stickers/chick/chick-066.png"
+      },
+      {
+        "id": "chick-067",
+        "label": "小黄鸡 67",
+        "src": "/stickers/chick/chick-067.gif"
+      },
+      {
+        "id": "chick-068",
+        "label": "小黄鸡 68",
+        "src": "/stickers/chick/chick-068.gif"
+      },
+      {
+        "id": "chick-069",
+        "label": "小黄鸡 69",
+        "src": "/stickers/chick/chick-069.gif"
+      },
+      {
+        "id": "chick-070",
+        "label": "小黄鸡 70",
+        "src": "/stickers/chick/chick-070.gif"
+      },
+      {
+        "id": "chick-071",
+        "label": "小黄鸡 71",
+        "src": "/stickers/chick/chick-071.png"
+      },
+      {
+        "id": "chick-072",
+        "label": "小黄鸡 72",
+        "src": "/stickers/chick/chick-072.png"
+      },
+      {
+        "id": "chick-073",
+        "label": "小黄鸡 73",
+        "src": "/stickers/chick/chick-073.png"
+      },
+      {
+        "id": "chick-074",
+        "label": "小黄鸡 74",
+        "src": "/stickers/chick/chick-074.png"
+      },
+      {
+        "id": "chick-075",
+        "label": "小黄鸡 75",
+        "src": "/stickers/chick/chick-075.gif"
+      },
+      {
+        "id": "chick-076",
+        "label": "小黄鸡 76",
+        "src": "/stickers/chick/chick-076.png"
+      },
+      {
+        "id": "chick-077",
+        "label": "小黄鸡 77",
+        "src": "/stickers/chick/chick-077.gif"
+      },
+      {
+        "id": "chick-078",
+        "label": "小黄鸡 78",
+        "src": "/stickers/chick/chick-078.png"
+      },
+      {
+        "id": "chick-079",
+        "label": "小黄鸡 79",
+        "src": "/stickers/chick/chick-079.png"
+      },
+      {
+        "id": "chick-080",
+        "label": "小黄鸡 80",
+        "src": "/stickers/chick/chick-080.png"
+      },
+      {
+        "id": "chick-081",
+        "label": "小黄鸡 81",
+        "src": "/stickers/chick/chick-081.gif"
+      },
+      {
+        "id": "chick-082",
+        "label": "小黄鸡 82",
+        "src": "/stickers/chick/chick-082.png"
+      },
+      {
+        "id": "chick-083",
+        "label": "小黄鸡 83",
+        "src": "/stickers/chick/chick-083.gif"
+      },
+      {
+        "id": "chick-084",
+        "label": "小黄鸡 84",
+        "src": "/stickers/chick/chick-084.png"
+      },
+      {
+        "id": "chick-085",
+        "label": "小黄鸡 85",
+        "src": "/stickers/chick/chick-085.gif"
+      },
+      {
+        "id": "chick-086",
+        "label": "小黄鸡 86",
+        "src": "/stickers/chick/chick-086.png"
+      },
+      {
+        "id": "chick-087",
+        "label": "小黄鸡 87",
+        "src": "/stickers/chick/chick-087.png"
+      },
+      {
+        "id": "chick-088",
+        "label": "小黄鸡 88",
+        "src": "/stickers/chick/chick-088.gif"
+      },
+      {
+        "id": "chick-089",
+        "label": "小黄鸡 89",
+        "src": "/stickers/chick/chick-089.gif"
+      },
+      {
+        "id": "chick-090",
+        "label": "小黄鸡 90",
+        "src": "/stickers/chick/chick-090.gif"
+      },
+      {
+        "id": "chick-091",
+        "label": "小黄鸡 91",
+        "src": "/stickers/chick/chick-091.png"
+      },
+      {
+        "id": "chick-092",
+        "label": "小黄鸡 92",
+        "src": "/stickers/chick/chick-092.gif"
+      },
+      {
+        "id": "chick-093",
+        "label": "小黄鸡 93",
+        "src": "/stickers/chick/chick-093.png"
+      },
+      {
+        "id": "chick-094",
+        "label": "小黄鸡 94",
+        "src": "/stickers/chick/chick-094.gif"
+      },
+      {
+        "id": "chick-095",
+        "label": "小黄鸡 95",
+        "src": "/stickers/chick/chick-095.png"
+      },
+      {
+        "id": "chick-096",
+        "label": "小黄鸡 96",
+        "src": "/stickers/chick/chick-096.png"
+      },
+      {
+        "id": "chick-097",
+        "label": "小黄鸡 97",
+        "src": "/stickers/chick/chick-097.gif"
+      },
+      {
+        "id": "chick-098",
+        "label": "小黄鸡 98",
+        "src": "/stickers/chick/chick-098.gif"
+      },
+      {
+        "id": "chick-099",
+        "label": "小黄鸡 99",
+        "src": "/stickers/chick/chick-099.gif"
+      },
+      {
+        "id": "chick-100",
+        "label": "小黄鸡 100",
+        "src": "/stickers/chick/chick-100.png"
+      },
+      {
+        "id": "chick-101",
+        "label": "小黄鸡 101",
+        "src": "/stickers/chick/chick-101.gif"
+      },
+      {
+        "id": "chick-102",
+        "label": "小黄鸡 102",
+        "src": "/stickers/chick/chick-102.png"
+      },
+      {
+        "id": "chick-103",
+        "label": "小黄鸡 103",
+        "src": "/stickers/chick/chick-103.gif"
+      },
+      {
+        "id": "chick-104",
+        "label": "小黄鸡 104",
+        "src": "/stickers/chick/chick-104.gif"
+      },
+      {
+        "id": "chick-105",
+        "label": "小黄鸡 105",
+        "src": "/stickers/chick/chick-105.gif"
+      },
+      {
+        "id": "chick-106",
+        "label": "小黄鸡 106",
+        "src": "/stickers/chick/chick-106.gif"
+      },
+      {
+        "id": "chick-107",
+        "label": "小黄鸡 107",
+        "src": "/stickers/chick/chick-107.gif"
+      },
+      {
+        "id": "chick-108",
+        "label": "小黄鸡 108",
+        "src": "/stickers/chick/chick-108.gif"
+      },
+      {
+        "id": "chick-109",
+        "label": "小黄鸡 109",
+        "src": "/stickers/chick/chick-109.gif"
+      },
+      {
+        "id": "chick-110",
+        "label": "小黄鸡 110",
+        "src": "/stickers/chick/chick-110.png"
+      },
+      {
+        "id": "chick-111",
+        "label": "小黄鸡 111",
+        "src": "/stickers/chick/chick-111.gif"
+      },
+      {
+        "id": "chick-112",
+        "label": "小黄鸡 112",
+        "src": "/stickers/chick/chick-112.gif"
+      },
+      {
+        "id": "chick-113",
+        "label": "小黄鸡 113",
+        "src": "/stickers/chick/chick-113.png"
+      },
+      {
+        "id": "chick-114",
+        "label": "小黄鸡 114",
+        "src": "/stickers/chick/chick-114.gif"
+      },
+      {
+        "id": "chick-115",
+        "label": "小黄鸡 115",
+        "src": "/stickers/chick/chick-115.png"
+      },
+      {
+        "id": "chick-116",
+        "label": "小黄鸡 116",
+        "src": "/stickers/chick/chick-116.png"
+      },
+      {
+        "id": "chick-117",
+        "label": "小黄鸡 117",
+        "src": "/stickers/chick/chick-117.gif"
+      },
+      {
+        "id": "chick-118",
+        "label": "小黄鸡 118",
+        "src": "/stickers/chick/chick-118.png"
+      },
+      {
+        "id": "chick-119",
+        "label": "小黄鸡 119",
+        "src": "/stickers/chick/chick-119.gif"
+      },
+      {
+        "id": "chick-120",
+        "label": "小黄鸡 120",
+        "src": "/stickers/chick/chick-120.gif"
+      },
+      {
+        "id": "chick-121",
+        "label": "小黄鸡 121",
+        "src": "/stickers/chick/chick-121.png"
+      },
+      {
+        "id": "chick-122",
+        "label": "小黄鸡 122",
+        "src": "/stickers/chick/chick-122.png"
+      },
+      {
+        "id": "chick-123",
+        "label": "小黄鸡 123",
+        "src": "/stickers/chick/chick-123.gif"
+      },
+      {
+        "id": "chick-124",
+        "label": "小黄鸡 124",
+        "src": "/stickers/chick/chick-124.png"
+      },
+      {
+        "id": "chick-125",
+        "label": "小黄鸡 125",
+        "src": "/stickers/chick/chick-125.gif"
+      },
+      {
+        "id": "chick-126",
+        "label": "小黄鸡 126",
+        "src": "/stickers/chick/chick-126.gif"
+      },
+      {
+        "id": "chick-127",
+        "label": "小黄鸡 127",
+        "src": "/stickers/chick/chick-127.gif"
+      },
+      {
+        "id": "chick-128",
+        "label": "小黄鸡 128",
+        "src": "/stickers/chick/chick-128.gif"
+      },
+      {
+        "id": "chick-129",
+        "label": "小黄鸡 129",
+        "src": "/stickers/chick/chick-129.gif"
+      },
+      {
+        "id": "chick-130",
+        "label": "小黄鸡 130",
+        "src": "/stickers/chick/chick-130.gif"
+      },
+      {
+        "id": "chick-131",
+        "label": "小黄鸡 131",
+        "src": "/stickers/chick/chick-131.png"
+      },
+      {
+        "id": "chick-132",
+        "label": "小黄鸡 132",
+        "src": "/stickers/chick/chick-132.png"
+      },
+      {
+        "id": "chick-133",
+        "label": "小黄鸡 133",
+        "src": "/stickers/chick/chick-133.png"
+      },
+      {
+        "id": "chick-134",
+        "label": "小黄鸡 134",
+        "src": "/stickers/chick/chick-134.gif"
+      },
+      {
+        "id": "chick-135",
+        "label": "小黄鸡 135",
+        "src": "/stickers/chick/chick-135.png"
+      },
+      {
+        "id": "chick-136",
+        "label": "小黄鸡 136",
+        "src": "/stickers/chick/chick-136.gif"
+      },
+      {
+        "id": "chick-137",
+        "label": "小黄鸡 137",
+        "src": "/stickers/chick/chick-137.png"
+      },
+      {
+        "id": "chick-138",
+        "label": "小黄鸡 138",
+        "src": "/stickers/chick/chick-138.png"
+      },
+      {
+        "id": "chick-139",
+        "label": "小黄鸡 139",
+        "src": "/stickers/chick/chick-139.png"
+      },
+      {
+        "id": "chick-140",
+        "label": "小黄鸡 140",
+        "src": "/stickers/chick/chick-140.gif"
+      },
+      {
+        "id": "chick-141",
+        "label": "小黄鸡 141",
+        "src": "/stickers/chick/chick-141.gif"
+      },
+      {
+        "id": "chick-142",
+        "label": "小黄鸡 142",
+        "src": "/stickers/chick/chick-142.gif"
+      },
+      {
+        "id": "chick-143",
+        "label": "小黄鸡 143",
+        "src": "/stickers/chick/chick-143.gif"
+      },
+      {
+        "id": "chick-144",
+        "label": "小黄鸡 144",
+        "src": "/stickers/chick/chick-144.gif"
+      },
+      {
+        "id": "chick-145",
+        "label": "小黄鸡 145",
+        "src": "/stickers/chick/chick-145.png"
+      },
+      {
+        "id": "chick-146",
+        "label": "小黄鸡 146",
+        "src": "/stickers/chick/chick-146.png"
+      },
+      {
+        "id": "chick-147",
+        "label": "小黄鸡 147",
+        "src": "/stickers/chick/chick-147.gif"
+      },
+      {
+        "id": "chick-148",
+        "label": "小黄鸡 148",
+        "src": "/stickers/chick/chick-148.png"
+      },
+      {
+        "id": "chick-149",
+        "label": "小黄鸡 149",
+        "src": "/stickers/chick/chick-149.png"
+      },
+      {
+        "id": "chick-150",
+        "label": "小黄鸡 150",
+        "src": "/stickers/chick/chick-150.gif"
+      },
+      {
+        "id": "chick-151",
+        "label": "小黄鸡 151",
+        "src": "/stickers/chick/chick-151.gif"
+      },
+      {
+        "id": "chick-152",
+        "label": "小黄鸡 152",
+        "src": "/stickers/chick/chick-152.png"
+      },
+      {
+        "id": "chick-153",
+        "label": "小黄鸡 153",
+        "src": "/stickers/chick/chick-153.png"
+      },
+      {
+        "id": "chick-154",
+        "label": "小黄鸡 154",
+        "src": "/stickers/chick/chick-154.gif"
+      },
+      {
+        "id": "chick-155",
+        "label": "小黄鸡 155",
+        "src": "/stickers/chick/chick-155.gif"
+      },
+      {
+        "id": "chick-156",
+        "label": "小黄鸡 156",
+        "src": "/stickers/chick/chick-156.gif"
+      },
+      {
+        "id": "chick-157",
+        "label": "小黄鸡 157",
+        "src": "/stickers/chick/chick-157.png"
+      },
+      {
+        "id": "chick-158",
+        "label": "小黄鸡 158",
+        "src": "/stickers/chick/chick-158.gif"
+      },
+      {
+        "id": "chick-159",
+        "label": "小黄鸡 159",
+        "src": "/stickers/chick/chick-159.png"
+      },
+      {
+        "id": "chick-160",
+        "label": "小黄鸡 160",
+        "src": "/stickers/chick/chick-160.gif"
+      },
+      {
+        "id": "chick-161",
+        "label": "小黄鸡 161",
+        "src": "/stickers/chick/chick-161.gif"
+      },
+      {
+        "id": "chick-162",
+        "label": "小黄鸡 162",
+        "src": "/stickers/chick/chick-162.png"
+      },
+      {
+        "id": "chick-163",
+        "label": "小黄鸡 163",
+        "src": "/stickers/chick/chick-163.gif"
+      },
+      {
+        "id": "chick-164",
+        "label": "小黄鸡 164",
+        "src": "/stickers/chick/chick-164.png"
+      },
+      {
+        "id": "chick-165",
+        "label": "小黄鸡 165",
+        "src": "/stickers/chick/chick-165.png"
+      },
+      {
+        "id": "chick-166",
+        "label": "小黄鸡 166",
+        "src": "/stickers/chick/chick-166.png"
+      },
+      {
+        "id": "chick-167",
+        "label": "小黄鸡 167",
+        "src": "/stickers/chick/chick-167.gif"
+      },
+      {
+        "id": "chick-168",
+        "label": "小黄鸡 168",
+        "src": "/stickers/chick/chick-168.gif"
+      },
+      {
+        "id": "chick-169",
+        "label": "小黄鸡 169",
+        "src": "/stickers/chick/chick-169.gif"
+      },
+      {
+        "id": "chick-170",
+        "label": "小黄鸡 170",
+        "src": "/stickers/chick/chick-170.gif"
+      },
+      {
+        "id": "chick-171",
+        "label": "小黄鸡 171",
+        "src": "/stickers/chick/chick-171.gif"
+      },
+      {
+        "id": "chick-172",
+        "label": "小黄鸡 172",
+        "src": "/stickers/chick/chick-172.gif"
+      },
+      {
+        "id": "chick-173",
+        "label": "小黄鸡 173",
+        "src": "/stickers/chick/chick-173.gif"
+      },
+      {
+        "id": "chick-174",
+        "label": "小黄鸡 174",
+        "src": "/stickers/chick/chick-174.png"
+      },
+      {
+        "id": "chick-175",
+        "label": "小黄鸡 175",
+        "src": "/stickers/chick/chick-175.png"
+      },
+      {
+        "id": "chick-176",
+        "label": "小黄鸡 176",
+        "src": "/stickers/chick/chick-176.gif"
+      },
+      {
+        "id": "chick-177",
+        "label": "小黄鸡 177",
+        "src": "/stickers/chick/chick-177.gif"
+      },
+      {
+        "id": "chick-178",
+        "label": "小黄鸡 178",
+        "src": "/stickers/chick/chick-178.png"
+      },
+      {
+        "id": "chick-179",
+        "label": "小黄鸡 179",
+        "src": "/stickers/chick/chick-179.png"
+      },
+      {
+        "id": "chick-180",
+        "label": "小黄鸡 180",
+        "src": "/stickers/chick/chick-180.png"
+      },
+      {
+        "id": "chick-181",
+        "label": "小黄鸡 181",
+        "src": "/stickers/chick/chick-181.png"
+      },
+      {
+        "id": "chick-182",
+        "label": "小黄鸡 182",
+        "src": "/stickers/chick/chick-182.gif"
+      },
+      {
+        "id": "chick-183",
+        "label": "小黄鸡 183",
+        "src": "/stickers/chick/chick-183.png"
+      },
+      {
+        "id": "chick-184",
+        "label": "小黄鸡 184",
+        "src": "/stickers/chick/chick-184.gif"
+      },
+      {
+        "id": "chick-185",
+        "label": "小黄鸡 185",
+        "src": "/stickers/chick/chick-185.png"
+      },
+      {
+        "id": "chick-186",
+        "label": "小黄鸡 186",
+        "src": "/stickers/chick/chick-186.png"
+      },
+      {
+        "id": "chick-187",
+        "label": "小黄鸡 187",
+        "src": "/stickers/chick/chick-187.png"
+      },
+      {
+        "id": "chick-188",
+        "label": "小黄鸡 188",
+        "src": "/stickers/chick/chick-188.png"
+      },
+      {
+        "id": "chick-189",
+        "label": "小黄鸡 189",
+        "src": "/stickers/chick/chick-189.png"
+      },
+      {
+        "id": "chick-190",
+        "label": "小黄鸡 190",
+        "src": "/stickers/chick/chick-190.png"
+      },
+      {
+        "id": "chick-191",
+        "label": "小黄鸡 191",
+        "src": "/stickers/chick/chick-191.png"
+      },
+      {
+        "id": "chick-192",
+        "label": "小黄鸡 192",
+        "src": "/stickers/chick/chick-192.gif"
+      },
+      {
+        "id": "chick-193",
+        "label": "小黄鸡 193",
+        "src": "/stickers/chick/chick-193.gif"
+      },
+      {
+        "id": "chick-194",
+        "label": "小黄鸡 194",
+        "src": "/stickers/chick/chick-194.gif"
+      },
+      {
+        "id": "chick-195",
+        "label": "小黄鸡 195",
+        "src": "/stickers/chick/chick-195.png"
+      },
+      {
+        "id": "chick-196",
+        "label": "小黄鸡 196",
+        "src": "/stickers/chick/chick-196.gif"
+      },
+      {
+        "id": "chick-197",
+        "label": "小黄鸡 197",
+        "src": "/stickers/chick/chick-197.gif"
+      },
+      {
+        "id": "chick-198",
+        "label": "小黄鸡 198",
+        "src": "/stickers/chick/chick-198.gif"
+      },
+      {
+        "id": "chick-199",
+        "label": "小黄鸡 199",
+        "src": "/stickers/chick/chick-199.png"
+      },
+      {
+        "id": "chick-200",
+        "label": "小黄鸡 200",
+        "src": "/stickers/chick/chick-200.gif"
+      },
+      {
+        "id": "chick-201",
+        "label": "小黄鸡 201",
+        "src": "/stickers/chick/chick-201.gif"
+      },
+      {
+        "id": "chick-202",
+        "label": "小黄鸡 202",
+        "src": "/stickers/chick/chick-202.png"
+      },
+      {
+        "id": "chick-203",
+        "label": "小黄鸡 203",
+        "src": "/stickers/chick/chick-203.gif"
+      },
+      {
+        "id": "chick-204",
+        "label": "小黄鸡 204",
+        "src": "/stickers/chick/chick-204.png"
+      },
+      {
+        "id": "chick-205",
+        "label": "小黄鸡 205",
+        "src": "/stickers/chick/chick-205.gif"
+      },
+      {
+        "id": "chick-206",
+        "label": "小黄鸡 206",
+        "src": "/stickers/chick/chick-206.gif"
+      },
+      {
+        "id": "chick-207",
+        "label": "小黄鸡 207",
+        "src": "/stickers/chick/chick-207.png"
+      },
+      {
+        "id": "chick-208",
+        "label": "小黄鸡 208",
+        "src": "/stickers/chick/chick-208.gif"
+      },
+      {
+        "id": "chick-209",
+        "label": "小黄鸡 209",
+        "src": "/stickers/chick/chick-209.gif"
+      },
+      {
+        "id": "chick-210",
+        "label": "小黄鸡 210",
+        "src": "/stickers/chick/chick-210.png"
+      },
+      {
+        "id": "chick-211",
+        "label": "小黄鸡 211",
+        "src": "/stickers/chick/chick-211.gif"
+      },
+      {
+        "id": "chick-212",
+        "label": "小黄鸡 212",
+        "src": "/stickers/chick/chick-212.png"
+      },
+      {
+        "id": "chick-213",
+        "label": "小黄鸡 213",
+        "src": "/stickers/chick/chick-213.png"
+      },
+      {
+        "id": "chick-214",
+        "label": "小黄鸡 214",
+        "src": "/stickers/chick/chick-214.gif"
+      },
+      {
+        "id": "chick-215",
+        "label": "小黄鸡 215",
+        "src": "/stickers/chick/chick-215.gif"
+      },
+      {
+        "id": "chick-216",
+        "label": "小黄鸡 216",
+        "src": "/stickers/chick/chick-216.gif"
+      },
+      {
+        "id": "chick-217",
+        "label": "小黄鸡 217",
+        "src": "/stickers/chick/chick-217.png"
+      },
+      {
+        "id": "chick-218",
+        "label": "小黄鸡 218",
+        "src": "/stickers/chick/chick-218.png"
+      },
+      {
+        "id": "chick-219",
+        "label": "小黄鸡 219",
+        "src": "/stickers/chick/chick-219.gif"
+      },
+      {
+        "id": "chick-220",
+        "label": "小黄鸡 220",
+        "src": "/stickers/chick/chick-220.gif"
+      },
+      {
+        "id": "chick-221",
+        "label": "小黄鸡 221",
+        "src": "/stickers/chick/chick-221.gif"
+      },
+      {
+        "id": "chick-222",
+        "label": "小黄鸡 222",
+        "src": "/stickers/chick/chick-222.gif"
+      },
+      {
+        "id": "chick-223",
+        "label": "小黄鸡 223",
+        "src": "/stickers/chick/chick-223.gif"
+      },
+      {
+        "id": "chick-224",
+        "label": "小黄鸡 224",
+        "src": "/stickers/chick/chick-224.gif"
+      },
+      {
+        "id": "chick-225",
+        "label": "小黄鸡 225",
+        "src": "/stickers/chick/chick-225.gif"
+      },
+      {
+        "id": "chick-226",
+        "label": "小黄鸡 226",
+        "src": "/stickers/chick/chick-226.gif"
+      },
+      {
+        "id": "chick-227",
+        "label": "小黄鸡 227",
+        "src": "/stickers/chick/chick-227.png"
+      },
+      {
+        "id": "chick-228",
+        "label": "小黄鸡 228",
+        "src": "/stickers/chick/chick-228.gif"
+      },
+      {
+        "id": "chick-229",
+        "label": "小黄鸡 229",
+        "src": "/stickers/chick/chick-229.gif"
+      },
+      {
+        "id": "chick-230",
+        "label": "小黄鸡 230",
+        "src": "/stickers/chick/chick-230.gif"
+      },
+      {
+        "id": "chick-231",
+        "label": "小黄鸡 231",
+        "src": "/stickers/chick/chick-231.gif"
+      },
+      {
+        "id": "chick-232",
+        "label": "小黄鸡 232",
+        "src": "/stickers/chick/chick-232.gif"
+      },
+      {
+        "id": "chick-233",
+        "label": "小黄鸡 233",
+        "src": "/stickers/chick/chick-233.gif"
+      },
+      {
+        "id": "chick-234",
+        "label": "小黄鸡 234",
+        "src": "/stickers/chick/chick-234.gif"
+      },
+      {
+        "id": "chick-235",
+        "label": "小黄鸡 235",
+        "src": "/stickers/chick/chick-235.png"
+      },
+      {
+        "id": "chick-236",
+        "label": "小黄鸡 236",
+        "src": "/stickers/chick/chick-236.gif"
+      },
+      {
+        "id": "chick-237",
+        "label": "小黄鸡 237",
+        "src": "/stickers/chick/chick-237.gif"
+      },
+      {
+        "id": "chick-238",
+        "label": "小黄鸡 238",
+        "src": "/stickers/chick/chick-238.png"
+      },
+      {
+        "id": "chick-239",
+        "label": "小黄鸡 239",
+        "src": "/stickers/chick/chick-239.png"
+      },
+      {
+        "id": "chick-240",
+        "label": "小黄鸡 240",
+        "src": "/stickers/chick/chick-240.gif"
+      },
+      {
+        "id": "chick-241",
+        "label": "小黄鸡 241",
+        "src": "/stickers/chick/chick-241.gif"
+      },
+      {
+        "id": "chick-242",
+        "label": "小黄鸡 242",
+        "src": "/stickers/chick/chick-242.gif"
+      },
+      {
+        "id": "chick-243",
+        "label": "小黄鸡 243",
+        "src": "/stickers/chick/chick-243.gif"
+      },
+      {
+        "id": "chick-244",
+        "label": "小黄鸡 244",
+        "src": "/stickers/chick/chick-244.gif"
+      },
+      {
+        "id": "chick-245",
+        "label": "小黄鸡 245",
+        "src": "/stickers/chick/chick-245.gif"
+      },
+      {
+        "id": "chick-246",
+        "label": "小黄鸡 246",
+        "src": "/stickers/chick/chick-246.png"
+      },
+      {
+        "id": "chick-247",
+        "label": "小黄鸡 247",
+        "src": "/stickers/chick/chick-247.gif"
+      },
+      {
+        "id": "chick-248",
+        "label": "小黄鸡 248",
+        "src": "/stickers/chick/chick-248.gif"
+      },
+      {
+        "id": "chick-249",
+        "label": "小黄鸡 249",
+        "src": "/stickers/chick/chick-249.gif"
+      },
+      {
+        "id": "chick-250",
+        "label": "小黄鸡 250",
+        "src": "/stickers/chick/chick-250.gif"
+      },
+      {
+        "id": "chick-251",
+        "label": "小黄鸡 251",
+        "src": "/stickers/chick/chick-251.gif"
+      },
+      {
+        "id": "chick-252",
+        "label": "小黄鸡 252",
+        "src": "/stickers/chick/chick-252.png"
+      },
+      {
+        "id": "chick-253",
+        "label": "小黄鸡 253",
+        "src": "/stickers/chick/chick-253.png"
+      },
+      {
+        "id": "chick-254",
+        "label": "小黄鸡 254",
+        "src": "/stickers/chick/chick-254.gif"
+      },
+      {
+        "id": "chick-255",
+        "label": "小黄鸡 255",
+        "src": "/stickers/chick/chick-255.gif"
+      },
+      {
+        "id": "chick-256",
+        "label": "小黄鸡 256",
+        "src": "/stickers/chick/chick-256.png"
+      },
+      {
+        "id": "chick-257",
+        "label": "小黄鸡 257",
+        "src": "/stickers/chick/chick-257.gif"
+      },
+      {
+        "id": "chick-258",
+        "label": "小黄鸡 258",
+        "src": "/stickers/chick/chick-258.png"
+      },
+      {
+        "id": "chick-259",
+        "label": "小黄鸡 259",
+        "src": "/stickers/chick/chick-259.png"
+      },
+      {
+        "id": "chick-260",
+        "label": "小黄鸡 260",
+        "src": "/stickers/chick/chick-260.png"
+      },
+      {
+        "id": "chick-261",
+        "label": "小黄鸡 261",
+        "src": "/stickers/chick/chick-261.gif"
+      },
+      {
+        "id": "chick-262",
+        "label": "小黄鸡 262",
+        "src": "/stickers/chick/chick-262.png"
+      },
+      {
+        "id": "chick-263",
+        "label": "小黄鸡 263",
+        "src": "/stickers/chick/chick-263.png"
+      },
+      {
+        "id": "chick-264",
+        "label": "小黄鸡 264",
+        "src": "/stickers/chick/chick-264.gif"
+      },
+      {
+        "id": "chick-265",
+        "label": "小黄鸡 265",
+        "src": "/stickers/chick/chick-265.gif"
+      },
+      {
+        "id": "chick-266",
+        "label": "小黄鸡 266",
+        "src": "/stickers/chick/chick-266.png"
+      },
+      {
+        "id": "chick-267",
+        "label": "小黄鸡 267",
+        "src": "/stickers/chick/chick-267.gif"
+      },
+      {
+        "id": "chick-268",
+        "label": "小黄鸡 268",
+        "src": "/stickers/chick/chick-268.gif"
+      },
+      {
+        "id": "chick-269",
+        "label": "小黄鸡 269",
+        "src": "/stickers/chick/chick-269.gif"
+      },
+      {
+        "id": "chick-270",
+        "label": "小黄鸡 270",
+        "src": "/stickers/chick/chick-270.gif"
+      },
+      {
+        "id": "chick-271",
+        "label": "小黄鸡 271",
+        "src": "/stickers/chick/chick-271.gif"
+      },
+      {
+        "id": "chick-272",
+        "label": "小黄鸡 272",
+        "src": "/stickers/chick/chick-272.png"
+      },
+      {
+        "id": "chick-273",
+        "label": "小黄鸡 273",
+        "src": "/stickers/chick/chick-273.gif"
+      },
+      {
+        "id": "chick-274",
+        "label": "小黄鸡 274",
+        "src": "/stickers/chick/chick-274.gif"
+      },
+      {
+        "id": "chick-275",
+        "label": "小黄鸡 275",
+        "src": "/stickers/chick/chick-275.png"
+      },
+      {
+        "id": "chick-276",
+        "label": "小黄鸡 276",
+        "src": "/stickers/chick/chick-276.gif"
+      },
+      {
+        "id": "chick-277",
+        "label": "小黄鸡 277",
+        "src": "/stickers/chick/chick-277.gif"
+      },
+      {
+        "id": "chick-278",
+        "label": "小黄鸡 278",
+        "src": "/stickers/chick/chick-278.gif"
+      },
+      {
+        "id": "chick-279",
+        "label": "小黄鸡 279",
+        "src": "/stickers/chick/chick-279.png"
+      },
+      {
+        "id": "chick-280",
+        "label": "小黄鸡 280",
+        "src": "/stickers/chick/chick-280.gif"
+      },
+      {
+        "id": "chick-281",
+        "label": "小黄鸡 281",
+        "src": "/stickers/chick/chick-281.gif"
+      },
+      {
+        "id": "chick-282",
+        "label": "小黄鸡 282",
+        "src": "/stickers/chick/chick-282.png"
+      },
+      {
+        "id": "chick-283",
+        "label": "小黄鸡 283",
+        "src": "/stickers/chick/chick-283.gif"
+      },
+      {
+        "id": "chick-284",
+        "label": "小黄鸡 284",
+        "src": "/stickers/chick/chick-284.gif"
+      },
+      {
+        "id": "chick-285",
+        "label": "小黄鸡 285",
+        "src": "/stickers/chick/chick-285.gif"
+      },
+      {
+        "id": "chick-286",
+        "label": "小黄鸡 286",
+        "src": "/stickers/chick/chick-286.gif"
+      },
+      {
+        "id": "chick-287",
+        "label": "小黄鸡 287",
+        "src": "/stickers/chick/chick-287.png"
+      },
+      {
+        "id": "chick-288",
+        "label": "小黄鸡 288",
+        "src": "/stickers/chick/chick-288.png"
+      },
+      {
+        "id": "chick-289",
+        "label": "小黄鸡 289",
+        "src": "/stickers/chick/chick-289.png"
+      },
+      {
+        "id": "chick-290",
+        "label": "小黄鸡 290",
+        "src": "/stickers/chick/chick-290.png"
+      },
+      {
+        "id": "chick-291",
+        "label": "小黄鸡 291",
+        "src": "/stickers/chick/chick-291.gif"
+      },
+      {
+        "id": "chick-292",
+        "label": "小黄鸡 292",
+        "src": "/stickers/chick/chick-292.gif"
+      },
+      {
+        "id": "chick-293",
+        "label": "小黄鸡 293",
+        "src": "/stickers/chick/chick-293.gif"
+      },
+      {
+        "id": "chick-294",
+        "label": "小黄鸡 294",
+        "src": "/stickers/chick/chick-294.gif"
+      },
+      {
+        "id": "chick-295",
+        "label": "小黄鸡 295",
+        "src": "/stickers/chick/chick-295.png"
+      },
+      {
+        "id": "chick-296",
+        "label": "小黄鸡 296",
+        "src": "/stickers/chick/chick-296.png"
+      },
+      {
+        "id": "chick-297",
+        "label": "小黄鸡 297",
+        "src": "/stickers/chick/chick-297.gif"
+      },
+      {
+        "id": "chick-298",
+        "label": "小黄鸡 298",
+        "src": "/stickers/chick/chick-298.gif"
+      },
+      {
+        "id": "chick-299",
+        "label": "小黄鸡 299",
+        "src": "/stickers/chick/chick-299.png"
+      },
+      {
+        "id": "chick-300",
+        "label": "小黄鸡 300",
+        "src": "/stickers/chick/chick-300.gif"
+      },
+      {
+        "id": "chick-301",
+        "label": "小黄鸡 301",
+        "src": "/stickers/chick/chick-301.gif"
+      },
+      {
+        "id": "chick-302",
+        "label": "小黄鸡 302",
+        "src": "/stickers/chick/chick-302.png"
+      },
+      {
+        "id": "chick-303",
+        "label": "小黄鸡 303",
+        "src": "/stickers/chick/chick-303.png"
+      },
+      {
+        "id": "chick-304",
+        "label": "小黄鸡 304",
+        "src": "/stickers/chick/chick-304.gif"
+      },
+      {
+        "id": "chick-305",
+        "label": "小黄鸡 305",
+        "src": "/stickers/chick/chick-305.gif"
+      },
+      {
+        "id": "chick-306",
+        "label": "小黄鸡 306",
+        "src": "/stickers/chick/chick-306.gif"
+      },
+      {
+        "id": "chick-307",
+        "label": "小黄鸡 307",
+        "src": "/stickers/chick/chick-307.png"
+      },
+      {
+        "id": "chick-308",
+        "label": "小黄鸡 308",
+        "src": "/stickers/chick/chick-308.png"
+      },
+      {
+        "id": "chick-309",
+        "label": "小黄鸡 309",
+        "src": "/stickers/chick/chick-309.gif"
+      },
+      {
+        "id": "chick-310",
+        "label": "小黄鸡 310",
+        "src": "/stickers/chick/chick-310.png"
+      },
+      {
+        "id": "chick-311",
+        "label": "小黄鸡 311",
+        "src": "/stickers/chick/chick-311.png"
+      },
+      {
+        "id": "chick-312",
+        "label": "小黄鸡 312",
+        "src": "/stickers/chick/chick-312.gif"
+      },
+      {
+        "id": "chick-313",
+        "label": "小黄鸡 313",
+        "src": "/stickers/chick/chick-313.png"
+      },
+      {
+        "id": "chick-314",
+        "label": "小黄鸡 314",
+        "src": "/stickers/chick/chick-314.png"
+      },
+      {
+        "id": "chick-315",
+        "label": "小黄鸡 315",
+        "src": "/stickers/chick/chick-315.png"
+      },
+      {
+        "id": "chick-316",
+        "label": "小黄鸡 316",
+        "src": "/stickers/chick/chick-316.gif"
+      },
+      {
+        "id": "chick-317",
+        "label": "小黄鸡 317",
+        "src": "/stickers/chick/chick-317.gif"
+      },
+      {
+        "id": "chick-318",
+        "label": "小黄鸡 318",
+        "src": "/stickers/chick/chick-318.png"
+      },
+      {
+        "id": "chick-319",
+        "label": "小黄鸡 319",
+        "src": "/stickers/chick/chick-319.gif"
+      },
+      {
+        "id": "chick-320",
+        "label": "小黄鸡 320",
+        "src": "/stickers/chick/chick-320.gif"
+      },
+      {
+        "id": "chick-321",
+        "label": "小黄鸡 321",
+        "src": "/stickers/chick/chick-321.png"
+      },
+      {
+        "id": "chick-322",
+        "label": "小黄鸡 322",
+        "src": "/stickers/chick/chick-322.gif"
+      },
+      {
+        "id": "chick-323",
+        "label": "小黄鸡 323",
+        "src": "/stickers/chick/chick-323.gif"
+      },
+      {
+        "id": "chick-324",
+        "label": "小黄鸡 324",
+        "src": "/stickers/chick/chick-324.gif"
+      },
+      {
+        "id": "chick-325",
+        "label": "小黄鸡 325",
+        "src": "/stickers/chick/chick-325.gif"
+      },
+      {
+        "id": "chick-326",
+        "label": "小黄鸡 326",
+        "src": "/stickers/chick/chick-326.gif"
+      },
+      {
+        "id": "chick-327",
+        "label": "小黄鸡 327",
+        "src": "/stickers/chick/chick-327.gif"
+      },
+      {
+        "id": "chick-328",
+        "label": "小黄鸡 328",
+        "src": "/stickers/chick/chick-328.gif"
+      },
+      {
+        "id": "chick-329",
+        "label": "小黄鸡 329",
+        "src": "/stickers/chick/chick-329.gif"
+      },
+      {
+        "id": "chick-330",
+        "label": "小黄鸡 330",
+        "src": "/stickers/chick/chick-330.jpg"
+      },
+      {
+        "id": "chick-331",
+        "label": "小黄鸡 331",
+        "src": "/stickers/chick/chick-331.png"
+      },
+      {
+        "id": "chick-332",
+        "label": "小黄鸡 332",
+        "src": "/stickers/chick/chick-332.png"
+      },
+      {
+        "id": "chick-333",
+        "label": "小黄鸡 333",
+        "src": "/stickers/chick/chick-333.png"
+      },
+      {
+        "id": "chick-334",
+        "label": "小黄鸡 334",
+        "src": "/stickers/chick/chick-334.gif"
+      },
+      {
+        "id": "chick-335",
+        "label": "小黄鸡 335",
+        "src": "/stickers/chick/chick-335.png"
+      },
+      {
+        "id": "chick-336",
+        "label": "小黄鸡 336",
+        "src": "/stickers/chick/chick-336.png"
+      },
+      {
+        "id": "chick-337",
+        "label": "小黄鸡 337",
+        "src": "/stickers/chick/chick-337.gif"
+      },
+      {
+        "id": "chick-338",
+        "label": "小黄鸡 338",
+        "src": "/stickers/chick/chick-338.gif"
+      },
+      {
+        "id": "chick-339",
+        "label": "小黄鸡 339",
+        "src": "/stickers/chick/chick-339.gif"
+      },
+      {
+        "id": "chick-340",
+        "label": "小黄鸡 340",
+        "src": "/stickers/chick/chick-340.png"
+      },
+      {
+        "id": "chick-341",
+        "label": "小黄鸡 341",
+        "src": "/stickers/chick/chick-341.gif"
+      },
+      {
+        "id": "chick-342",
+        "label": "小黄鸡 342",
+        "src": "/stickers/chick/chick-342.gif"
+      },
+      {
+        "id": "chick-343",
+        "label": "小黄鸡 343",
+        "src": "/stickers/chick/chick-343.gif"
+      },
+      {
+        "id": "chick-344",
+        "label": "小黄鸡 344",
+        "src": "/stickers/chick/chick-344.png"
+      },
+      {
+        "id": "chick-345",
+        "label": "小黄鸡 345",
+        "src": "/stickers/chick/chick-345.gif"
+      },
+      {
+        "id": "chick-346",
+        "label": "小黄鸡 346",
+        "src": "/stickers/chick/chick-346.png"
+      },
+      {
+        "id": "chick-347",
+        "label": "小黄鸡 347",
+        "src": "/stickers/chick/chick-347.png"
+      },
+      {
+        "id": "chick-348",
+        "label": "小黄鸡 348",
+        "src": "/stickers/chick/chick-348.gif"
+      },
+      {
+        "id": "chick-349",
+        "label": "小黄鸡 349",
+        "src": "/stickers/chick/chick-349.gif"
+      },
+      {
+        "id": "chick-350",
+        "label": "小黄鸡 350",
+        "src": "/stickers/chick/chick-350.gif"
+      },
+      {
+        "id": "chick-351",
+        "label": "小黄鸡 351",
+        "src": "/stickers/chick/chick-351.gif"
+      },
+      {
+        "id": "chick-352",
+        "label": "小黄鸡 352",
+        "src": "/stickers/chick/chick-352.gif"
+      },
+      {
+        "id": "chick-353",
+        "label": "小黄鸡 353",
+        "src": "/stickers/chick/chick-353.gif"
+      },
+      {
+        "id": "chick-354",
+        "label": "小黄鸡 354",
+        "src": "/stickers/chick/chick-354.png"
+      },
+      {
+        "id": "chick-355",
+        "label": "小黄鸡 355",
+        "src": "/stickers/chick/chick-355.gif"
+      },
+      {
+        "id": "chick-356",
+        "label": "小黄鸡 356",
+        "src": "/stickers/chick/chick-356.gif"
+      },
+      {
+        "id": "chick-357",
+        "label": "小黄鸡 357",
+        "src": "/stickers/chick/chick-357.gif"
+      },
+      {
+        "id": "chick-358",
+        "label": "小黄鸡 358",
+        "src": "/stickers/chick/chick-358.gif"
+      },
+      {
+        "id": "chick-359",
+        "label": "小黄鸡 359",
+        "src": "/stickers/chick/chick-359.png"
+      },
+      {
+        "id": "chick-360",
+        "label": "小黄鸡 360",
+        "src": "/stickers/chick/chick-360.gif"
+      },
+      {
+        "id": "chick-361",
+        "label": "小黄鸡 361",
+        "src": "/stickers/chick/chick-361.gif"
+      },
+      {
+        "id": "chick-362",
+        "label": "小黄鸡 362",
+        "src": "/stickers/chick/chick-362.png"
+      },
+      {
+        "id": "chick-363",
+        "label": "小黄鸡 363",
+        "src": "/stickers/chick/chick-363.gif"
+      },
+      {
+        "id": "chick-364",
+        "label": "小黄鸡 364",
+        "src": "/stickers/chick/chick-364.gif"
+      },
+      {
+        "id": "chick-365",
+        "label": "小黄鸡 365",
+        "src": "/stickers/chick/chick-365.png"
+      },
+      {
+        "id": "chick-366",
+        "label": "小黄鸡 366",
+        "src": "/stickers/chick/chick-366.gif"
+      },
+      {
+        "id": "chick-367",
+        "label": "小黄鸡 367",
+        "src": "/stickers/chick/chick-367.gif"
+      },
+      {
+        "id": "chick-368",
+        "label": "小黄鸡 368",
+        "src": "/stickers/chick/chick-368.gif"
+      },
+      {
+        "id": "chick-369",
+        "label": "小黄鸡 369",
+        "src": "/stickers/chick/chick-369.png"
+      },
+      {
+        "id": "chick-370",
+        "label": "小黄鸡 370",
+        "src": "/stickers/chick/chick-370.gif"
+      },
+      {
+        "id": "chick-371",
+        "label": "小黄鸡 371",
+        "src": "/stickers/chick/chick-371.gif"
+      },
+      {
+        "id": "chick-372",
+        "label": "小黄鸡 372",
+        "src": "/stickers/chick/chick-372.gif"
+      },
+      {
+        "id": "chick-373",
+        "label": "小黄鸡 373",
+        "src": "/stickers/chick/chick-373.gif"
+      },
+      {
+        "id": "chick-374",
+        "label": "小黄鸡 374",
+        "src": "/stickers/chick/chick-374.png"
+      },
+      {
+        "id": "chick-375",
+        "label": "小黄鸡 375",
+        "src": "/stickers/chick/chick-375.png"
+      },
+      {
+        "id": "chick-376",
+        "label": "小黄鸡 376",
+        "src": "/stickers/chick/chick-376.gif"
+      },
+      {
+        "id": "chick-377",
+        "label": "小黄鸡 377",
+        "src": "/stickers/chick/chick-377.gif"
+      },
+      {
+        "id": "chick-378",
+        "label": "小黄鸡 378",
+        "src": "/stickers/chick/chick-378.gif"
+      },
+      {
+        "id": "chick-379",
+        "label": "小黄鸡 379",
+        "src": "/stickers/chick/chick-379.gif"
+      },
+      {
+        "id": "chick-380",
+        "label": "小黄鸡 380",
+        "src": "/stickers/chick/chick-380.png"
+      },
+      {
+        "id": "chick-381",
+        "label": "小黄鸡 381",
+        "src": "/stickers/chick/chick-381.png"
+      },
+      {
+        "id": "chick-382",
+        "label": "小黄鸡 382",
+        "src": "/stickers/chick/chick-382.png"
+      },
+      {
+        "id": "chick-383",
+        "label": "小黄鸡 383",
+        "src": "/stickers/chick/chick-383.gif"
+      },
+      {
+        "id": "chick-384",
+        "label": "小黄鸡 384",
+        "src": "/stickers/chick/chick-384.gif"
+      },
+      {
+        "id": "chick-385",
+        "label": "小黄鸡 385",
+        "src": "/stickers/chick/chick-385.gif"
+      },
+      {
+        "id": "chick-386",
+        "label": "小黄鸡 386",
+        "src": "/stickers/chick/chick-386.gif"
+      },
+      {
+        "id": "chick-387",
+        "label": "小黄鸡 387",
+        "src": "/stickers/chick/chick-387.gif"
+      },
+      {
+        "id": "chick-388",
+        "label": "小黄鸡 388",
+        "src": "/stickers/chick/chick-388.gif"
+      },
+      {
+        "id": "chick-389",
+        "label": "小黄鸡 389",
+        "src": "/stickers/chick/chick-389.gif"
+      },
+      {
+        "id": "chick-390",
+        "label": "小黄鸡 390",
+        "src": "/stickers/chick/chick-390.png"
+      },
+      {
+        "id": "chick-391",
+        "label": "小黄鸡 391",
+        "src": "/stickers/chick/chick-391.gif"
+      },
+      {
+        "id": "chick-392",
+        "label": "小黄鸡 392",
+        "src": "/stickers/chick/chick-392.gif"
+      },
+      {
+        "id": "chick-393",
+        "label": "小黄鸡 393",
+        "src": "/stickers/chick/chick-393.gif"
+      },
+      {
+        "id": "chick-394",
+        "label": "小黄鸡 394",
+        "src": "/stickers/chick/chick-394.png"
+      },
+      {
+        "id": "chick-395",
+        "label": "小黄鸡 395",
+        "src": "/stickers/chick/chick-395.gif"
+      },
+      {
+        "id": "chick-396",
+        "label": "小黄鸡 396",
+        "src": "/stickers/chick/chick-396.png"
+      },
+      {
+        "id": "chick-397",
+        "label": "小黄鸡 397",
+        "src": "/stickers/chick/chick-397.gif"
+      },
+      {
+        "id": "chick-398",
+        "label": "小黄鸡 398",
+        "src": "/stickers/chick/chick-398.gif"
+      },
+      {
+        "id": "chick-399",
+        "label": "小黄鸡 399",
+        "src": "/stickers/chick/chick-399.png"
+      },
+      {
+        "id": "chick-400",
+        "label": "小黄鸡 400",
+        "src": "/stickers/chick/chick-400.gif"
+      },
+      {
+        "id": "chick-401",
+        "label": "小黄鸡 401",
+        "src": "/stickers/chick/chick-401.gif"
+      },
+      {
+        "id": "chick-402",
+        "label": "小黄鸡 402",
+        "src": "/stickers/chick/chick-402.png"
+      },
+      {
+        "id": "chick-403",
+        "label": "小黄鸡 403",
+        "src": "/stickers/chick/chick-403.png"
+      },
+      {
+        "id": "chick-404",
+        "label": "小黄鸡 404",
+        "src": "/stickers/chick/chick-404.gif"
+      },
+      {
+        "id": "chick-405",
+        "label": "小黄鸡 405",
+        "src": "/stickers/chick/chick-405.gif"
+      },
+      {
+        "id": "chick-406",
+        "label": "小黄鸡 406",
+        "src": "/stickers/chick/chick-406.png"
+      },
+      {
+        "id": "chick-407",
+        "label": "小黄鸡 407",
+        "src": "/stickers/chick/chick-407.png"
+      },
+      {
+        "id": "chick-408",
+        "label": "小黄鸡 408",
+        "src": "/stickers/chick/chick-408.gif"
+      },
+      {
+        "id": "chick-409",
+        "label": "小黄鸡 409",
+        "src": "/stickers/chick/chick-409.png"
+      },
+      {
+        "id": "chick-410",
+        "label": "小黄鸡 410",
+        "src": "/stickers/chick/chick-410.gif"
+      },
+      {
+        "id": "chick-411",
+        "label": "小黄鸡 411",
+        "src": "/stickers/chick/chick-411.gif"
+      },
+      {
+        "id": "chick-412",
+        "label": "小黄鸡 412",
+        "src": "/stickers/chick/chick-412.gif"
+      },
+      {
+        "id": "chick-413",
+        "label": "小黄鸡 413",
+        "src": "/stickers/chick/chick-413.png"
+      },
+      {
+        "id": "chick-414",
+        "label": "小黄鸡 414",
+        "src": "/stickers/chick/chick-414.png"
+      },
+      {
+        "id": "chick-415",
+        "label": "小黄鸡 415",
+        "src": "/stickers/chick/chick-415.png"
+      },
+      {
+        "id": "chick-416",
+        "label": "小黄鸡 416",
+        "src": "/stickers/chick/chick-416.png"
+      },
+      {
+        "id": "chick-417",
+        "label": "小黄鸡 417",
+        "src": "/stickers/chick/chick-417.gif"
+      },
+      {
+        "id": "chick-418",
+        "label": "小黄鸡 418",
+        "src": "/stickers/chick/chick-418.png"
+      },
+      {
+        "id": "chick-419",
+        "label": "小黄鸡 419",
+        "src": "/stickers/chick/chick-419.gif"
+      },
+      {
+        "id": "chick-420",
+        "label": "小黄鸡 420",
+        "src": "/stickers/chick/chick-420.gif"
+      },
+      {
+        "id": "chick-421",
+        "label": "小黄鸡 421",
+        "src": "/stickers/chick/chick-421.gif"
+      },
+      {
+        "id": "chick-422",
+        "label": "小黄鸡 422",
+        "src": "/stickers/chick/chick-422.png"
+      },
+      {
+        "id": "chick-423",
+        "label": "小黄鸡 423",
+        "src": "/stickers/chick/chick-423.gif"
+      },
+      {
+        "id": "chick-424",
+        "label": "小黄鸡 424",
+        "src": "/stickers/chick/chick-424.gif"
+      },
+      {
+        "id": "chick-425",
+        "label": "小黄鸡 425",
+        "src": "/stickers/chick/chick-425.gif"
+      },
+      {
+        "id": "chick-426",
+        "label": "小黄鸡 426",
+        "src": "/stickers/chick/chick-426.png"
+      },
+      {
+        "id": "chick-427",
+        "label": "小黄鸡 427",
+        "src": "/stickers/chick/chick-427.png"
+      },
+      {
+        "id": "chick-428",
+        "label": "小黄鸡 428",
+        "src": "/stickers/chick/chick-428.gif"
+      },
+      {
+        "id": "chick-429",
+        "label": "小黄鸡 429",
+        "src": "/stickers/chick/chick-429.png"
+      },
+      {
+        "id": "chick-430",
+        "label": "小黄鸡 430",
+        "src": "/stickers/chick/chick-430.gif"
+      },
+      {
+        "id": "chick-431",
+        "label": "小黄鸡 431",
+        "src": "/stickers/chick/chick-431.gif"
+      },
+      {
+        "id": "chick-432",
+        "label": "小黄鸡 432",
+        "src": "/stickers/chick/chick-432.gif"
+      },
+      {
+        "id": "chick-433",
+        "label": "小黄鸡 433",
+        "src": "/stickers/chick/chick-433.gif"
+      },
+      {
+        "id": "chick-434",
+        "label": "小黄鸡 434",
+        "src": "/stickers/chick/chick-434.gif"
+      },
+      {
+        "id": "chick-435",
+        "label": "小黄鸡 435",
+        "src": "/stickers/chick/chick-435.png"
+      },
+      {
+        "id": "chick-436",
+        "label": "小黄鸡 436",
+        "src": "/stickers/chick/chick-436.gif"
+      },
+      {
+        "id": "chick-437",
+        "label": "小黄鸡 437",
+        "src": "/stickers/chick/chick-437.gif"
+      },
+      {
+        "id": "chick-438",
+        "label": "小黄鸡 438",
+        "src": "/stickers/chick/chick-438.gif"
+      },
+      {
+        "id": "chick-439",
+        "label": "小黄鸡 439",
+        "src": "/stickers/chick/chick-439.png"
+      },
+      {
+        "id": "chick-440",
+        "label": "小黄鸡 440",
+        "src": "/stickers/chick/chick-440.gif"
+      },
+      {
+        "id": "chick-441",
+        "label": "小黄鸡 441",
+        "src": "/stickers/chick/chick-441.png"
+      },
+      {
+        "id": "chick-442",
+        "label": "小黄鸡 442",
+        "src": "/stickers/chick/chick-442.gif"
+      },
+      {
+        "id": "chick-443",
+        "label": "小黄鸡 443",
+        "src": "/stickers/chick/chick-443.jpg"
+      },
+      {
+        "id": "chick-444",
+        "label": "小黄鸡 444",
+        "src": "/stickers/chick/chick-444.gif"
+      },
+      {
+        "id": "chick-445",
+        "label": "小黄鸡 445",
+        "src": "/stickers/chick/chick-445.png"
+      },
+      {
+        "id": "chick-446",
+        "label": "小黄鸡 446",
+        "src": "/stickers/chick/chick-446.png"
+      },
+      {
+        "id": "chick-447",
+        "label": "小黄鸡 447",
+        "src": "/stickers/chick/chick-447.png"
+      },
+      {
+        "id": "chick-448",
+        "label": "小黄鸡 448",
+        "src": "/stickers/chick/chick-448.gif"
+      },
+      {
+        "id": "chick-449",
+        "label": "小黄鸡 449",
+        "src": "/stickers/chick/chick-449.gif"
+      },
+      {
+        "id": "chick-450",
+        "label": "小黄鸡 450",
+        "src": "/stickers/chick/chick-450.gif"
+      },
+      {
+        "id": "chick-451",
+        "label": "小黄鸡 451",
+        "src": "/stickers/chick/chick-451.png"
+      },
+      {
+        "id": "chick-452",
+        "label": "小黄鸡 452",
+        "src": "/stickers/chick/chick-452.gif"
+      },
+      {
+        "id": "chick-453",
+        "label": "小黄鸡 453",
+        "src": "/stickers/chick/chick-453.gif"
+      },
+      {
+        "id": "chick-454",
+        "label": "小黄鸡 454",
+        "src": "/stickers/chick/chick-454.png"
+      },
+      {
+        "id": "chick-455",
+        "label": "小黄鸡 455",
+        "src": "/stickers/chick/chick-455.gif"
+      },
+      {
+        "id": "chick-456",
+        "label": "小黄鸡 456",
+        "src": "/stickers/chick/chick-456.gif"
+      },
+      {
+        "id": "chick-457",
+        "label": "小黄鸡 457",
+        "src": "/stickers/chick/chick-457.gif"
+      },
+      {
+        "id": "chick-458",
+        "label": "小黄鸡 458",
+        "src": "/stickers/chick/chick-458.png"
+      },
+      {
+        "id": "chick-459",
+        "label": "小黄鸡 459",
+        "src": "/stickers/chick/chick-459.gif"
+      },
+      {
+        "id": "chick-460",
+        "label": "小黄鸡 460",
+        "src": "/stickers/chick/chick-460.gif"
+      },
+      {
+        "id": "chick-461",
+        "label": "小黄鸡 461",
+        "src": "/stickers/chick/chick-461.gif"
+      },
+      {
+        "id": "chick-462",
+        "label": "小黄鸡 462",
+        "src": "/stickers/chick/chick-462.gif"
+      },
+      {
+        "id": "chick-463",
+        "label": "小黄鸡 463",
+        "src": "/stickers/chick/chick-463.png"
+      },
+      {
+        "id": "chick-464",
+        "label": "小黄鸡 464",
+        "src": "/stickers/chick/chick-464.gif"
+      },
+      {
+        "id": "chick-465",
+        "label": "小黄鸡 465",
+        "src": "/stickers/chick/chick-465.gif"
+      },
+      {
+        "id": "chick-466",
+        "label": "小黄鸡 466",
+        "src": "/stickers/chick/chick-466.gif"
+      },
+      {
+        "id": "chick-467",
+        "label": "小黄鸡 467",
+        "src": "/stickers/chick/chick-467.gif"
+      },
+      {
+        "id": "chick-468",
+        "label": "小黄鸡 468",
+        "src": "/stickers/chick/chick-468.gif"
+      },
+      {
+        "id": "chick-469",
+        "label": "小黄鸡 469",
+        "src": "/stickers/chick/chick-469.png"
+      },
+      {
+        "id": "chick-470",
+        "label": "小黄鸡 470",
+        "src": "/stickers/chick/chick-470.gif"
+      },
+      {
+        "id": "chick-471",
+        "label": "小黄鸡 471",
+        "src": "/stickers/chick/chick-471.png"
+      },
+      {
+        "id": "chick-472",
+        "label": "小黄鸡 472",
+        "src": "/stickers/chick/chick-472.gif"
+      },
+      {
+        "id": "chick-473",
+        "label": "小黄鸡 473",
+        "src": "/stickers/chick/chick-473.png"
+      },
+      {
+        "id": "chick-474",
+        "label": "小黄鸡 474",
+        "src": "/stickers/chick/chick-474.png"
+      },
+      {
+        "id": "chick-475",
+        "label": "小黄鸡 475",
+        "src": "/stickers/chick/chick-475.gif"
+      },
+      {
+        "id": "chick-476",
+        "label": "小黄鸡 476",
+        "src": "/stickers/chick/chick-476.png"
+      },
+      {
+        "id": "chick-477",
+        "label": "小黄鸡 477",
+        "src": "/stickers/chick/chick-477.gif"
+      },
+      {
+        "id": "chick-478",
+        "label": "小黄鸡 478",
+        "src": "/stickers/chick/chick-478.gif"
+      },
+      {
+        "id": "chick-479",
+        "label": "小黄鸡 479",
+        "src": "/stickers/chick/chick-479.png"
+      },
+      {
+        "id": "chick-480",
+        "label": "小黄鸡 480",
+        "src": "/stickers/chick/chick-480.gif"
+      },
+      {
+        "id": "chick-481",
+        "label": "小黄鸡 481",
+        "src": "/stickers/chick/chick-481.gif"
+      },
+      {
+        "id": "chick-482",
+        "label": "小黄鸡 482",
+        "src": "/stickers/chick/chick-482.png"
+      },
+      {
+        "id": "chick-483",
+        "label": "小黄鸡 483",
+        "src": "/stickers/chick/chick-483.gif"
+      },
+      {
+        "id": "chick-484",
+        "label": "小黄鸡 484",
+        "src": "/stickers/chick/chick-484.gif"
+      },
+      {
+        "id": "chick-485",
+        "label": "小黄鸡 485",
+        "src": "/stickers/chick/chick-485.gif"
+      },
+      {
+        "id": "chick-486",
+        "label": "小黄鸡 486",
+        "src": "/stickers/chick/chick-486.gif"
+      },
+      {
+        "id": "chick-487",
+        "label": "小黄鸡 487",
+        "src": "/stickers/chick/chick-487.gif"
+      },
+      {
+        "id": "chick-488",
+        "label": "小黄鸡 488",
+        "src": "/stickers/chick/chick-488.gif"
+      },
+      {
+        "id": "chick-489",
+        "label": "小黄鸡 489",
+        "src": "/stickers/chick/chick-489.png"
+      },
+      {
+        "id": "chick-490",
+        "label": "小黄鸡 490",
+        "src": "/stickers/chick/chick-490.png"
+      },
+      {
+        "id": "chick-491",
+        "label": "小黄鸡 491",
+        "src": "/stickers/chick/chick-491.png"
+      },
+      {
+        "id": "chick-492",
+        "label": "小黄鸡 492",
+        "src": "/stickers/chick/chick-492.gif"
+      },
+      {
+        "id": "chick-493",
+        "label": "小黄鸡 493",
+        "src": "/stickers/chick/chick-493.png"
+      },
+      {
+        "id": "chick-494",
+        "label": "小黄鸡 494",
+        "src": "/stickers/chick/chick-494.gif"
+      },
+      {
+        "id": "chick-495",
+        "label": "小黄鸡 495",
+        "src": "/stickers/chick/chick-495.gif"
+      },
+      {
+        "id": "chick-496",
+        "label": "小黄鸡 496",
+        "src": "/stickers/chick/chick-496.png"
+      },
+      {
+        "id": "chick-497",
+        "label": "小黄鸡 497",
+        "src": "/stickers/chick/chick-497.gif"
+      },
+      {
+        "id": "chick-498",
+        "label": "小黄鸡 498",
+        "src": "/stickers/chick/chick-498.gif"
+      },
+      {
+        "id": "chick-499",
+        "label": "小黄鸡 499",
+        "src": "/stickers/chick/chick-499.gif"
+      },
+      {
+        "id": "chick-500",
+        "label": "小黄鸡 500",
+        "src": "/stickers/chick/chick-500.gif"
+      },
+      {
+        "id": "chick-501",
+        "label": "小黄鸡 501",
+        "src": "/stickers/chick/chick-501.gif"
+      },
+      {
+        "id": "chick-502",
+        "label": "小黄鸡 502",
+        "src": "/stickers/chick/chick-502.gif"
+      },
+      {
+        "id": "chick-503",
+        "label": "小黄鸡 503",
+        "src": "/stickers/chick/chick-503.gif"
+      },
+      {
+        "id": "chick-504",
+        "label": "小黄鸡 504",
+        "src": "/stickers/chick/chick-504.png"
+      },
+      {
+        "id": "chick-505",
+        "label": "小黄鸡 505",
+        "src": "/stickers/chick/chick-505.gif"
+      },
+      {
+        "id": "chick-506",
+        "label": "小黄鸡 506",
+        "src": "/stickers/chick/chick-506.png"
+      },
+      {
+        "id": "chick-507",
+        "label": "小黄鸡 507",
+        "src": "/stickers/chick/chick-507.png"
+      },
+      {
+        "id": "chick-508",
+        "label": "小黄鸡 508",
+        "src": "/stickers/chick/chick-508.gif"
+      },
+      {
+        "id": "chick-509",
+        "label": "小黄鸡 509",
+        "src": "/stickers/chick/chick-509.gif"
+      },
+      {
+        "id": "chick-510",
+        "label": "小黄鸡 510",
+        "src": "/stickers/chick/chick-510.gif"
+      },
+      {
+        "id": "chick-511",
+        "label": "小黄鸡 511",
+        "src": "/stickers/chick/chick-511.gif"
+      },
+      {
+        "id": "chick-512",
+        "label": "小黄鸡 512",
+        "src": "/stickers/chick/chick-512.png"
+      },
+      {
+        "id": "chick-513",
+        "label": "小黄鸡 513",
+        "src": "/stickers/chick/chick-513.gif"
+      },
+      {
+        "id": "chick-514",
+        "label": "小黄鸡 514",
+        "src": "/stickers/chick/chick-514.gif"
+      },
+      {
+        "id": "chick-515",
+        "label": "小黄鸡 515",
+        "src": "/stickers/chick/chick-515.gif"
+      },
+      {
+        "id": "chick-516",
+        "label": "小黄鸡 516",
+        "src": "/stickers/chick/chick-516.png"
+      },
+      {
+        "id": "chick-517",
+        "label": "小黄鸡 517",
+        "src": "/stickers/chick/chick-517.gif"
+      },
+      {
+        "id": "chick-518",
+        "label": "小黄鸡 518",
+        "src": "/stickers/chick/chick-518.gif"
+      },
+      {
+        "id": "chick-519",
+        "label": "小黄鸡 519",
+        "src": "/stickers/chick/chick-519.png"
+      },
+      {
+        "id": "chick-520",
+        "label": "小黄鸡 520",
+        "src": "/stickers/chick/chick-520.gif"
+      },
+      {
+        "id": "chick-521",
+        "label": "小黄鸡 521",
+        "src": "/stickers/chick/chick-521.gif"
+      },
+      {
+        "id": "chick-522",
+        "label": "小黄鸡 522",
+        "src": "/stickers/chick/chick-522.gif"
+      },
+      {
+        "id": "chick-523",
+        "label": "小黄鸡 523",
+        "src": "/stickers/chick/chick-523.png"
+      },
+      {
+        "id": "chick-524",
+        "label": "小黄鸡 524",
+        "src": "/stickers/chick/chick-524.gif"
+      },
+      {
+        "id": "chick-525",
+        "label": "小黄鸡 525",
+        "src": "/stickers/chick/chick-525.png"
+      },
+      {
+        "id": "chick-526",
+        "label": "小黄鸡 526",
+        "src": "/stickers/chick/chick-526.gif"
+      },
+      {
+        "id": "chick-527",
+        "label": "小黄鸡 527",
+        "src": "/stickers/chick/chick-527.png"
+      },
+      {
+        "id": "chick-528",
+        "label": "小黄鸡 528",
+        "src": "/stickers/chick/chick-528.png"
+      },
+      {
+        "id": "chick-529",
+        "label": "小黄鸡 529",
+        "src": "/stickers/chick/chick-529.png"
+      },
+      {
+        "id": "chick-530",
+        "label": "小黄鸡 530",
+        "src": "/stickers/chick/chick-530.png"
+      },
+      {
+        "id": "chick-531",
+        "label": "小黄鸡 531",
+        "src": "/stickers/chick/chick-531.gif"
+      },
+      {
+        "id": "chick-532",
+        "label": "小黄鸡 532",
+        "src": "/stickers/chick/chick-532.gif"
+      },
+      {
+        "id": "chick-533",
+        "label": "小黄鸡 533",
+        "src": "/stickers/chick/chick-533.png"
+      },
+      {
+        "id": "chick-534",
+        "label": "小黄鸡 534",
+        "src": "/stickers/chick/chick-534.png"
+      },
+      {
+        "id": "chick-535",
+        "label": "小黄鸡 535",
+        "src": "/stickers/chick/chick-535.gif"
+      },
+      {
+        "id": "chick-536",
+        "label": "小黄鸡 536",
+        "src": "/stickers/chick/chick-536.gif"
+      },
+      {
+        "id": "chick-537",
+        "label": "小黄鸡 537",
+        "src": "/stickers/chick/chick-537.gif"
+      },
+      {
+        "id": "chick-538",
+        "label": "小黄鸡 538",
+        "src": "/stickers/chick/chick-538.gif"
+      },
+      {
+        "id": "chick-539",
+        "label": "小黄鸡 539",
+        "src": "/stickers/chick/chick-539.gif"
+      },
+      {
+        "id": "chick-540",
+        "label": "小黄鸡 540",
+        "src": "/stickers/chick/chick-540.gif"
+      },
+      {
+        "id": "chick-541",
+        "label": "小黄鸡 541",
+        "src": "/stickers/chick/chick-541.gif"
+      },
+      {
+        "id": "chick-542",
+        "label": "小黄鸡 542",
+        "src": "/stickers/chick/chick-542.gif"
+      },
+      {
+        "id": "chick-543",
+        "label": "小黄鸡 543",
+        "src": "/stickers/chick/chick-543.png"
+      },
+      {
+        "id": "chick-544",
+        "label": "小黄鸡 544",
+        "src": "/stickers/chick/chick-544.gif"
+      },
+      {
+        "id": "chick-545",
+        "label": "小黄鸡 545",
+        "src": "/stickers/chick/chick-545.gif"
+      },
+      {
+        "id": "chick-546",
+        "label": "小黄鸡 546",
+        "src": "/stickers/chick/chick-546.gif"
+      },
+      {
+        "id": "chick-547",
+        "label": "小黄鸡 547",
+        "src": "/stickers/chick/chick-547.gif"
+      },
+      {
+        "id": "chick-548",
+        "label": "小黄鸡 548",
+        "src": "/stickers/chick/chick-548.gif"
+      },
+      {
+        "id": "chick-549",
+        "label": "小黄鸡 549",
+        "src": "/stickers/chick/chick-549.png"
+      },
+      {
+        "id": "chick-550",
+        "label": "小黄鸡 550",
+        "src": "/stickers/chick/chick-550.gif"
+      },
+      {
+        "id": "chick-551",
+        "label": "小黄鸡 551",
+        "src": "/stickers/chick/chick-551.gif"
+      },
+      {
+        "id": "chick-552",
+        "label": "小黄鸡 552",
+        "src": "/stickers/chick/chick-552.png"
+      },
+      {
+        "id": "chick-553",
+        "label": "小黄鸡 553",
+        "src": "/stickers/chick/chick-553.png"
+      },
+      {
+        "id": "chick-554",
+        "label": "小黄鸡 554",
+        "src": "/stickers/chick/chick-554.gif"
+      },
+      {
+        "id": "chick-555",
+        "label": "小黄鸡 555",
+        "src": "/stickers/chick/chick-555.gif"
+      },
+      {
+        "id": "chick-556",
+        "label": "小黄鸡 556",
+        "src": "/stickers/chick/chick-556.gif"
+      },
+      {
+        "id": "chick-557",
+        "label": "小黄鸡 557",
+        "src": "/stickers/chick/chick-557.png"
+      },
+      {
+        "id": "chick-558",
+        "label": "小黄鸡 558",
+        "src": "/stickers/chick/chick-558.gif"
+      },
+      {
+        "id": "chick-559",
+        "label": "小黄鸡 559",
+        "src": "/stickers/chick/chick-559.png"
+      },
+      {
+        "id": "chick-560",
+        "label": "小黄鸡 560",
+        "src": "/stickers/chick/chick-560.gif"
+      },
+      {
+        "id": "chick-561",
+        "label": "小黄鸡 561",
+        "src": "/stickers/chick/chick-561.png"
+      },
+      {
+        "id": "chick-562",
+        "label": "小黄鸡 562",
+        "src": "/stickers/chick/chick-562.png"
+      },
+      {
+        "id": "chick-563",
+        "label": "小黄鸡 563",
+        "src": "/stickers/chick/chick-563.gif"
+      },
+      {
+        "id": "chick-564",
+        "label": "小黄鸡 564",
+        "src": "/stickers/chick/chick-564.gif"
+      },
+      {
+        "id": "chick-565",
+        "label": "小黄鸡 565",
+        "src": "/stickers/chick/chick-565.gif"
+      },
+      {
+        "id": "chick-566",
+        "label": "小黄鸡 566",
+        "src": "/stickers/chick/chick-566.gif"
+      },
+      {
+        "id": "chick-567",
+        "label": "小黄鸡 567",
+        "src": "/stickers/chick/chick-567.png"
+      },
+      {
+        "id": "chick-568",
+        "label": "小黄鸡 568",
+        "src": "/stickers/chick/chick-568.png"
+      },
+      {
+        "id": "chick-569",
+        "label": "小黄鸡 569",
+        "src": "/stickers/chick/chick-569.png"
+      },
+      {
+        "id": "chick-570",
+        "label": "小黄鸡 570",
+        "src": "/stickers/chick/chick-570.gif"
+      },
+      {
+        "id": "chick-571",
+        "label": "小黄鸡 571",
+        "src": "/stickers/chick/chick-571.png"
+      },
+      {
+        "id": "chick-572",
+        "label": "小黄鸡 572",
+        "src": "/stickers/chick/chick-572.png"
+      },
+      {
+        "id": "chick-573",
+        "label": "小黄鸡 573",
+        "src": "/stickers/chick/chick-573.png"
+      },
+      {
+        "id": "chick-574",
+        "label": "小黄鸡 574",
+        "src": "/stickers/chick/chick-574.gif"
+      },
+      {
+        "id": "chick-575",
+        "label": "小黄鸡 575",
+        "src": "/stickers/chick/chick-575.gif"
+      },
+      {
+        "id": "chick-576",
+        "label": "小黄鸡 576",
+        "src": "/stickers/chick/chick-576.gif"
+      },
+      {
+        "id": "chick-577",
+        "label": "小黄鸡 577",
+        "src": "/stickers/chick/chick-577.gif"
+      },
+      {
+        "id": "chick-578",
+        "label": "小黄鸡 578",
+        "src": "/stickers/chick/chick-578.gif"
+      },
+      {
+        "id": "chick-579",
+        "label": "小黄鸡 579",
+        "src": "/stickers/chick/chick-579.gif"
+      },
+      {
+        "id": "chick-580",
+        "label": "小黄鸡 580",
+        "src": "/stickers/chick/chick-580.png"
+      },
+      {
+        "id": "chick-581",
+        "label": "小黄鸡 581",
+        "src": "/stickers/chick/chick-581.gif"
+      },
+      {
+        "id": "chick-582",
+        "label": "小黄鸡 582",
+        "src": "/stickers/chick/chick-582.gif"
+      },
+      {
+        "id": "chick-583",
+        "label": "小黄鸡 583",
+        "src": "/stickers/chick/chick-583.gif"
+      },
+      {
+        "id": "chick-584",
+        "label": "小黄鸡 584",
+        "src": "/stickers/chick/chick-584.gif"
+      },
+      {
+        "id": "chick-585",
+        "label": "小黄鸡 585",
+        "src": "/stickers/chick/chick-585.png"
+      },
+      {
+        "id": "chick-586",
+        "label": "小黄鸡 586",
+        "src": "/stickers/chick/chick-586.gif"
+      },
+      {
+        "id": "chick-587",
+        "label": "小黄鸡 587",
+        "src": "/stickers/chick/chick-587.png"
+      },
+      {
+        "id": "chick-588",
+        "label": "小黄鸡 588",
+        "src": "/stickers/chick/chick-588.gif"
+      },
+      {
+        "id": "chick-589",
+        "label": "小黄鸡 589",
+        "src": "/stickers/chick/chick-589.png"
+      },
+      {
+        "id": "chick-590",
+        "label": "小黄鸡 590",
+        "src": "/stickers/chick/chick-590.gif"
+      },
+      {
+        "id": "chick-591",
+        "label": "小黄鸡 591",
+        "src": "/stickers/chick/chick-591.gif"
+      },
+      {
+        "id": "chick-592",
+        "label": "小黄鸡 592",
+        "src": "/stickers/chick/chick-592.png"
+      },
+      {
+        "id": "chick-593",
+        "label": "小黄鸡 593",
+        "src": "/stickers/chick/chick-593.gif"
+      },
+      {
+        "id": "chick-594",
+        "label": "小黄鸡 594",
+        "src": "/stickers/chick/chick-594.png"
+      },
+      {
+        "id": "chick-595",
+        "label": "小黄鸡 595",
+        "src": "/stickers/chick/chick-595.gif"
+      },
+      {
+        "id": "chick-596",
+        "label": "小黄鸡 596",
+        "src": "/stickers/chick/chick-596.gif"
+      },
+      {
+        "id": "chick-597",
+        "label": "小黄鸡 597",
+        "src": "/stickers/chick/chick-597.gif"
+      },
+      {
+        "id": "chick-598",
+        "label": "小黄鸡 598",
+        "src": "/stickers/chick/chick-598.gif"
+      },
+      {
+        "id": "chick-599",
+        "label": "小黄鸡 599",
+        "src": "/stickers/chick/chick-599.png"
+      },
+      {
+        "id": "chick-600",
+        "label": "小黄鸡 600",
+        "src": "/stickers/chick/chick-600.png"
+      },
+      {
+        "id": "chick-601",
+        "label": "小黄鸡 601",
+        "src": "/stickers/chick/chick-601.gif"
+      },
+      {
+        "id": "chick-602",
+        "label": "小黄鸡 602",
+        "src": "/stickers/chick/chick-602.gif"
+      },
+      {
+        "id": "chick-603",
+        "label": "小黄鸡 603",
+        "src": "/stickers/chick/chick-603.gif"
+      },
+      {
+        "id": "chick-604",
+        "label": "小黄鸡 604",
+        "src": "/stickers/chick/chick-604.gif"
+      },
+      {
+        "id": "chick-605",
+        "label": "小黄鸡 605",
+        "src": "/stickers/chick/chick-605.gif"
+      },
+      {
+        "id": "chick-606",
+        "label": "小黄鸡 606",
+        "src": "/stickers/chick/chick-606.png"
+      },
+      {
+        "id": "chick-607",
+        "label": "小黄鸡 607",
+        "src": "/stickers/chick/chick-607.gif"
+      },
+      {
+        "id": "chick-608",
+        "label": "小黄鸡 608",
+        "src": "/stickers/chick/chick-608.gif"
+      },
+      {
+        "id": "chick-609",
+        "label": "小黄鸡 609",
+        "src": "/stickers/chick/chick-609.gif"
+      },
+      {
+        "id": "chick-610",
+        "label": "小黄鸡 610",
+        "src": "/stickers/chick/chick-610.gif"
+      },
+      {
+        "id": "chick-611",
+        "label": "小黄鸡 611",
+        "src": "/stickers/chick/chick-611.gif"
+      },
+      {
+        "id": "chick-612",
+        "label": "小黄鸡 612",
+        "src": "/stickers/chick/chick-612.gif"
+      },
+      {
+        "id": "chick-613",
+        "label": "小黄鸡 613",
+        "src": "/stickers/chick/chick-613.png"
+      },
+      {
+        "id": "chick-614",
+        "label": "小黄鸡 614",
+        "src": "/stickers/chick/chick-614.png"
+      },
+      {
+        "id": "chick-615",
+        "label": "小黄鸡 615",
+        "src": "/stickers/chick/chick-615.png"
+      },
+      {
+        "id": "chick-616",
+        "label": "小黄鸡 616",
+        "src": "/stickers/chick/chick-616.png"
+      },
+      {
+        "id": "chick-617",
+        "label": "小黄鸡 617",
+        "src": "/stickers/chick/chick-617.gif"
+      },
+      {
+        "id": "chick-618",
+        "label": "小黄鸡 618",
+        "src": "/stickers/chick/chick-618.gif"
+      },
+      {
+        "id": "chick-619",
+        "label": "小黄鸡 619",
+        "src": "/stickers/chick/chick-619.gif"
+      },
+      {
+        "id": "chick-620",
+        "label": "小黄鸡 620",
+        "src": "/stickers/chick/chick-620.png"
+      },
+      {
+        "id": "chick-621",
+        "label": "小黄鸡 621",
+        "src": "/stickers/chick/chick-621.gif"
+      },
+      {
+        "id": "chick-622",
+        "label": "小黄鸡 622",
+        "src": "/stickers/chick/chick-622.png"
+      },
+      {
+        "id": "chick-623",
+        "label": "小黄鸡 623",
+        "src": "/stickers/chick/chick-623.gif"
+      },
+      {
+        "id": "chick-624",
+        "label": "小黄鸡 624",
+        "src": "/stickers/chick/chick-624.png"
+      },
+      {
+        "id": "chick-625",
+        "label": "小黄鸡 625",
+        "src": "/stickers/chick/chick-625.png"
+      },
+      {
+        "id": "chick-626",
+        "label": "小黄鸡 626",
+        "src": "/stickers/chick/chick-626.png"
+      },
+      {
+        "id": "chick-627",
+        "label": "小黄鸡 627",
+        "src": "/stickers/chick/chick-627.png"
+      },
+      {
+        "id": "chick-628",
+        "label": "小黄鸡 628",
+        "src": "/stickers/chick/chick-628.gif"
+      },
+      {
+        "id": "chick-629",
+        "label": "小黄鸡 629",
+        "src": "/stickers/chick/chick-629.gif"
+      },
+      {
+        "id": "chick-630",
+        "label": "小黄鸡 630",
+        "src": "/stickers/chick/chick-630.gif"
+      },
+      {
+        "id": "chick-631",
+        "label": "小黄鸡 631",
+        "src": "/stickers/chick/chick-631.gif"
+      },
+      {
+        "id": "chick-632",
+        "label": "小黄鸡 632",
+        "src": "/stickers/chick/chick-632.png"
+      },
+      {
+        "id": "chick-633",
+        "label": "小黄鸡 633",
+        "src": "/stickers/chick/chick-633.gif"
+      },
+      {
+        "id": "chick-634",
+        "label": "小黄鸡 634",
+        "src": "/stickers/chick/chick-634.gif"
+      },
+      {
+        "id": "chick-635",
+        "label": "小黄鸡 635",
+        "src": "/stickers/chick/chick-635.gif"
+      },
+      {
+        "id": "chick-636",
+        "label": "小黄鸡 636",
+        "src": "/stickers/chick/chick-636.gif"
+      },
+      {
+        "id": "chick-637",
+        "label": "小黄鸡 637",
+        "src": "/stickers/chick/chick-637.gif"
+      },
+      {
+        "id": "chick-638",
+        "label": "小黄鸡 638",
+        "src": "/stickers/chick/chick-638.gif"
+      },
+      {
+        "id": "chick-639",
+        "label": "小黄鸡 639",
+        "src": "/stickers/chick/chick-639.png"
+      },
+      {
+        "id": "chick-640",
+        "label": "小黄鸡 640",
+        "src": "/stickers/chick/chick-640.png"
+      },
+      {
+        "id": "chick-641",
+        "label": "小黄鸡 641",
+        "src": "/stickers/chick/chick-641.gif"
+      },
+      {
+        "id": "chick-642",
+        "label": "小黄鸡 642",
+        "src": "/stickers/chick/chick-642.png"
+      },
+      {
+        "id": "chick-643",
+        "label": "小黄鸡 643",
+        "src": "/stickers/chick/chick-643.png"
+      },
+      {
+        "id": "chick-644",
+        "label": "小黄鸡 644",
+        "src": "/stickers/chick/chick-644.png"
+      },
+      {
+        "id": "chick-645",
+        "label": "小黄鸡 645",
+        "src": "/stickers/chick/chick-645.gif"
+      },
+      {
+        "id": "chick-646",
+        "label": "小黄鸡 646",
+        "src": "/stickers/chick/chick-646.gif"
+      },
+      {
+        "id": "chick-647",
+        "label": "小黄鸡 647",
+        "src": "/stickers/chick/chick-647.jpg"
+      },
+      {
+        "id": "chick-648",
+        "label": "小黄鸡 648",
+        "src": "/stickers/chick/chick-648.gif"
+      },
+      {
+        "id": "chick-649",
+        "label": "小黄鸡 649",
+        "src": "/stickers/chick/chick-649.gif"
+      },
+      {
+        "id": "chick-650",
+        "label": "小黄鸡 650",
+        "src": "/stickers/chick/chick-650.png"
+      },
+      {
+        "id": "chick-651",
+        "label": "小黄鸡 651",
+        "src": "/stickers/chick/chick-651.png"
+      },
+      {
+        "id": "chick-652",
+        "label": "小黄鸡 652",
+        "src": "/stickers/chick/chick-652.png"
+      },
+      {
+        "id": "chick-653",
+        "label": "小黄鸡 653",
+        "src": "/stickers/chick/chick-653.gif"
+      },
+      {
+        "id": "chick-654",
+        "label": "小黄鸡 654",
+        "src": "/stickers/chick/chick-654.png"
+      },
+      {
+        "id": "chick-655",
+        "label": "小黄鸡 655",
+        "src": "/stickers/chick/chick-655.gif"
+      },
+      {
+        "id": "chick-656",
+        "label": "小黄鸡 656",
+        "src": "/stickers/chick/chick-656.png"
+      },
+      {
+        "id": "chick-657",
+        "label": "小黄鸡 657",
+        "src": "/stickers/chick/chick-657.gif"
+      },
+      {
+        "id": "chick-658",
+        "label": "小黄鸡 658",
+        "src": "/stickers/chick/chick-658.png"
+      },
+      {
+        "id": "chick-659",
+        "label": "小黄鸡 659",
+        "src": "/stickers/chick/chick-659.gif"
+      },
+      {
+        "id": "chick-660",
+        "label": "小黄鸡 660",
+        "src": "/stickers/chick/chick-660.png"
+      },
+      {
+        "id": "chick-661",
+        "label": "小黄鸡 661",
+        "src": "/stickers/chick/chick-661.gif"
+      },
+      {
+        "id": "chick-662",
+        "label": "小黄鸡 662",
+        "src": "/stickers/chick/chick-662.png"
+      },
+      {
+        "id": "chick-663",
+        "label": "小黄鸡 663",
+        "src": "/stickers/chick/chick-663.png"
+      },
+      {
+        "id": "chick-664",
+        "label": "小黄鸡 664",
+        "src": "/stickers/chick/chick-664.png"
+      },
+      {
+        "id": "chick-665",
+        "label": "小黄鸡 665",
+        "src": "/stickers/chick/chick-665.gif"
+      },
+      {
+        "id": "chick-666",
+        "label": "小黄鸡 666",
+        "src": "/stickers/chick/chick-666.gif"
+      },
+      {
+        "id": "chick-667",
+        "label": "小黄鸡 667",
+        "src": "/stickers/chick/chick-667.gif"
+      },
+      {
+        "id": "chick-668",
+        "label": "小黄鸡 668",
+        "src": "/stickers/chick/chick-668.gif"
+      },
+      {
+        "id": "chick-669",
+        "label": "小黄鸡 669",
+        "src": "/stickers/chick/chick-669.gif"
+      },
+      {
+        "id": "chick-670",
+        "label": "小黄鸡 670",
+        "src": "/stickers/chick/chick-670.gif"
+      },
+      {
+        "id": "chick-671",
+        "label": "小黄鸡 671",
+        "src": "/stickers/chick/chick-671.gif"
+      },
+      {
+        "id": "chick-672",
+        "label": "小黄鸡 672",
+        "src": "/stickers/chick/chick-672.png"
+      },
+      {
+        "id": "chick-673",
+        "label": "小黄鸡 673",
+        "src": "/stickers/chick/chick-673.png"
+      },
+      {
+        "id": "chick-674",
+        "label": "小黄鸡 674",
+        "src": "/stickers/chick/chick-674.gif"
+      },
+      {
+        "id": "chick-675",
+        "label": "小黄鸡 675",
+        "src": "/stickers/chick/chick-675.png"
+      },
+      {
+        "id": "chick-676",
+        "label": "小黄鸡 676",
+        "src": "/stickers/chick/chick-676.gif"
+      },
+      {
+        "id": "chick-677",
+        "label": "小黄鸡 677",
+        "src": "/stickers/chick/chick-677.png"
+      },
+      {
+        "id": "chick-678",
+        "label": "小黄鸡 678",
+        "src": "/stickers/chick/chick-678.png"
+      },
+      {
+        "id": "chick-679",
+        "label": "小黄鸡 679",
+        "src": "/stickers/chick/chick-679.png"
+      },
+      {
+        "id": "chick-680",
+        "label": "小黄鸡 680",
+        "src": "/stickers/chick/chick-680.gif"
+      },
+      {
+        "id": "chick-681",
+        "label": "小黄鸡 681",
+        "src": "/stickers/chick/chick-681.png"
+      },
+      {
+        "id": "chick-682",
+        "label": "小黄鸡 682",
+        "src": "/stickers/chick/chick-682.png"
+      },
+      {
+        "id": "chick-683",
+        "label": "小黄鸡 683",
+        "src": "/stickers/chick/chick-683.png"
+      },
+      {
+        "id": "chick-684",
+        "label": "小黄鸡 684",
+        "src": "/stickers/chick/chick-684.png"
+      },
+      {
+        "id": "chick-685",
+        "label": "小黄鸡 685",
+        "src": "/stickers/chick/chick-685.gif"
+      },
+      {
+        "id": "chick-686",
+        "label": "小黄鸡 686",
+        "src": "/stickers/chick/chick-686.png"
+      },
+      {
+        "id": "chick-687",
+        "label": "小黄鸡 687",
+        "src": "/stickers/chick/chick-687.png"
+      },
+      {
+        "id": "chick-688",
+        "label": "小黄鸡 688",
+        "src": "/stickers/chick/chick-688.gif"
+      },
+      {
+        "id": "chick-689",
+        "label": "小黄鸡 689",
+        "src": "/stickers/chick/chick-689.png"
+      },
+      {
+        "id": "chick-690",
+        "label": "小黄鸡 690",
+        "src": "/stickers/chick/chick-690.gif"
+      },
+      {
+        "id": "chick-691",
+        "label": "小黄鸡 691",
+        "src": "/stickers/chick/chick-691.gif"
+      },
+      {
+        "id": "chick-692",
+        "label": "小黄鸡 692",
+        "src": "/stickers/chick/chick-692.gif"
+      },
+      {
+        "id": "chick-693",
+        "label": "小黄鸡 693",
+        "src": "/stickers/chick/chick-693.png"
+      },
+      {
+        "id": "chick-694",
+        "label": "小黄鸡 694",
+        "src": "/stickers/chick/chick-694.png"
+      },
+      {
+        "id": "chick-695",
+        "label": "小黄鸡 695",
+        "src": "/stickers/chick/chick-695.png"
+      },
+      {
+        "id": "chick-696",
+        "label": "小黄鸡 696",
+        "src": "/stickers/chick/chick-696.gif"
+      },
+      {
+        "id": "chick-697",
+        "label": "小黄鸡 697",
+        "src": "/stickers/chick/chick-697.gif"
+      },
+      {
+        "id": "chick-698",
+        "label": "小黄鸡 698",
+        "src": "/stickers/chick/chick-698.gif"
+      },
+      {
+        "id": "chick-699",
+        "label": "小黄鸡 699",
+        "src": "/stickers/chick/chick-699.gif"
+      },
+      {
+        "id": "chick-700",
+        "label": "小黄鸡 700",
+        "src": "/stickers/chick/chick-700.gif"
+      },
+      {
+        "id": "chick-701",
+        "label": "小黄鸡 701",
+        "src": "/stickers/chick/chick-701.gif"
+      },
+      {
+        "id": "chick-702",
+        "label": "小黄鸡 702",
+        "src": "/stickers/chick/chick-702.gif"
+      },
+      {
+        "id": "chick-703",
+        "label": "小黄鸡 703",
+        "src": "/stickers/chick/chick-703.gif"
+      },
+      {
+        "id": "chick-704",
+        "label": "小黄鸡 704",
+        "src": "/stickers/chick/chick-704.png"
+      },
+      {
+        "id": "chick-705",
+        "label": "小黄鸡 705",
+        "src": "/stickers/chick/chick-705.png"
+      },
+      {
+        "id": "chick-706",
+        "label": "小黄鸡 706",
+        "src": "/stickers/chick/chick-706.gif"
+      },
+      {
+        "id": "chick-707",
+        "label": "小黄鸡 707",
+        "src": "/stickers/chick/chick-707.gif"
+      },
+      {
+        "id": "chick-708",
+        "label": "小黄鸡 708",
+        "src": "/stickers/chick/chick-708.png"
+      },
+      {
+        "id": "chick-709",
+        "label": "小黄鸡 709",
+        "src": "/stickers/chick/chick-709.png"
+      },
+      {
+        "id": "chick-710",
+        "label": "小黄鸡 710",
+        "src": "/stickers/chick/chick-710.png"
+      },
+      {
+        "id": "chick-711",
+        "label": "小黄鸡 711",
+        "src": "/stickers/chick/chick-711.png"
+      },
+      {
+        "id": "chick-712",
+        "label": "小黄鸡 712",
+        "src": "/stickers/chick/chick-712.png"
+      },
+      {
+        "id": "chick-713",
+        "label": "小黄鸡 713",
+        "src": "/stickers/chick/chick-713.png"
+      },
+      {
+        "id": "chick-714",
+        "label": "小黄鸡 714",
+        "src": "/stickers/chick/chick-714.gif"
+      },
+      {
+        "id": "chick-715",
+        "label": "小黄鸡 715",
+        "src": "/stickers/chick/chick-715.gif"
+      },
+      {
+        "id": "chick-716",
+        "label": "小黄鸡 716",
+        "src": "/stickers/chick/chick-716.gif"
+      },
+      {
+        "id": "chick-717",
+        "label": "小黄鸡 717",
+        "src": "/stickers/chick/chick-717.png"
+      },
+      {
+        "id": "chick-718",
+        "label": "小黄鸡 718",
+        "src": "/stickers/chick/chick-718.png"
+      },
+      {
+        "id": "chick-719",
+        "label": "小黄鸡 719",
+        "src": "/stickers/chick/chick-719.gif"
+      },
+      {
+        "id": "chick-720",
+        "label": "小黄鸡 720",
+        "src": "/stickers/chick/chick-720.gif"
+      },
+      {
+        "id": "chick-721",
+        "label": "小黄鸡 721",
+        "src": "/stickers/chick/chick-721.png"
+      },
+      {
+        "id": "chick-722",
+        "label": "小黄鸡 722",
+        "src": "/stickers/chick/chick-722.gif"
+      },
+      {
+        "id": "chick-723",
+        "label": "小黄鸡 723",
+        "src": "/stickers/chick/chick-723.gif"
+      },
+      {
+        "id": "chick-724",
+        "label": "小黄鸡 724",
+        "src": "/stickers/chick/chick-724.png"
+      },
+      {
+        "id": "chick-725",
+        "label": "小黄鸡 725",
+        "src": "/stickers/chick/chick-725.gif"
+      },
+      {
+        "id": "chick-726",
+        "label": "小黄鸡 726",
+        "src": "/stickers/chick/chick-726.gif"
+      },
+      {
+        "id": "chick-727",
+        "label": "小黄鸡 727",
+        "src": "/stickers/chick/chick-727.gif"
+      },
+      {
+        "id": "chick-728",
+        "label": "小黄鸡 728",
+        "src": "/stickers/chick/chick-728.png"
+      },
+      {
+        "id": "chick-729",
+        "label": "小黄鸡 729",
+        "src": "/stickers/chick/chick-729.png"
+      },
+      {
+        "id": "chick-730",
+        "label": "小黄鸡 730",
+        "src": "/stickers/chick/chick-730.gif"
+      },
+      {
+        "id": "chick-731",
+        "label": "小黄鸡 731",
+        "src": "/stickers/chick/chick-731.png"
+      },
+      {
+        "id": "chick-732",
+        "label": "小黄鸡 732",
+        "src": "/stickers/chick/chick-732.gif"
+      },
+      {
+        "id": "chick-733",
+        "label": "小黄鸡 733",
+        "src": "/stickers/chick/chick-733.gif"
+      },
+      {
+        "id": "chick-734",
+        "label": "小黄鸡 734",
+        "src": "/stickers/chick/chick-734.png"
+      },
+      {
+        "id": "chick-735",
+        "label": "小黄鸡 735",
+        "src": "/stickers/chick/chick-735.gif"
+      },
+      {
+        "id": "chick-736",
+        "label": "小黄鸡 736",
+        "src": "/stickers/chick/chick-736.png"
+      },
+      {
+        "id": "chick-737",
+        "label": "小黄鸡 737",
+        "src": "/stickers/chick/chick-737.png"
+      },
+      {
+        "id": "chick-738",
+        "label": "小黄鸡 738",
+        "src": "/stickers/chick/chick-738.gif"
+      },
+      {
+        "id": "chick-739",
+        "label": "小黄鸡 739",
+        "src": "/stickers/chick/chick-739.gif"
+      },
+      {
+        "id": "chick-740",
+        "label": "小黄鸡 740",
+        "src": "/stickers/chick/chick-740.png"
+      },
+      {
+        "id": "chick-741",
+        "label": "小黄鸡 741",
+        "src": "/stickers/chick/chick-741.png"
+      },
+      {
+        "id": "chick-742",
+        "label": "小黄鸡 742",
+        "src": "/stickers/chick/chick-742.gif"
+      },
+      {
+        "id": "chick-743",
+        "label": "小黄鸡 743",
+        "src": "/stickers/chick/chick-743.gif"
+      },
+      {
+        "id": "chick-744",
+        "label": "小黄鸡 744",
+        "src": "/stickers/chick/chick-744.png"
+      },
+      {
+        "id": "chick-745",
+        "label": "小黄鸡 745",
+        "src": "/stickers/chick/chick-745.gif"
+      },
+      {
+        "id": "chick-746",
+        "label": "小黄鸡 746",
+        "src": "/stickers/chick/chick-746.gif"
+      },
+      {
+        "id": "chick-747",
+        "label": "小黄鸡 747",
+        "src": "/stickers/chick/chick-747.png"
+      },
+      {
+        "id": "chick-748",
+        "label": "小黄鸡 748",
+        "src": "/stickers/chick/chick-748.gif"
+      },
+      {
+        "id": "chick-749",
+        "label": "小黄鸡 749",
+        "src": "/stickers/chick/chick-749.png"
+      },
+      {
+        "id": "chick-750",
+        "label": "小黄鸡 750",
+        "src": "/stickers/chick/chick-750.gif"
+      },
+      {
+        "id": "chick-751",
+        "label": "小黄鸡 751",
+        "src": "/stickers/chick/chick-751.png"
+      },
+      {
+        "id": "chick-752",
+        "label": "小黄鸡 752",
+        "src": "/stickers/chick/chick-752.gif"
+      },
+      {
+        "id": "chick-753",
+        "label": "小黄鸡 753",
+        "src": "/stickers/chick/chick-753.gif"
+      },
+      {
+        "id": "chick-754",
+        "label": "小黄鸡 754",
+        "src": "/stickers/chick/chick-754.gif"
+      },
+      {
+        "id": "chick-755",
+        "label": "小黄鸡 755",
+        "src": "/stickers/chick/chick-755.png"
+      },
+      {
+        "id": "chick-756",
+        "label": "小黄鸡 756",
+        "src": "/stickers/chick/chick-756.gif"
+      },
+      {
+        "id": "chick-757",
+        "label": "小黄鸡 757",
+        "src": "/stickers/chick/chick-757.gif"
+      },
+      {
+        "id": "chick-758",
+        "label": "小黄鸡 758",
+        "src": "/stickers/chick/chick-758.gif"
+      },
+      {
+        "id": "chick-759",
+        "label": "小黄鸡 759",
+        "src": "/stickers/chick/chick-759.png"
+      },
+      {
+        "id": "chick-760",
+        "label": "小黄鸡 760",
+        "src": "/stickers/chick/chick-760.gif"
+      },
+      {
+        "id": "chick-761",
+        "label": "小黄鸡 761",
+        "src": "/stickers/chick/chick-761.png"
+      },
+      {
+        "id": "chick-762",
+        "label": "小黄鸡 762",
+        "src": "/stickers/chick/chick-762.gif"
+      },
+      {
+        "id": "chick-763",
+        "label": "小黄鸡 763",
+        "src": "/stickers/chick/chick-763.png"
+      },
+      {
+        "id": "chick-764",
+        "label": "小黄鸡 764",
+        "src": "/stickers/chick/chick-764.png"
+      },
+      {
+        "id": "chick-765",
+        "label": "小黄鸡 765",
+        "src": "/stickers/chick/chick-765.gif"
+      },
+      {
+        "id": "chick-766",
+        "label": "小黄鸡 766",
+        "src": "/stickers/chick/chick-766.gif"
+      },
+      {
+        "id": "chick-767",
+        "label": "小黄鸡 767",
+        "src": "/stickers/chick/chick-767.gif"
+      },
+      {
+        "id": "chick-768",
+        "label": "小黄鸡 768",
+        "src": "/stickers/chick/chick-768.png"
+      },
+      {
+        "id": "chick-769",
+        "label": "小黄鸡 769",
+        "src": "/stickers/chick/chick-769.gif"
+      }
+    ]
+  }
+]

@@ -1,0 +1,82 @@
+---
+import {
+  profile,
+  postMedia,
+  postAudio,
+  postVideo,
+  postFiles,
+  type Post,
+} from "../lib/posts/repo";
+import { renderMarkdown } from "../lib/markdown";
+import FileGallery from "./FileGallery.astro";
+import VideoGallery from "./VideoGallery.astro";
+import AudioGallery from "./AudioGallery.astro";
+import MediaGallery from "./MediaGallery.astro";
+interface Props {
+  post: Post;
+  full?: boolean;
+}
+const { post, full = false } = Astro.props;
+const person = profile();
+const images = postMedia(post.id);
+const long =
+  !full && (post.body.length > 850 || post.body.split("\n").length > 16);
+const date = new Date(post.publishedAt ?? post.createdAt);
+const dateLabel = date.toLocaleString("zh-CN", {
+  timeZone: "Asia/Shanghai",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: false,
+});
+---
+
+<article class="entry" id={`post-${post.id}`}>
+  <div class="entry-meta">
+    <strong>{person.displayName}</strong>
+    <span aria-hidden="true">·</span>
+    <a href={`/p/${post.id}`}>
+      <time datetime={date.toISOString()} title={`${dateLabel} UTC+8`}>
+        {dateLabel}
+      </time>
+    </a>
+    {post.pinned && <span class="badge">置顶</span>}
+    {post.visibility !== "public" && (
+      <span class="badge">
+        {post.visibility === "private" ? "私密" : "不列出"}
+      </span>
+    )}
+    {post.status === "draft" && <span class="badge">草稿</span>}
+  </div>
+  <div
+    class:list={["prose", { collapsed: long }]}
+    id={`body-${post.id}`}
+    set:html={renderMarkdown(post.body)}
+  />
+  {long && (
+    <button
+      class="text-button expand"
+      data-expand={`body-${post.id}`}
+      aria-expanded="false"
+      aria-controls={`body-${post.id}`}
+    >
+      展开全文
+    </button>
+  )}
+  <MediaGallery images={images} />
+  <AudioGallery items={postAudio(post.id)} />
+  <VideoGallery items={postVideo(post.id)} />
+  <FileGallery items={postFiles(post.id)} />
+  <div class="entry-actions">
+    <button class="text-button" data-copy={`/p/${post.id}`} aria-live="polite">
+      复制链接
+    </button>
+    <span class="global-status" aria-live="polite"></span>
+    {Astro.locals.owner && <a href={`/admin/edit/${post.id}`}>编辑</a>}
+    {Astro.locals.owner && Astro.url.pathname === "/" && (
+      <button type="button" class="text-button entry-delete" data-delete={post.id}>删除</button>
+    )}
+  </div>
+</article>

@@ -1,0 +1,17 @@
+---
+import type { media } from "../lib/db/schema";
+import { mediaSize } from "../lib/storage/media";
+import { renderFileDownload } from "../lib/downloads";
+interface Props {
+  items: (typeof media.$inferSelect)[];
+}
+const { items } = Astro.props;
+---
+
+<div class="file-gallery">
+  {items.map((item) => (
+    <Fragment
+      set:html={renderFileDownload(item.id, item.alt, mediaSize(item.key))}
+    />
+  ))}
+</div>

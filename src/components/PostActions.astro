@@ -1,0 +1,10 @@
+---
+const path = Astro.url.pathname.replace(/\/$/, "");
+const writing = path === "/admin/new" || path.startsWith("/admin/edit/");
+const drafts = !writing && Astro.url.searchParams.get("status") === "draft";
+---
+<div class="toolbar post-actions" aria-label="动态操作">
+  <a class:list={["button", { current: writing, primary: !writing }]} aria-current={writing ? "page" : undefined} href="/admin/new">写动态</a>
+  <a class:list={["button", { current: !writing && !drafts }]} aria-current={!writing && !drafts ? "page" : undefined} href="/admin">动态列表</a>
+  <a class:list={["button", { current: drafts }]} aria-current={drafts ? "page" : undefined} href="/admin?status=draft">草稿箱</a>
+</div>

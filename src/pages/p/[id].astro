@@ -1,0 +1,43 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import TimelineEntry from "../../components/TimelineEntry.astro";
+import {
+  getPost,
+  readable,
+  postMedia,
+  siteSettings,
+} from "../../lib/posts/repo";
+import { plainText } from "../../lib/markdown";
+const post = getPost(Astro.params.id!);
+const allowed = post && readable(post, Boolean(Astro.locals.owner));
+if (!allowed) Astro.response.status = 404;
+const indexed =
+  allowed && post.status === "published" && post.visibility === "public";
+if (!indexed) Astro.response.headers.set("X-Robots-Tag", "noindex, nofollow");
+const snippet = indexed
+  ? plainText(post.body).slice(0, 160)
+  : siteSettings().description;
+const image = indexed ? postMedia(post.id)[0] : null;
+---
+
+<SiteLayout
+  title={
+    indexed
+      ? plainText(post.body).slice(0, 45) || "图片动态"
+      : allowed
+        ? "动态"
+        : "动态不存在"
+  }
+  description={snippet}
+  noindex={!indexed}
+  image={image ? `/media/${image.id}` : undefined}
+>
+  <a class="back" href="/">
+    ← 返回首页
+  </a>
+  {allowed ? (
+    <TimelineEntry post={post} full />
+  ) : (
+    <p class="empty">动态不存在或无权访问。</p>
+  )}
+</SiteLayout>
