@@ -365,6 +365,39 @@ async function run() {
     ).res.status === 400,
     "empty post rejected",
   );
+  const categoryName = "分类-" + randomBytes(6).toString("hex");
+  check((await anon.request("/api/categories", { name: categoryName })).res.status === 401, "category mutations require owner");
+  check((await admin.request("/api/categories", { name: categoryName }, "POST", { csrf: "invalid" })).res.status === 403, "category mutations require CSRF");
+  const category = await admin.request("/api/categories", { name: categoryName });
+  check(category.res.status === 201, "category created");
+  const categoryId = category.data.category.id;
+  check((await admin.request("/api/categories", { name: categoryName })).res.status === 409, "duplicate category rejected");
+  const titledInput = { title: "title-" + randomBytes(6).toString("hex"), categoryId, body: "分类正文", status: "published", visibility: "public", pinned: true, images: [] };
+  const titled = await admin.request("/api/posts", titledInput);
+  check(titled.res.status === 201 && titled.data.post.title === titledInput.title && titled.data.post.categoryId === categoryId, "title and category saved");
+  const titledPage = await anon.get(`/p/${titled.data.post.id}`);
+  check(titledPage.text.includes(titledInput.title) && titledPage.text.includes(categoryName), "title and category rendered");
+  check((await anon.get(`/search?q=${titledInput.title}`)).text.includes(titled.data.post.id), "title searchable without matching body");
+  const renamedCategory = categoryName + "改";
+  check((await admin.request(`/api/categories/${categoryId}`, { name: renamedCategory }, "PATCH")).res.status === 200, "category renamed");
+  check((await anon.get(`/p/${titled.data.post.id}`)).text.includes(renamedCategory), "category rename reflected on existing post");
+  const categoryExport = await admin.request("/api/export", undefined);
+  const categoryArchive = unzipSync(categoryExport.data);
+  const categoryContent = JSON.parse(strFromU8(categoryArchive["content.json"]));
+  check(categoryContent.categories.some((item) => item.id === categoryId && item.name === renamedCategory), "backup includes categories");
+  check(categoryContent.posts.some((item) => item.id === titled.data.post.id && item.title === titledInput.title), "backup includes post title");
+  const categoryRestorePath = path.join(folder, "category-restore.sqlite");
+  if (categoryArchive["shuxin.sqlite"]) writeFileSync(categoryRestorePath, categoryArchive["shuxin.sqlite"]);
+  const categoryRestored = new Database(categoryRestorePath);
+  if (categoryArchive["database.sql"]) categoryRestored.exec(strFromU8(categoryArchive["database.sql"]));
+  check(categoryRestored.prepare("SELECT p.title,c.name FROM posts p JOIN categories c ON p.category_id=c.id WHERE p.id=?").get(titled.data.post.id)?.name === renamedCategory, "backup restores category association");
+  categoryRestored.close();
+  check((await admin.request(`/api/categories/${categoryId}`, undefined, "DELETE")).res.status === 200, "category deleted");
+  const retainedPage = await anon.get(`/p/${titled.data.post.id}`);
+  check(retainedPage.res.status === 200 && retainedPage.text.includes(titledInput.title) && !retainedPage.text.includes(renamedCategory), "category deletion retains post and clears badge");
+  check((await admin.request("/api/posts", titledInput)).res.status === 400, "deleted category rejected when saving post");
+  check((await admin.request(`/api/posts/${titled.data.post.id}`, { ...titledInput, title: "", categoryId: null, updatedAt: titled.data.post.updatedAt }, "PATCH")).res.status === 200, "title and category can be cleared");
+  check((await admin.request(`/api/posts/${titled.data.post.id}`, undefined, "DELETE")).res.status === 200, "category fixture cleanup");
   const marker = "review-" + randomBytes(8).toString("hex");
   const png = await sharp({
     create: { width: 8, height: 8, channels: 3, background: "#769678" },
@@ -1466,7 +1499,7 @@ async function run() {
   );
   check(
     restored.prepare("SELECT count(*) AS n FROM schema_migrations").get().n ===
-      5,
+      6,
     "backup preserves migration history",
   );
   const encodedPassword = restored

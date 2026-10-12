@@ -11,6 +11,7 @@
   --link-hover: #18428a;
   --danger: #ab4040;
   --focus: #555555;
+  --file-icon-filter: none;
   --radius: 8px;
   --width: 720px;
   font-family:
@@ -30,6 +31,7 @@
   --link-hover: #aecbfa;
   --danger: #ee9b9b;
   --focus: #b5b5b5;
+  --file-icon-filter: invert(1);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]):not([data-theme="dark"]) {
@@ -45,5 +47,6 @@
     --link-hover: #aecbfa;
     --danger: #ee9b9b;
     --focus: #b5b5b5;
+    --file-icon-filter: invert(1);
   }
 }

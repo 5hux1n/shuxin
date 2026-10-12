@@ -35,8 +35,9 @@ export function timeline(cursor: string | null, query = "") {
     }
   }
   // Escape literal search operators before the parameterized LIKE query.
+  const searchText = `%${query.replace(/[!%_]/g, "!$&")}%`;
   const searchRule = query
-    ? sql`${posts.body} LIKE ${`%${query.replace(/[!%_]/g, "!$&")}%`} ESCAPE '!'`
+    ? or(sql`${posts.body} LIKE ${searchText} ESCAPE '!'`, sql`${posts.title} LIKE ${searchText} ESCAPE '!'`)
     : undefined;
   const rows = db
     .select()

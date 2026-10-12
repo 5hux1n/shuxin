@@ -4,6 +4,10 @@ import { db } from "../../lib/db";
 import { posts, media } from "../../lib/db/schema";
 import { and, desc, eq, lt, or, inArray } from "drizzle-orm";
 import { adminPreview } from "../../lib/posts/preview";
+import { plainText } from "../../lib/markdown";
+import { listCategories } from "../../lib/posts/categories";
+import CategoryBadge from "../../components/CategoryBadge.astro";
+const categoryNames = new Map(listCategories().map((category) => [category.id, category.name]));
 const filter = Astro.url.searchParams.get("status");
 const cursor = Astro.url.searchParams.get("cursor");
 let after;
@@ -81,7 +85,9 @@ const previews = new Map(
       post.id,
       {
         ...preview,
+        summary: post.title ? plainText(post.body, true).slice(0, 160) : preview.summary,
         title:
+          post.title ||
           preview.title ||
           (images.length
             ? "图片动态"
@@ -145,6 +151,7 @@ const next =
             }
           </span>
           {post.pinned && <span class="badge">置顶</span>}
+          {post.categoryId && categoryNames.has(post.categoryId) && <CategoryBadge name={categoryNames.get(post.categoryId)!} />}
         </div>
         <div class="admin-preview">
           <div class="admin-preview-text">

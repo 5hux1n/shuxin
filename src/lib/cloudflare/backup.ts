@@ -1,6 +1,6 @@
 import { zipSync, strToU8 } from "fflate";
 import { db } from "../db";
-import { owner, posts, media, settings } from "../db/schema";
+import { owner, posts, media, settings, categories } from "../db/schema";
 import { workerRuntime } from "../runtime";
 import { mediaSize, streamMedia } from "../storage/media";
 import { HttpError } from "../http";
@@ -9,6 +9,7 @@ import objectStorageSql from "../../../drizzle/0005_object_storage.sql?raw";
 import imageLinksSql from "../../../drizzle/0004_image_links.sql?raw";
 import uploadsSql from "../../../drizzle/0003_uploads.sql?raw";
 import liveSql from "../../../drizzle/0002_live_media.sql?raw";
+import postDetailsSql from "../../../drizzle/0006_post_details.sql?raw";
 function literal(value: unknown): string {
   if (value === null) return "NULL";
   if (typeof value === "number") return String(value);
@@ -35,6 +36,7 @@ export async function exportBackup() {
         .all()
         .filter((row) => row.key !== "mediaStoreId"),
       posts: db.select().from(posts).all(),
+      categories: db.select().from(categories).all(),
       media: db.select().from(media).all(),
     };
     let sql =
@@ -43,6 +45,7 @@ export async function exportBackup() {
       uploadsSql +
       imageLinksSql +
       objectStorageSql +
+      postDetailsSql +
       "\nCREATE TABLE schema_migrations (name TEXT PRIMARY KEY, applied_at INTEGER NOT NULL);\nINSERT INTO schema_migrations VALUES ('0001_initial.sql', " +
       Date.now() +
       ");\nINSERT INTO schema_migrations VALUES ('0002_live_media.sql', " +
@@ -53,8 +56,10 @@ export async function exportBackup() {
       Date.now() +
       ");\nINSERT INTO schema_migrations VALUES ('0005_object_storage.sql', " +
       Date.now() +
+      ");\nINSERT INTO schema_migrations VALUES ('0006_post_details.sql', " +
+      Date.now() +
       ");\nDELETE FROM settings;\n";
-    for (const table of ["owner", "posts", "media", "settings"])
+    for (const table of ["owner", "categories", "posts", "media", "settings"])
       for (const row of workerRuntime()
         .storage.sql.exec(`SELECT * FROM ${table}`)
         .toArray())

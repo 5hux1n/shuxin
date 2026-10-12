@@ -11,7 +11,7 @@ import { PassThrough, Readable } from "node:stream";
 import archiver from "archiver";
 import Database from "better-sqlite3";
 import { db, sqlite } from "./db";
-import { posts, media, owner, settings } from "./db/schema";
+import { posts, media, owner, settings, categories } from "./db/schema";
 import { mediaPath } from "./media/service";
 import { mediaObjects } from "./db/schema";
 import { streamMedia } from "./storage/media";
@@ -48,6 +48,7 @@ export async function exportBackup(): Promise<
             .all()
             .filter((row) => row.key !== "mediaStoreId"),
           posts: db.select().from(posts).all(),
+          categories: db.select().from(categories).all(),
           media: db.select().from(media).all(),
         };
         writeFileSync(

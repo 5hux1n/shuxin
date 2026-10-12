@@ -35,6 +35,8 @@ export async function api(url: string, payload?: unknown, method = "POST") {
     redirect: string;
     message: string;
     html: string;
+    category?: { id: string; name: string };
+    categories?: { id: string; name: string }[];
     storage?: unknown;
     background?: unknown;
     branding?: {

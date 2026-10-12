@@ -20,6 +20,7 @@ const migrations = [
   "0003_uploads.sql",
   "0004_image_links.sql",
   "0005_object_storage.sql",
+  "0006_post_details.sql",
 ];
 sqlite
   .transaction(() => {

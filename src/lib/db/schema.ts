@@ -7,11 +7,18 @@ export const owner = sqliteTable("owner", {
   bio: text("bio").notNull().default(""),
   avatarId: text("avatar_id"),
 });
+export const categories = sqliteTable("categories", {
+  id: text("id").primaryKey(),
+  name: text("name").notNull().unique(),
+  createdAt: integer("created_at").notNull(),
+});
 export const posts = sqliteTable(
   "posts",
   {
     id: text("id").primaryKey(),
     body: text("body").notNull(),
+    title: text("title").notNull().default(""),
+    categoryId: text("category_id").references(() => categories.id, { onDelete: "set null" }),
     status: text("status", { enum: ["draft", "published"] }).notNull(),
     visibility: text("visibility", {
       enum: ["public", "unlisted", "private"],

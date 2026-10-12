@@ -8,6 +8,7 @@ import liveSql from "../drizzle/0002_live_media.sql?raw";
 import uploadsSql from "../drizzle/0003_uploads.sql?raw";
 import imageLinksSql from "../drizzle/0004_image_links.sql?raw";
 import objectStorageSql from "../drizzle/0005_object_storage.sql?raw";
+import postDetailsSql from "../drizzle/0006_post_details.sql?raw";
 export class ShuxinSite {
   private database;
   constructor(
@@ -83,6 +84,10 @@ export class ShuxinSite {
           "0005_object_storage.sql",
           Date.now(),
         );
+      }
+      if (!ctx.storage.sql.exec("SELECT 1 FROM schema_migrations WHERE name='0006_post_details.sql'").toArray().length) {
+        ctx.storage.sql.exec(postDetailsSql);
+        ctx.storage.sql.exec("INSERT INTO schema_migrations VALUES (?,?)", "0006_post_details.sql", Date.now());
       }
       ctx.storage.sql.exec(
         "CREATE TABLE IF NOT EXISTS media_chunks (key TEXT NOT NULL, position INTEGER NOT NULL, bytes BLOB NOT NULL, PRIMARY KEY(key,position))",

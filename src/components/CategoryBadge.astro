@@ -1,0 +1,11 @@
+---
+interface Props { name: string }
+const { name } = Astro.props;
+---
+<span class="badge category-badge" aria-label={`分类：${name}`}>
+  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M20 13.5 13.5 20a2 2 0 0 1-2.8 0L3 12.3V4h8.3l8.7 6.7a2 2 0 0 1 0 2.8Z" />
+    <circle cx="7.5" cy="8.5" r="1" />
+  </svg>
+  <span>{name}</span>
+</span>

@@ -2,7 +2,7 @@ import { randomUUID } from "node:crypto";
 import { z } from "zod";
 import { eq } from "drizzle-orm";
 import { db, sqlite } from "../db";
-import { posts, media, owner } from "../db/schema";
+import { posts, media, owner, categories } from "../db/schema";
 import { HttpError } from "../http";
 import { getPost, siteSettings, postVideo } from "./repo";
 import { fileName } from "../downloads";
@@ -10,6 +10,8 @@ import { markdownMediaIds } from "../media/references";
 export const postInput = z
   .object({
     body: z.string().max(100_000, "正文不能超过 100000 字"),
+    title: z.string().trim().max(120, "标题不能超过 120 字").optional(),
+    categoryId: z.uuid().nullable().optional(),
     status: z.enum(["draft", "published"]),
     visibility: z.enum(["public", "unlisted", "private"]),
     pinned: z.boolean(),
@@ -74,6 +76,9 @@ export async function savePost(input: unknown, id?: string) {
       if (id && !existing) throw new HttpError(404, "动态不存在");
       if (existing && data.updatedAt !== existing.updatedAt)
         throw new HttpError(409, "动态已在其他页面修改，请重新打开后编辑");
+      const categoryId = data.categoryId === undefined ? existing?.categoryId ?? null : data.categoryId;
+      if (categoryId && !db.select().from(categories).where(eq(categories.id, categoryId)).get())
+        throw new HttpError(400, "所选分类已删除，请重新选择");
       if (new Set(data.images.map((i) => i.id)).size !== data.images.length)
         throw new HttpError(400, "图片不能重复");
       for (const id of markdownMediaIds(data.body)) {
@@ -183,6 +188,8 @@ export async function savePost(input: unknown, id?: string) {
       }
       const fields = {
         body: data.body,
+        title: data.title ?? existing?.title ?? "",
+        categoryId,
         status: data.status,
         visibility: data.visibility,
         pinned: data.pinned,

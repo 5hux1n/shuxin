@@ -1,4 +1,5 @@
 import { bindLibrary } from "./file-library";
+import { bindCategories } from "./categories";
 import {
   downloadFromShare,
   fileIcon,
@@ -118,15 +119,16 @@ if (composer) {
   }
   form.addEventListener("input", markDirty);
   form.addEventListener("change", markDirty);
+  const categoryBusy = bindCategories(form, markDirty);
   const lifecycle = new AbortController();
   form.addEventListener("shuxin:before-leave", event => {
-    if (saving || uploading) {
+    if (saving || uploading || categoryBusy()) {
       event.preventDefault();
       notice(message, "请等当前保存或上传完成后再切换页面。", true);
     } else if (dirty && !confirm("动态尚未保存，离开后将丢失修改。确定离开？")) event.preventDefault();
   });
   window.addEventListener("beforeunload", (event) => {
-    if (form.isConnected && dirty && !saving) {
+    if (form.isConnected && ((dirty && !saving) || categoryBusy())) {
       event.preventDefault();
     }
   }, { signal: lifecycle.signal });
@@ -772,13 +774,14 @@ if (composer) {
   });
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    if (uploading || saving) return;
+    if (uploading || saving || categoryBusy()) return;
     const submitter = (event as SubmitEvent)
       .submitter as HTMLButtonElement | null;
     const status = submitter?.value === "draft" ? "draft" : "published";
     const values = new FormData(form);
     const id = form.dataset.postId;
     saving = true;
+    form.querySelector<HTMLFieldSetElement>("#category-field")!.disabled = true;
     form
       .querySelectorAll<HTMLButtonElement>("[type=submit]")
       .forEach((b) => (b.disabled = true));
@@ -790,6 +793,8 @@ if (composer) {
         id ? `/api/posts/${id}` : "/api/posts",
         {
           body: textarea.value,
+          title: String(values.get("title") ?? "").trim(),
+          categoryId: values.get("categoryId") || null,
           status,
           visibility: values.get("visibility"),
           pinned: values.has("pinned"),
@@ -803,10 +808,12 @@ if (composer) {
       );
       dirty = false;
       saving = false;
+      form.querySelector<HTMLFieldSetElement>("#category-field")!.disabled = false;
       form.querySelectorAll<HTMLButtonElement>('[type="submit"]').forEach(button => button.disabled = false);
       form.dispatchEvent(new CustomEvent("shuxin:navigate", { bubbles: true, detail: { href: data.redirect } }));
     } catch (e) {
       saving = false;
+      form.querySelector<HTMLFieldSetElement>("#category-field")!.disabled = false;
       notice(message, (e as Error).message, true);
       form
         .querySelectorAll<HTMLButtonElement>("[type=submit]")

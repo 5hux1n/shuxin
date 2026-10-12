@@ -23,7 +23,7 @@ const image = indexed ? postMedia(post.id)[0] : null;
 <SiteLayout
   title={
     indexed
-      ? plainText(post.body).slice(0, 45) || "图片动态"
+      ? post.title || plainText(post.body).slice(0, 45) || "图片动态"
       : allowed
         ? "动态"
         : "动态不存在"

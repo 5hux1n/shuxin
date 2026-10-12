@@ -5,7 +5,7 @@
 ## 开始前
 
 - 确认部署平台、访问地址、首次安装或升级，以及指定版本。沿用用户已提供的信息。
-- 源码默认分支为 `main`；获取固定版本可用 `git clone --branch v1.0.0 --depth 1 https://github.com/5hux1n/shuxin.git`。服务器运行包来自对应 GitHub Release。
+- 源码默认分支为 `main`；获取固定版本可用 `git clone --branch v1.1.0 --depth 1 https://github.com/5hux1n/shuxin.git`。服务器运行包来自对应 GitHub Release。
 - 新站没有预设账号或演示数据。部署完成后，由用户访问 `/admin/setup` 创建唯一站长；后台入口为 `/admin`。
 - 用户密码允许任意非空值；会话密钥 `SESSION_SECRET` 使用至少 32 字符的随机值。账号、密钥由用户安全填写，不能提交到 Git、放入 URL 或公开日志。
 - 不复用演示站的域名、密钥、账号或数据库，不主动安装面板或变更 DNS；使用用户授权的目标环境。

@@ -1,6 +1,5 @@
 ---
 import {
-  profile,
   postMedia,
   postAudio,
   postVideo,
@@ -12,12 +11,14 @@ import FileGallery from "./FileGallery.astro";
 import VideoGallery from "./VideoGallery.astro";
 import AudioGallery from "./AudioGallery.astro";
 import MediaGallery from "./MediaGallery.astro";
+import { getCategory } from "../lib/posts/categories";
+import CategoryBadge from "./CategoryBadge.astro";
 interface Props {
   post: Post;
   full?: boolean;
 }
 const { post, full = false } = Astro.props;
-const person = profile();
+const category = getCategory(post.categoryId);
 const images = postMedia(post.id);
 const long =
   !full && (post.body.length > 850 || post.body.split("\n").length > 16);
@@ -35,14 +36,14 @@ const dateLabel = date.toLocaleString("zh-CN", {
 
 <article class="entry" id={`post-${post.id}`}>
   <div class="entry-meta">
-    <strong>{person.displayName}</strong>
-    <span aria-hidden="true">·</span>
-    <a href={`/p/${post.id}`}>
+    {post.title && <strong class="entry-title">{post.title}</strong>}
+    <a class="entry-date" href={`/p/${post.id}`}>
       <time datetime={date.toISOString()} title={`${dateLabel} UTC+8`}>
         {dateLabel}
       </time>
     </a>
     {post.pinned && <span class="badge">置顶</span>}
+    {category && <CategoryBadge name={category.name} />}
     {post.visibility !== "public" && (
       <span class="badge">
         {post.visibility === "private" ? "私密" : "不列出"}
