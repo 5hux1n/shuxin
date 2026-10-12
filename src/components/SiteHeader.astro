@@ -1,0 +1,34 @@
+---
+import { siteSettings } from "../lib/posts/repo";
+const site = siteSettings();
+---
+
+<header class="site-header">
+  <a class="brand" href="/" aria-label={`${site.title} 首页`}>
+    {site.logoId && (
+      <img class="brand-logo" src={`/media/${site.logoId}`} width="32" height="32" alt="" />
+    )}
+    {site.logoText && <span class="brand-title text-logo">{site.logoText}</span>}
+  </a>
+  <div class="header-actions">
+    <form class="header-search" action="/search" method="get" role="search" data-header-search>
+      <button class="header-search-toggle" type="button" aria-label="展开搜索" aria-expanded="false" aria-controls="header-search-input" data-search-toggle>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <circle cx="10.5" cy="10.5" r="6.5" />
+          <path d="m16 16 5 5" />
+        </svg>
+      </button>
+      <label class="sr-only" for="header-search-input">搜索公开动态</label>
+      <input id="header-search-input" name="q" type="search" maxlength="200" placeholder="搜索动态…" autocomplete="off" disabled data-search-input />
+    </form>
+    <button class="theme-toggle" type="button" aria-label="切换到夜间模式" data-theme-toggle>
+      <svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" />
+      </svg>
+      <svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M20.5 13.1A8.5 8.5 0 0 1 10.9 3.5a8.5 8.5 0 1 0 9.6 9.6Z" />
+      </svg>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,86 @@
+{
+  "name": "shuxin",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0",
+    "build": "npm run prepare:media && astro build",
+    "start": "node start.mjs",
+    "check": "astro check",
+    "build:worker": "npm run prepare:media && SHUXIN_TARGET=cloudflare astro build",
+    "dev:worker": "SHUXIN_TARGET=cloudflare astro dev --port 4322",
+    "deploy:worker": "npm run build:worker && wrangler deploy --config dist-worker/server/wrangler.json",
+    "lint": "eslint src scripts *.mjs",
+    "test": "node scripts/acceptance.mjs",
+    "test:storage": "node scripts/storage-acceptance.mjs",
+    "test:worker": "node scripts/acceptance.mjs --worker",
+    "prepare:media": "node scripts/prepare-audio-codec.mjs",
+    "deploy": "npm run deploy:worker",
+    "deploy:production": "SHUXIN_CONFIG=wrangler.production.jsonc npm run deploy:worker",
+    "setup:server": "node scripts/setup-server.mjs",
+    "package:server": "npm run build && node scripts/package-server.mjs"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.3.4",
+    "@astrojs/node": "^11.1.7",
+    "@cf-wasm/photon": "^0.4.0",
+    "@ffmpeg/core": "0.12.10",
+    "@ffmpeg/ffmpeg": "0.12.15",
+    "@noble/hashes": "^2.4.0",
+    "archiver": "^7.0.1",
+    "astro": "^7.3.8",
+    "better-sqlite3": "^12.4.1",
+    "drizzle-orm": "^0.45.4",
+    "fflate": "^0.8.3",
+    "heic-to": "^1.6.5",
+    "highlight.js": "11.12.0",
+    "image-size": "^2.0.4",
+    "marked": "^16.3.0",
+    "mp4box": "^2.4.1",
+    "music-metadata": "^12.1.0",
+    "sanitize-html": "^2.17.0",
+    "sharp": "^0.35.5",
+    "strtok3": "^10.3.5",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@cloudflare/workers-types": "^5.20261010.1",
+    "@eslint/js": "^10.0.1",
+    "@types/archiver": "^6.0.3",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.18.0",
+    "@types/sanitize-html": "^2.16.0",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.12.0",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.9",
+    "prettier-plugin-astro": "^1.1.1",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.71.1",
+    "wrangler": "^4.149.0"
+  },
+  "allowScripts": {
+    "better-sqlite3": true,
+    "esbuild": true,
+    "sharp": true,
+    "workerd": true
+  },
+  "cloudflare": {
+    "bindings": {
+      "SITE_URL": {
+        "description": "网站完整 HTTPS 地址，不带路径。使用 workers.dev 时填写你所选 Worker 的完整地址；之后可在设置中修改。"
+      },
+      "SESSION_SECRET": {
+        "description": "填写独立随机密钥，至少 32 字符，用于保护站长会话。"
+      },
+      "SETUP_KEY": {
+        "description": "填写另一份独立随机密钥。首次访问 /admin/setup 时输入此值创建站长。"
+      }
+    }
+  }
+}

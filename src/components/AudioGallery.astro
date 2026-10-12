@@ -1,0 +1,44 @@
+---
+import type { media } from "../lib/db/schema";
+interface Props {
+  items: (typeof media.$inferSelect)[];
+}
+const { items } = Astro.props;
+---
+
+{items.map((item, index) => (
+  <figure class="audio-player audio-card">
+    <div class="music-card">
+      <img
+        class="music-cover"
+        src="/music-placeholder.webp"
+        alt=""
+        loading="lazy"
+        width="84"
+        height="84"
+      />
+      <div class="music-info">
+        <figcaption class="music-title">
+          {item.alt || `音频 ${index + 1}`}
+        </figcaption>
+        <span class="music-artist">音频文件</span>
+      </div>
+      <button
+        class="music-play"
+        type="button"
+        aria-label="播放音频"
+        title="播放音频"
+      >
+        ▶
+      </button>
+    </div>
+    <audio
+      src={`/media/${item.id}`}
+      preload="none"
+      aria-label={item.alt || `音频 ${index + 1}`}
+    ></audio>
+    <p class="audio-error" hidden>
+      音频暂时无法播放，请稍后重试。
+    </p>
+  </figure>
+))}

@@ -1,0 +1,28 @@
+name: Server release package
+on:
+  release:
+    types: [published]
+permissions:
+  contents: write
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.release.tag_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Check release version
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: node --input-type=module -e 'import fs from "node:fs"; if ("v" + JSON.parse(fs.readFileSync("package.json")).version !== process.env.RELEASE_TAG) process.exit(1)'
+      - run: npm ci --no-audit --no-fund
+      - run: npm run package:server
+      - name: Publish runtime archive
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: gh release upload "$RELEASE_TAG" releases/ShuXin_*_server.zip --clobber

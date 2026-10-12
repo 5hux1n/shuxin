@@ -1,0 +1,26 @@
+---
+const { picker = false } = Astro.props;
+---
+<div class="file-library" data-file-library data-picker={picker ? "true" : "false"}>
+  <div class="library-toolbar">
+  <div class="library-tabs" role="group" aria-label="文件类型">
+    {[["all", "全部"], ["image", "图片"], ["video", "视频"], ["audio", "音频"], ["file", "附件"]].map(([kind, title]) => <button type="button" class="button" data-library-kind={kind} aria-pressed={kind === "all" ? "true" : "false"}>{title}</button>)}
+  </div>
+  {!picker && (
+    <div class="library-upload-actions">
+      <button type="button" class="button" data-library-upload>上传文件</button>
+      <input type="file" data-library-upload-files multiple hidden aria-label="选择上传文件" />
+    </div>
+  )}
+  </div>
+  <div class="library-actions">
+    <div class="library-selection">
+      <label><input type="checkbox" data-library-all /> 全选当前分类</label>
+      <span class="library-selection-count" data-library-selected aria-live="polite">已选 0 项</span>
+    </div>
+    <button type="button" class="button danger" data-library-delete disabled>删除所选</button>
+  </div>
+  <div class="library-list"></div>
+  <p class="library-empty empty" hidden>此分类暂无文件。</p>
+  <button type="button" class="button" data-library-more hidden>加载更多文件</button>
+</div>

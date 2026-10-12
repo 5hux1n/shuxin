@@ -1,0 +1,38 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import { db } from "../../lib/db";
+import { owner } from "../../lib/db/schema";
+if (!db.select().from(owner).get()) return Astro.redirect("/admin/setup");
+if (Astro.locals.owner) return Astro.redirect("/admin");
+---
+
+<SiteLayout title="站长登录" noindex>
+  <div class="auth-page">
+    <h1 class="page-title">站长登录</h1>
+    <form class="form" data-api-form="/api/auth/login">
+      <label>
+        登录名
+        <input
+          name="username"
+          autocomplete="username"
+          required
+          maxlength="80"
+        />
+      </label>
+      <label>
+        密码
+        <input
+          name="password"
+          type="password"
+          autocomplete="current-password"
+          required
+          maxlength="128"
+        />
+      </label>
+      <button class="button primary" type="submit">
+        登录
+      </button>
+      <p class="notice" aria-live="polite"></p>
+    </form>
+  </div>
+</SiteLayout>

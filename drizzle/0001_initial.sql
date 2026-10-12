@@ -1,0 +1,10 @@
+CREATE TABLE owner (id INTEGER PRIMARY KEY CHECK(id=1), username TEXT NOT NULL UNIQUE, password_hash TEXT NOT NULL, display_name TEXT NOT NULL, bio TEXT NOT NULL DEFAULT '', avatar_id TEXT);
+CREATE TABLE posts (id TEXT PRIMARY KEY, body TEXT NOT NULL, status TEXT NOT NULL CHECK(status IN ('draft','published')), visibility TEXT NOT NULL CHECK(visibility IN ('public','unlisted','private')), pinned INTEGER NOT NULL DEFAULT 0 CHECK(pinned IN (0,1)), created_at INTEGER NOT NULL, updated_at INTEGER NOT NULL, published_at INTEGER);
+CREATE INDEX posts_timeline ON posts(status,visibility,pinned DESC,published_at DESC,id DESC);
+CREATE TABLE media (id TEXT PRIMARY KEY, key TEXT NOT NULL UNIQUE, post_id TEXT REFERENCES posts(id) ON DELETE CASCADE, mime TEXT NOT NULL, width INTEGER NOT NULL, height INTEGER NOT NULL, alt TEXT NOT NULL DEFAULT '', position INTEGER NOT NULL DEFAULT 0, created_at INTEGER NOT NULL);
+CREATE INDEX media_post ON media(post_id,position);
+CREATE TABLE sessions (token_hash TEXT PRIMARY KEY, owner_id INTEGER NOT NULL REFERENCES owner(id), expires_at INTEGER NOT NULL);
+CREATE INDEX sessions_expiry ON sessions(expires_at);
+CREATE TABLE settings (key TEXT PRIMARY KEY, value TEXT NOT NULL);
+CREATE TABLE login_limits (key TEXT PRIMARY KEY, attempts INTEGER NOT NULL, expires_at INTEGER NOT NULL);
+INSERT INTO settings VALUES ('title','书信'),('description',''),('theme','system');

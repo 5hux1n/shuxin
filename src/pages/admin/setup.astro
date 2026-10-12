@@ -1,0 +1,49 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import { db } from "../../lib/db";
+import { owner } from "../../lib/db/schema";
+if (db.select().from(owner).get()) return Astro.redirect("/admin/login");
+---
+
+<SiteLayout title="初始化" noindex>
+  <div class="auth-page">
+    <h1 class="page-title">创建站长账号</h1>
+    <form class="form" data-api-form="/api/auth/setup">
+      <label>
+        登录名
+        <input
+          name="username"
+          autocomplete="username"
+          required
+          pattern="[a-zA-Z0-9_.\-]{3,40}"
+          minlength="3"
+          maxlength="40"
+        />
+      </label>
+      <label>
+        昵称
+        <input
+          name="displayName"
+          autocomplete="nickname"
+          required
+          maxlength="80"
+        />
+      </label>
+      <label>
+        密码
+        <input
+          name="password"
+          type="password"
+          autocomplete="new-password"
+          required
+          maxlength="128"
+        />
+      </label>
+      <p class="hint">本站只创建一个站长账号。</p>
+      <button class="button primary" type="submit">
+        创建账号
+      </button>
+      <p class="notice" aria-live="polite"></p>
+    </form>
+  </div>
+</SiteLayout>

@@ -1,0 +1,3 @@
+# Enter the full HTTPS address of your new site in SITE_URL on the deployment page.
+# Generate one long random string. Do not use these placeholders.
+SESSION_SECRET=replace-with-an-independent-random-secret-of-32-or-more-characters

@@ -1,0 +1,20 @@
+---
+const path = Astro.url.pathname.replace(/\/$/, "");
+const tabs = [
+  ["动态管理", "/admin"],
+  ["系统设置", "/admin/system"],
+  ["用户设置", "/admin/user"],
+  ["网站设置", "/admin/settings"],
+  ["存储设置", "/admin/storage"],
+  ["文件管理", "/admin/files"],
+];
+const current = path === "/admin/new" || path.startsWith("/admin/edit/") ? "/admin" : path;
+---
+<nav class="admin-tabs" aria-label="后台菜单">
+  {tabs.map(([label, href]) => (
+    <a class:list={["admin-tab", { active: current === href }]} href={href} aria-current={current === href ? "page" : undefined}>
+      {label}
+    </a>
+  ))}
+  <span class="admin-tab-liquid" aria-hidden="true"></span>
+</nav>

@@ -1,0 +1,27 @@
+---
+import { profile } from "../lib/posts/repo";
+const person = profile();
+const Avatar = person.avatarLink ? "a" : "div";
+---
+
+<section class="profile" aria-label="站长资料">
+  <Avatar class="profile-avatar" href={person.avatarLink || undefined} aria-label={person.avatarLink ? `访问${person.displayName}的链接` : undefined}>
+  {person.avatarId ? (
+    <img
+      class="avatar"
+      src={`/media/${person.avatarId}`}
+      alt=""
+      width="54"
+      height="54"
+    />
+  ) : (
+    <span class="avatar avatar-placeholder" aria-hidden="true">
+      {person.displayName.slice(0, 1)}
+    </span>
+  )}
+  </Avatar>
+  <div>
+    <h1 class="profile-name">{person.displayName}</h1>
+    {person.bio && <p class="profile-bio">{person.bio}</p>}
+  </div>
+</section>

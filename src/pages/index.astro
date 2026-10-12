@@ -1,0 +1,46 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import OwnerProfile from "../components/OwnerProfile.astro";
+import TimelineEntry from "../components/TimelineEntry.astro";
+import arrowUpToLine from "../../public/icons/lucide/arrow-up-to-line.svg?raw";
+import { timeline } from "../lib/posts/repo";
+const result = timeline(Astro.url.searchParams.get("cursor"));
+if (result.invalid) Astro.response.status = 400;
+---
+
+<SiteLayout>
+  <OwnerProfile />
+  <div id="timeline">
+    {result.entries.map((post) => (
+      <TimelineEntry post={post} />
+    ))}
+  </div>
+  {result.invalid ? (
+    <p class="empty">
+      分页链接无效，请<a href="/">返回首页</a>。
+    </p>
+  ) : (
+    result.entries.length === 0 && (
+      <p class="empty">
+        {Astro.url.searchParams.has("cursor")
+          ? "已经读完了。"
+          : "还没有公开动态。"}
+      </p>
+    )
+  )}
+  {result.cursor && (
+    <div class="pagination">
+      <a
+        class="button"
+        data-load-more
+        href={`/?cursor=${encodeURIComponent(result.cursor)}`}
+      >
+        加载更多
+      </a>
+    </div>
+  )}
+  <p class="load-status" aria-live="polite"></p>
+  <button class="back-to-top" type="button" data-back-to-top aria-label="回到顶部" title="回到顶部" hidden>
+    <span aria-hidden="true" set:html={arrowUpToLine} />
+  </button>
+</SiteLayout>

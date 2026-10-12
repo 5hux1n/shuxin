@@ -1,0 +1,60 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import { profileAvatarLink } from "../../lib/profile-link";
+const person = Astro.locals.owner!;
+const avatarLink = profileAvatarLink();
+---
+
+<SiteLayout title="用户设置" noindex>
+  <section class="form-section">
+    <h2>个人资料</h2>
+    <form class="form" id="account-form" data-avatar={person.avatarId ?? ""}>
+      <div class="avatar-editor">
+        <img
+          id="avatar-preview"
+          class="avatar"
+          src={person.avatarId ? `/media/${person.avatarId}` : "/favicon.svg"}
+          alt="管理员头像预览"
+          width="54"
+          height="54"
+        />
+        <label class="button file-label">
+          更换头像
+          <input
+            id="avatar-file"
+            type="file"
+            accept="image/jpeg,image/png,image/webp,image/gif,image/heic,image/heif,.heic,.heif"
+            hidden
+          />
+        </label>
+        <button class="button" type="button" id="avatar-remove">
+          移除头像
+        </button>
+      </div>
+      <label>
+        头像跳转链接（可选）
+        <input name="avatarLink" type="url" value={avatarLink} maxlength="2048" placeholder="https://example.com" inputmode="url" />
+        <span class="hint">留空时头像不跳转。</span>
+      </label>
+      <label>
+        昵称
+        <input
+          name="displayName"
+          value={person.displayName}
+          autocomplete="nickname"
+          required
+          maxlength="80"
+        />
+      </label>
+      <label>
+        简介<textarea name="bio" maxlength="500">{person.bio}</textarea>
+      </label>
+      <div class="form-actions">
+        <button class="button primary" type="submit">
+          保存用户资料
+        </button>
+      </div>
+      <p class="notice" aria-live="polite"></p>
+    </form>
+  </section>
+</SiteLayout>

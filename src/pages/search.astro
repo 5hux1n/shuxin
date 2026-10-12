@@ -1,0 +1,54 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import TimelineEntry from "../components/TimelineEntry.astro";
+import { timeline } from "../lib/posts/repo";
+const q = (Astro.url.searchParams.get("q") ?? "").trim().slice(0, 200);
+const result = q ? timeline(Astro.url.searchParams.get("cursor"), q) : null;
+if (result?.invalid) Astro.response.status = 400;
+---
+
+<SiteLayout title="搜索" noindex>
+  <a class="back" href="/">
+    ← 返回首页
+  </a>
+  <h1 class="page-title">搜索动态</h1>
+  <form class="search-form" action="/search" method="get">
+    <label class="sr-only" for="q">
+      搜索公开动态
+    </label>
+    <input
+      id="q"
+      name="q"
+      type="search"
+      value={q}
+      maxlength="200"
+      placeholder="搜索正文"
+      required
+    />
+    <button class="button" type="submit">
+      搜索
+    </button>
+  </form>
+  <div id="timeline">
+    {result?.entries.map((post) => (
+      <TimelineEntry post={post} />
+    ))}
+  </div>
+  {result?.invalid ? (
+    <p class="empty">分页链接无效，请重新搜索。</p>
+  ) : (
+    q && !result?.entries.length && <p class="empty">没有找到相关动态。</p>
+  )}
+  {result?.cursor && (
+    <div class="pagination">
+      <a
+        class="button"
+        data-load-more
+        href={`/search?q=${encodeURIComponent(q)}&cursor=${encodeURIComponent(result.cursor)}`}
+      >
+        加载更多
+      </a>
+    </div>
+  )}
+  <p class="load-status" aria-live="polite"></p>
+</SiteLayout>
