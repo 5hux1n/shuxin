@@ -18,6 +18,15 @@ const composer = document.querySelector<HTMLFormElement>("#composer");
 if (composer) {
   const form = composer;
   const textarea = form.querySelector<HTMLTextAreaElement>("#post-body")!;
+  const protectedToggle = form.querySelector<HTMLInputElement>('[name="passwordProtected"]')!;
+  const protectedPassword = form.querySelector<HTMLInputElement>('[name="password"]')!;
+  const updatePassword = () => {
+    protectedPassword.disabled = !protectedToggle.checked;
+    protectedPassword.required = protectedToggle.checked && form.dataset.passwordProtected !== "true";
+    if (!protectedToggle.checked) protectedPassword.value = "";
+  };
+  protectedToggle.addEventListener("change", updatePassword);
+  updatePassword();
   const rows = form.querySelector<HTMLElement>("#image-editor")!;
   const message = form.querySelector<HTMLElement>("#composer-notice")!;
   const picker = form.querySelector<HTMLInputElement>("#image-files")!;
@@ -63,6 +72,20 @@ if (composer) {
     button.addEventListener("mousedown", (event) => event.preventDefault());
     button.addEventListener("click", () => {
       if (previewing || saving || uploading) return;
+      if (button.dataset.md === "footnote") {
+        let n = 1;
+        while (textarea.value.includes(`[^${n}]`)) n++;
+        const start = textarea.selectionStart, end = textarea.selectionEnd;
+        const selected = textarea.value.slice(start, end);
+        const marker = `[^${n}]`;
+        textarea.setRangeText(selected + marker, start, end, "end");
+        const position = textarea.value.length + 2 + marker.length + 2;
+        textarea.value += `\n\n${marker}: 注释内容`;
+        textarea.focus();
+        textarea.setSelectionRange(position, position + 4);
+        markDirty();
+        return;
+      }
       const start = textarea.selectionStart,
         end = textarea.selectionEnd,
         selected = textarea.value.slice(start, end);
@@ -72,6 +95,7 @@ if (composer) {
         strike: ["~~", "~~", "删除文字"],
         heading: ["### ", "", "标题"],
         quote: ["> ", "", "引用文字"],
+        callout: ["> [!NOTE]\n> ", "", "提示内容"],
         unordered: ["- ", "", "列表项目"],
         ordered: ["1. ", "", "列表项目"],
         task: ["- [ ] ", "", "待办项目"],
@@ -85,6 +109,7 @@ if (composer) {
         [before, after, fallback] = samples[command];
       const block = [
         "heading",
+        "callout",
         "quote",
         "unordered",
         "ordered",
@@ -98,11 +123,11 @@ if (composer) {
       let content = selected || fallback;
       if (
         selected &&
-        ["quote", "unordered", "ordered", "task"].includes(command)
+        ["quote", "unordered", "ordered", "task", "callout"].includes(command)
       )
         content = selected
           .split("\n")
-          .map((line, index) => (index ? before : "") + line)
+          .map((line, index) => (index ? command === "callout" ? "> " : before : "") + line)
           .join("\n");
       const inserted = prefix + before + content + after;
       textarea.setRangeText(inserted, start, end, "end");
@@ -117,10 +142,17 @@ if (composer) {
   function markDirty() {
     dirty = true;
   }
+  function setSaving(value: boolean) {
+    saving = value;
+    form.inert = value;
+    if (value) form.setAttribute("aria-busy", "true");
+    else form.removeAttribute("aria-busy");
+    form.querySelectorAll<HTMLButtonElement>('[type="submit"]').forEach(button => button.disabled = value);
+  }
   form.addEventListener("input", markDirty);
   form.addEventListener("change", markDirty);
-  const categoryBusy = bindCategories(form, markDirty);
   const lifecycle = new AbortController();
+  const categoryBusy = bindCategories(form, markDirty, lifecycle.signal);
   form.addEventListener("shuxin:before-leave", event => {
     if (saving || uploading || categoryBusy()) {
       event.preventDefault();
@@ -780,11 +812,7 @@ if (composer) {
     const status = submitter?.value === "draft" ? "draft" : "published";
     const values = new FormData(form);
     const id = form.dataset.postId;
-    saving = true;
-    form.querySelector<HTMLFieldSetElement>("#category-field")!.disabled = true;
-    form
-      .querySelectorAll<HTMLButtonElement>("[type=submit]")
-      .forEach((b) => (b.disabled = true));
+    setSaving(true);
     notice(message, status === "draft"
       ? form.dataset.postStatus === "published" ? "正在转为草稿…" : "正在保存草稿…"
       : form.dataset.postStatus === "published" ? "正在保存修改…" : "正在发布动态…");
@@ -795,6 +823,8 @@ if (composer) {
           body: textarea.value,
           title: String(values.get("title") ?? "").trim(),
           categoryId: values.get("categoryId") || null,
+          passwordProtected: values.has("passwordProtected"),
+          ...(values.has("passwordProtected") && values.get("password") ? { password: String(values.get("password")) } : {}),
           status,
           visibility: values.get("visibility"),
           pinned: values.has("pinned"),
@@ -806,18 +836,18 @@ if (composer) {
         },
         id ? "PATCH" : "POST",
       );
+      const savedPost = (data as typeof data & { post: { id: string; updatedAt: number; status: string; passwordProtected: boolean } }).post;
+      form.dataset.postId = savedPost.id;
+      form.dataset.updatedAt = String(savedPost.updatedAt);
+      form.dataset.postStatus = savedPost.status;
+      form.dataset.passwordProtected = String(savedPost.passwordProtected);
+      updatePassword();
       dirty = false;
-      saving = false;
-      form.querySelector<HTMLFieldSetElement>("#category-field")!.disabled = false;
-      form.querySelectorAll<HTMLButtonElement>('[type="submit"]').forEach(button => button.disabled = false);
+      setSaving(false);
       form.dispatchEvent(new CustomEvent("shuxin:navigate", { bubbles: true, detail: { href: data.redirect } }));
     } catch (e) {
-      saving = false;
-      form.querySelector<HTMLFieldSetElement>("#category-field")!.disabled = false;
+      setSaving(false);
       notice(message, (e as Error).message, true);
-      form
-        .querySelectorAll<HTMLButtonElement>("[type=submit]")
-        .forEach((b) => (b.disabled = false));
     }
   });
   return () => lifecycle.abort();

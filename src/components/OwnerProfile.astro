@@ -9,8 +9,10 @@ const Avatar = person.avatarLink ? "a" : "div";
   {person.avatarId ? (
     <img
       class="avatar"
-      src={`/media/${person.avatarId}`}
+      src={`/media/${person.avatarId}?w=108`}
       alt=""
+      decoding="async"
+      fetchpriority="high"
       width="54"
       height="54"
     />

@@ -17,6 +17,7 @@ export const posts = sqliteTable(
   {
     id: text("id").primaryKey(),
     body: text("body").notNull(),
+    passwordHash: text("password_hash"),
     title: text("title").notNull().default(""),
     categoryId: text("category_id").references(() => categories.id, { onDelete: "set null" }),
     status: text("status", { enum: ["draft", "published"] }).notNull(),

@@ -1,4 +1,4 @@
-node_modules/
+node_modules
 dist/
 .astro/
 .env
@@ -27,3 +27,13 @@ content/
 design/
 output/
 wrangler.production.jsonc
+
+# Local implementation, review, and acceptance materials
+AGENTS.md
+AUDIT_REPORT.md
+SHUXIN_PLAN.md
+CODEX_START.md
+shuxin_codex_docs/
+scripts/acceptance.mjs
+scripts/storage-acceptance.mjs
+scripts/fixtures/

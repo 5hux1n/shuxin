@@ -22,6 +22,7 @@ const categories = listCategories();
   class="composer"
   id="composer"
   data-post-id={post?.id}
+  data-password-protected={String(Boolean(post?.passwordHash))}
   data-post-status={post?.status ?? "draft"}
   data-updated-at={post?.updatedAt}
 >
@@ -379,6 +380,18 @@ const categories = listCategories();
       </div>
     ))}
   </div>
+  <details class="markdown-help">
+    <summary>更多格式</summary>
+    <div class="markdown-help-content">
+      <p>提示块支持 NOTE、TIP、IMPORTANT、WARNING、CAUTION；脚注支持点击编号查看，再返回正文。</p>
+      <div class="markdown-help-actions">
+        <button class="text-button" type="button" data-md="callout">插入提示块</button>
+        <button class="text-button" type="button" data-md="footnote">插入脚注</button>
+      </div>
+      <p>提示块：<code>&gt; [!NOTE]</code>，下一行以 <code>&gt;</code> 开头填写内容。</p>
+      <p>脚注：正文中写 <code>[^1]</code>，另起一行写 <code>[^1]: 注释内容</code>。</p>
+    </div>
+  </details>
   <div class="composer-options">
     <fieldset class="visibility-field">
       <legend>可见性</legend>
@@ -409,26 +422,39 @@ const categories = listCategories();
       置顶
     </label>
   </div>
+  <div class="post-password-settings">
+    <label class="post-password-toggle"><input type="checkbox" name="passwordProtected" checked={Boolean(post?.passwordHash)} /> 设置访问密码</label>
+    <label for="post-access-password">访问密码</label>
+    <input id="post-access-password" name="password" type="password" maxlength="128" autocomplete="new-password" placeholder={post?.passwordHash ? "留空保留原密码；取消勾选可移除密码" : "启用后请输入访问密码"} />
+    <p class="hint">标题、时间和分类仍会展示，正文和附件解锁后可见。</p>
+  </div>
   <fieldset class="category-field" id="category-field">
     <legend>分类</legend>
-    <input type="hidden" name="categoryId" id="post-category" value={post?.categoryId ?? ""} />
-    <div class="category-options" role="group" aria-label="选择分类">
-      <button type="button" class="category-choice" data-category-id="" aria-pressed={!post?.categoryId}>不分类</button>
+    <label class="sr-only" for="post-category">选择分类</label>
+    <select name="categoryId" id="post-category">
+      <option value="" selected={!post?.categoryId}>不分类</option>
       {categories.map((category) => (
-        <button type="button" class="category-choice" data-category-id={category.id} aria-pressed={post?.categoryId === category.id}>{category.name}</button>
+        <option value={category.id} selected={post?.categoryId === category.id}>{category.name}</option>
       ))}
+    </select>
+    <div class="category-select" id="category-select" hidden>
+      <button type="button" class="category-select-trigger" id="category-select-trigger" role="combobox" aria-label="选择分类" aria-haspopup="listbox" aria-controls="category-select-menu" aria-expanded="false">
+        <span data-category-label>不分类</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 10 5 5 5-5" /></svg>
+      </button>
+      <div id="category-select-menu" class="category-select-menu" role="listbox" aria-label="分类选项" hidden></div>
     </div>
     <div class="category-controls">
-      <button type="button" class="text-button" id="category-add">新增分类</button>
-      <button type="button" class="text-button" id="category-rename" disabled={!post?.categoryId}>重命名</button>
-      <button type="button" class="text-button danger" id="category-delete" disabled={!post?.categoryId}>删除分类</button>
+      <button type="button" class="text-button category-text-button" id="category-add">新增分类</button>
+      <button type="button" class="text-button category-text-button" id="category-rename" disabled={!post?.categoryId}>重命名</button>
+      <button type="button" class="text-button category-text-button danger" id="category-delete" disabled={!post?.categoryId}>删除分类</button>
     </div>
     <div class="category-editor" id="category-editor" hidden>
       <label class="sr-only" for="category-name">分类名称</label>
       <input id="category-name" maxlength="40" placeholder="分类名称" autocomplete="off" />
       <div class="category-editor-actions">
-        <button type="button" class="button" id="category-save">添加分类</button>
-        <button type="button" class="text-button" id="category-cancel">取消</button>
+        <button type="button" class="text-button category-text-button" id="category-save">添加分类</button>
+        <button type="button" class="text-button category-text-button" id="category-cancel">取消</button>
       </div>
     </div>
   </fieldset>

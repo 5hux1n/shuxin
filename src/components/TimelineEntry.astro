@@ -1,9 +1,6 @@
 ---
 import {
-  postMedia,
-  postAudio,
-  postVideo,
-  postFiles,
+  postAttachments,
   type Post,
 } from "../lib/posts/repo";
 import { renderMarkdown } from "../lib/markdown";
@@ -13,13 +10,18 @@ import AudioGallery from "./AudioGallery.astro";
 import MediaGallery from "./MediaGallery.astro";
 import { getCategory } from "../lib/posts/categories";
 import CategoryBadge from "./CategoryBadge.astro";
+import PostLock from "./PostLock.astro";
+import { unlockedPost } from "../lib/posts/password";
 interface Props {
   post: Post;
   full?: boolean;
+  attachments?: ReturnType<typeof postAttachments>;
 }
 const { post, full = false } = Astro.props;
+const locked = !Astro.locals.owner && !unlockedPost(post, Astro.cookies);
 const category = getCategory(post.categoryId);
-const images = postMedia(post.id);
+const attachments = locked ? { images: [], audio: [], videos: [], files: [] } : Astro.props.attachments ?? postAttachments(post.id);
+const images = attachments.images;
 const long =
   !full && (post.body.length > 850 || post.body.split("\n").length > 16);
 const date = new Date(post.publishedAt ?? post.createdAt);
@@ -51,10 +53,11 @@ const dateLabel = date.toLocaleString("zh-CN", {
     )}
     {post.status === "draft" && <span class="badge">草稿</span>}
   </div>
+  {locked ? <PostLock id={post.id} /> : <>
   <div
     class:list={["prose", { collapsed: long }]}
     id={`body-${post.id}`}
-    set:html={renderMarkdown(post.body)}
+    set:html={renderMarkdown(post.body, post.id)}
   />
   {long && (
     <button
@@ -67,9 +70,10 @@ const dateLabel = date.toLocaleString("zh-CN", {
     </button>
   )}
   <MediaGallery images={images} />
-  <AudioGallery items={postAudio(post.id)} />
-  <VideoGallery items={postVideo(post.id)} />
-  <FileGallery items={postFiles(post.id)} />
+  <AudioGallery items={attachments.audio} />
+  <VideoGallery items={attachments.videos} />
+  <FileGallery items={attachments.files} />
+  </>}
   <div class="entry-actions">
     <button class="text-button" data-copy={`/p/${post.id}`} aria-live="polite">
       复制链接

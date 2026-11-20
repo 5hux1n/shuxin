@@ -1,3 +1,4 @@
+import "./quick-composer";
 import { bindAdminRouter } from "./admin-router";
 import "./admin-nav";
 import { bindCodeBlocks } from "./code-blocks";
@@ -370,3 +371,38 @@ async function initializeAdminPage() {
 if (document.querySelector(".admin-shell")) {
   void bindAdminRouter(initializeAdminPage).catch(error => notice(null, (error as Error).message, true));
 } else bindAdminActions();
+
+// Delegation also covers password forms appended by timeline pagination.
+document.addEventListener("submit", async event => {
+  const form = event.target;
+  if (!(form instanceof HTMLFormElement) || !form.matches("[data-post-unlock]")) return;
+  event.preventDefault();
+  const button = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+  if (button.disabled) return;
+  const password = form.querySelector<HTMLInputElement>('[name="password"]')!;
+  const message = form.querySelector<HTMLElement>(".notice");
+  button.disabled = true;
+  notice(message, "正在解锁…");
+  try {
+    const data = await api(`/api/posts/${form.dataset.postUnlock}/unlock`, { password: password.value });
+    location.assign(data.redirect);
+  } catch (error) {
+    notice(message, (error as Error).message, true);
+    button.disabled = false;
+    password.focus();
+    password.select();
+  }
+});
+
+function revealFootnote(element: Element | null) {
+  const prose = element?.closest<HTMLElement>(".prose.collapsed");
+  if (!prose) return;
+  prose.classList.remove("collapsed");
+  const toggle = prose.closest(".entry")?.querySelector<HTMLButtonElement>("[data-expand]");
+  if (toggle) { toggle.setAttribute("aria-expanded", "true"); toggle.textContent = "收起全文"; }
+}
+document.addEventListener("click", event => {
+  const link = event.target instanceof Element ? event.target.closest("a.footnote-ref") : null;
+  if (link) revealFootnote(link);
+});
+if (location.hash.startsWith("#sx-fn-")) revealFootnote(document.getElementById(location.hash.slice(1)));

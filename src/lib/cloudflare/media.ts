@@ -1,7 +1,9 @@
+import type { AstroCookies } from "astro";
+import { unlockedPost } from "../posts/password";
 import { publicMediaReference } from "../media/references";
 import { animatedGif, liveVideo } from "../media/formats";
 import { randomUUID } from "node:crypto";
-import { PhotonImage, rotate, fliph, flipv } from "@cf-wasm/photon/workerd";
+import { PhotonImage, rotate, fliph, flipv, resize, SamplingFilter } from "@cf-wasm/photon/workerd";
 import { imageSize } from "image-size";
 import { eq } from "drizzle-orm";
 import { config } from "../config";
@@ -139,17 +141,18 @@ function storeMedia(
   });
   return { id, width, height, alt: "", url: `/media/${id}` };
 }
-export function accessibleMedia(id: string, authenticated: boolean) {
+export function accessibleMedia(id: string, authenticated: boolean, cookies?: AstroCookies) {
   const row = db.select().from(media).where(eq(media.id, id)).get();
   if (!row) return null;
   if (authenticated || db.select().from(owner).get()?.avatarId === id)
     return row;
   if ([siteSettings().logoId, siteSettings().backgroundId].includes(id))
     return row;
-  if (publicMediaReference(id)) return row;
-  if (!row.postId) return null;
-  const post = getPost(row.postId);
-  return post && readable(post, false) ? row : null;
+  if (row.postId) {
+    const post = getPost(row.postId);
+    if (post && readable(post, false) && unlockedPost(post, cookies)) return row;
+  }
+  return publicMediaReference(id, cookies) ? row : null;
 }
 
 export function mediaSize(key: string) {
@@ -219,4 +222,14 @@ export function renameMedia(from: string, to: string) {
     mediaPath(to),
     mediaPath(from),
   );
+}
+
+export async function imagePreview(bytes: Buffer, width: number) {
+  const image = PhotonImage.new_from_byteslice(bytes);
+  let scaled: PhotonImage | undefined;
+  try {
+    const scale = Math.min(1, width / image.get_width());
+    scaled = resize(image, Math.max(1, Math.round(image.get_width() * scale)), Math.max(1, Math.round(image.get_height() * scale)), SamplingFilter.Lanczos3);
+    return Buffer.from(scaled.get_bytes_webp());
+  } finally { scaled?.free(); image.free(); }
 }

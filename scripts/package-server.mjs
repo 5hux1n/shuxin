@@ -21,7 +21,6 @@ for (const file of [
   "start.mjs",
   "LICENSE",
   "README.md",
-  "AGENTS.md",
   "Ai_agent_docs/AI_DEPLOYMENT.md",
   "scripts/setup-server.mjs",
 ]) {

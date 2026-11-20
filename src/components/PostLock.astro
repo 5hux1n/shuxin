@@ -1,0 +1,16 @@
+---
+interface Props { id: string; }
+const { id } = Astro.props;
+---
+<form class="post-lock" data-post-unlock={id}>
+  <p class="post-lock-label">
+    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+    这篇动态需要密码才能查看
+  </p>
+  <div class="post-unlock-fields">
+    <label class="sr-only" for={`password-${id}`}>访问密码</label>
+    <input id={`password-${id}`} name="password" type="password" required maxlength="128" autocomplete="off" placeholder="输入访问密码" />
+    <button class="text-button" type="submit">解锁</button>
+  </div>
+  <p class="notice" role="status" aria-live="polite"></p>
+</form>

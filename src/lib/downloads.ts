@@ -1,3 +1,5 @@
+import { fileName } from "./file-name";
+export { fileName } from "./file-name";
 import { z } from "zod";
 
 const providers = [
@@ -84,25 +86,6 @@ export function downloadFromShare(source: string, title: string, code: string) {
       /(?:提取码|访问码|密码)\s*[:：]?\s*([A-Za-z0-9]{3,12})/i,
     )?.[1] || "";
   return downloadSchema.parse({ title, url, code: code || inferred });
-}
-export function fileName(value: string) {
-  return (
-    Array.from(value)
-      .filter(
-        (c) =>
-          c.charCodeAt(0) >= 32 &&
-          (c.length > 1 ||
-            c.charCodeAt(0) < 0xd800 ||
-            c.charCodeAt(0) > 0xdfff) &&
-          c.charCodeAt(0) !== 127 &&
-          c !== "/" &&
-          c !== "\\",
-      )
-      .join("")
-      .trim()
-      .slice(0, 255)
-      .replace(/[\uD800-\uDBFF]$/, "") || "文件"
-  );
 }
 export function fileIcon(name: string) {
   const ext = name.split(".").at(-1)?.toLowerCase() || "";

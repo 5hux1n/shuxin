@@ -1,14 +1,24 @@
+import { createHash } from "node:crypto";
+import { previewImage, animatedWebp } from "../../lib/media/preview";
 import { accessibleMedia } from "../../lib/media/service";
-import { mediaSize, streamMedia } from "../../lib/storage/media";
+import { mediaSize, streamMedia, previewSource } from "../../lib/storage/media";
 import { fileName } from "../../lib/downloads";
 import { endpoint } from "../../lib/http";
 export const GET = endpoint(async (ctx) => {
-  const image = accessibleMedia(ctx.params.id!, Boolean(ctx.locals.owner));
+  const image = accessibleMedia(ctx.params.id!, Boolean(ctx.locals.owner), ctx.cookies);
   if (!image) return new Response("媒体不存在", { status: 404 });
-  const size = mediaSize(image.key);
+  const requestedWidth = ctx.url.searchParams.get("w");
+  if (requestedWidth !== null && !["108", "720", "1440"].includes(requestedWidth))
+    return new Response("预览尺寸无效", { status: 400 });
+  let preview: Buffer | undefined;
+  if (requestedWidth && ["image/jpeg", "image/png", "image/webp"].includes(image.mime)) {
+    const source = await previewSource(image.key);
+    if (!animatedWebp(source)) preview = await previewImage(source, Number(requestedWidth));
+  }
+  const size = preview?.length ?? mediaSize(image.key);
   const headers = new Headers({
-    "Content-Type": image.mime,
-    "Cache-Control": "private, no-store",
+    "Content-Type": preview ? "image/webp" : image.mime,
+    "Cache-Control": preview ? "private, no-cache, must-revalidate" : "private, no-store",
     "Content-Disposition":
       image.mime === "application/octet-stream"
         ? `attachment; filename="download.bin"; filename*=UTF-8''${encodeURIComponent(fileName(image.alt)).replace(/['()*]/g, (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`)}`
@@ -18,6 +28,13 @@ export const GET = endpoint(async (ctx) => {
     "Accept-Ranges": "bytes",
   });
   const range = ctx.request.headers.get("range");
+  if (preview) {
+    const etag = '"' + createHash("sha256").update(preview).digest("hex") + '"';
+    headers.set("ETag", etag);
+    if (!range && ctx.request.headers.get("if-none-match")?.split(",").some((tag) => tag.trim().replace(/^W\//, "") === etag || tag.trim() === "*"))
+      return new Response(null, { status: 304, headers });
+  }
+  const body = async (start: number, end: number) => preview ? new Uint8Array(preview.subarray(start, end + 1)) : streamMedia(image.key, start, end);
   if (range) {
     const match = /^bytes=(\d*)-(\d*)$/.exec(range);
     let start: number,
@@ -40,11 +57,11 @@ export const GET = endpoint(async (ctx) => {
     }
     headers.set("Content-Range", `bytes ${start}-${end}/${size}`);
     headers.set("Content-Length", String(end - start + 1));
-    return new Response(await streamMedia(image.key, start, end), {
+    return new Response(await body(start, end), {
       status: 206,
       headers,
     });
   }
   headers.set("Content-Length", String(size));
-  return new Response(await streamMedia(image.key, 0, size - 1), { headers });
+  return new Response(await body(0, size - 1), { headers });
 });

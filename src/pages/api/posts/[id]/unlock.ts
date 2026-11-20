@@ -1,0 +1,21 @@
+import { z } from "zod";
+import { guard, rateLimit, rateLimitScope, verifyPassword } from "../../../../lib/auth";
+import { endpoint, body, json, HttpError } from "../../../../lib/http";
+import { getPost, readable } from "../../../../lib/posts/repo";
+import { grantPost } from "../../../../lib/posts/password";
+export const POST = endpoint(async (ctx) => {
+  guard(ctx, false);
+  const post = getPost(ctx.params.id!);
+  if (!post || !readable(post, Boolean(ctx.locals.owner))) throw new HttpError(404, "动态不存在");
+  if (ctx.locals.owner || !post.passwordHash) return json({ redirect: `/p/${post.id}` });
+  const scope = rateLimitScope(ctx);
+  rateLimit("post-unlock-global", 80, scope);
+  rateLimit(`post-unlock:${post.id}`, 20, scope);
+  const data = z.object({ password: z.string().min(1, "请输入访问密码").max(128) }).parse(await body(ctx.request));
+  if (!await verifyPassword(data.password, post.passwordHash)) throw new HttpError(401, "访问密码不正确");
+  const latest = getPost(post.id);
+  if (!latest || !readable(latest, false)) throw new HttpError(404, "动态不存在");
+  if (latest.passwordHash !== post.passwordHash) throw new HttpError(409, "访问密码已修改，请重新输入");
+  grantPost(latest, ctx.cookies);
+  return json({ redirect: `/p/${post.id}` });
+});

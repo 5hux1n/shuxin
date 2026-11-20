@@ -22,7 +22,7 @@ const { images } = Astro.props;
             muted
             loop
             preload="none"
-            poster={`/media/${image.id}`}
+            poster={`/media/${image.id}?w=720`}
             aria-label={image.alt || `Live Photo ${index + 1}`}
             width={image.width}
             height={image.height}
@@ -45,7 +45,9 @@ const { images } = Astro.props;
           aria-label={`查看图片 ${index + 1}${image.alt ? `：${image.alt}` : ""}`}
         >
           <img
-            src={`/media/${image.id}`}
+            src={`/media/${image.id}${image.mime === "image/gif" ? "" : "?w=720"}`}
+            srcset={image.mime !== "image/gif" && image.width > 720 ? `/media/${image.id}?w=720 720w, /media/${image.id}?w=1440 ${Math.min(image.width, 1440)}w` : undefined}
+            sizes={images.length === 1 ? "(max-width: 720px) calc(100vw - 56px), 664px" : "(max-width: 720px) calc(50vw - 28px), 332px"}
             width={image.width}
             height={image.height}
             alt={image.alt}

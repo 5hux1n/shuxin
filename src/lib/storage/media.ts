@@ -82,14 +82,16 @@ export async function promoteMedia(id: string) {
     try {
       await client.delete(objectKey);
     } catch {
-      db.insert(mediaObjects)
-        .values({ key: row.key, storeId, objectKey, size })
-        .onConflictDoNothing()
-        .run();
+      console.error("[shuxin] remote media cleanup failed after promotion error");
     }
-    db.delete(media).where(eq(media.id, id)).run();
-    builtin.removeFile(row.key);
     throw error;
   }
   builtin.removeFile(row.key);
+}
+
+export async function previewSource(key: string) {
+  const object = db.select().from(mediaObjects).where(eq(mediaObjects.key, key)).get();
+  if (!object) return builtin.readMedia(key);
+  const response = await new ObjectClient(getStore(object.storeId)).get(object.objectKey, 0, object.size - 1);
+  return Buffer.from(await response.arrayBuffer());
 }

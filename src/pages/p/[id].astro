@@ -12,7 +12,7 @@ const post = getPost(Astro.params.id!);
 const allowed = post && readable(post, Boolean(Astro.locals.owner));
 if (!allowed) Astro.response.status = 404;
 const indexed =
-  allowed && post.status === "published" && post.visibility === "public";
+  allowed && !post.passwordHash && post.status === "published" && post.visibility === "public";
 if (!indexed) Astro.response.headers.set("X-Robots-Tag", "noindex, nofollow");
 const snippet = indexed
   ? plainText(post.body).slice(0, 160)

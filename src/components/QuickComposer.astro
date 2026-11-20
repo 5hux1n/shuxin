@@ -1,0 +1,29 @@
+---
+import EditorIcon from "./EditorIcon.astro";
+---
+<section class="quick-composer" aria-label="快捷发帖">
+  <form id="quick-composer" class="form" data-quick-composer>
+    <label class="sr-only" for="quick-body">动态正文</label>
+    <textarea id="quick-body" name="body" rows="3" maxlength="100000" placeholder="写点什么……" required></textarea>
+    <div class="quick-images" data-quick-images></div>
+    <details class="quick-options">
+      <summary>发布选项</summary>
+      <label class="field" for="quick-title">标题（可选）<input id="quick-title" name="title" maxlength="120" /></label>
+      <fieldset class="visibility-field"><legend>可见性</legend><div class="visibility-options">
+        {[["public", "公开"], ["unlisted", "不列出"], ["private", "私密"]].map(([value, label]) => (
+          <label class="visibility-option"><input class="sr-only" type="radio" name="visibility" value={value} checked={value === "public"} /><span>{label}</span></label>
+        ))}
+      </div></fieldset>
+      <label class="post-password-toggle"><input type="checkbox" name="passwordProtected" /> 设置访问密码</label>
+      <label class="sr-only" for="quick-password">访问密码</label>
+      <input id="quick-password" name="password" type="password" maxlength="128" autocomplete="new-password" placeholder="访问密码" disabled />
+    </details>
+    <div class="quick-actions">
+      <input type="file" id="quick-image-input" accept="image/jpeg,image/png,image/webp,image/gif,image/heic,image/heif" multiple hidden />
+      <button class="text-button quick-image-button" type="button" data-quick-upload><EditorIcon name="image-plus" /> 图片</button>
+      <a class="text-button" href="/admin/new" data-quick-full>完整编辑</a>
+      <button class="button primary" type="submit">发布动态</button>
+    </div>
+    <p class="notice" role="status" aria-live="polite"></p>
+  </form>
+</section>

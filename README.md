@@ -2,18 +2,18 @@
 
 轻量、可自托管的个人微博客。站长发布，访客阅读；从一句话、一张图到一篇长文，都留在同一条单列信息流里。
 
-[在线演示](https://shuxin.my/) · [下载 1.1.0](https://github.com/5hux1n/shuxin/releases/tag/v1.1.0) · [让 AI 帮你部署](Ai_agent_docs/AI_DEPLOYMENT.md)
+[在线演示](https://shuxin.my/) · [下载 1.2.0](https://github.com/5hux1n/shuxin/releases/tag/v1.2.0) · [让 AI 帮你部署](Ai_agent_docs/AI_DEPLOYMENT.md)
 
 ![书信电脑端与手机端宣传效果图](Ai_agent_docs/images/promo-overview.png)
 
 
 ## 主要功能
 
-- **连续阅读**：单列时间线、置顶、加载更多、长文展开、独立链接、搜索与回到顶部。
-- **自由记录**：可选标题与分类，支持 Markdown、代码高亮、图片、GIF、Live Photo、音视频、音乐卡片、歌单和文件下载卡片。
-- **轻量管理**：发布、编辑、删除、草稿、分类管理与文件库；后台标签直接切换，适配手机和电脑。
+- **连续阅读**：单列时间线、置顶、加载更多、长文展开、独立链接、标题与正文搜索、分类匹配与筛选、回到顶部。
+- **自由记录**：可选标题与分类，支持 Markdown、脚注、提示块、代码高亮、图片、GIF、Live Photo、音视频、音乐卡片、歌单和文件下载卡片。
+- **轻量管理**：首页快捷发布、完整编辑器、删除、草稿、分类管理与文件库，适配手机和电脑。
 - **个人外观**：头像、昵称、简介、头像跳转链接、图片与文字 Logo、日夜模式、背景图及不透明度。
-- **内容权限**：公开、不列出、私密三种可见性；草稿与私密内容的媒体按权限访问。
+- **内容权限**：公开、不列出、私密三种可见性，可另设访问密码；密码动态的正文与附件解锁后可读，标题、时间和分类仍公开展示。草稿与私密内容仍仅站长可读。
 - **自己掌握数据**：SQLite、内容与媒体备份；支持 Node、Docker、Cloudflare Workers 和可选对象存储。
 
 
@@ -21,7 +21,7 @@
 
 ### Cloudflare Workers
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/5hux1n/shuxin/tree/v1.1.0)
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/5hux1n/shuxin/tree/v1.2.0)
 
 部署到自己的 Cloudflare 账号，配置 `SITE_URL` 为最终访问地址，`SESSION_SECRET` 为至少 32 字符的随机会话密钥。部署后访问 `/admin/setup` 创建站长。
 
@@ -29,7 +29,7 @@
 
 ### 宝塔 / Node 服务器
 
-从 [1.1.0 Release](https://github.com/5hux1n/shuxin/releases/tag/v1.1.0) 下载 **`ShuXin_1.1.0_server.zip`**，解压后在 Node.js 24 环境执行：
+从 [1.2.0 Release](https://github.com/5hux1n/shuxin/releases/tag/v1.2.0) 下载 **`ShuXin_1.2.0_server.zip`**，解压后在 Node.js 24 环境执行：
 
 ```sh
 npm ci --omit=dev --no-audit --no-fund
@@ -44,7 +44,7 @@ npm start
 需要 Node.js 22.12+，建议 Node.js 24。
 
 ```sh
-git clone --branch v1.1.0 --depth 1 https://github.com/5hux1n/shuxin.git
+git clone --branch v1.2.0 --depth 1 https://github.com/5hux1n/shuxin.git
 cd shuxin
 npm ci
 cp .env.example .env

@@ -7,16 +7,18 @@ import {
   createSession,
   rateLimit,
   clearLimit,
+  rateLimitScope,
 } from "../../../lib/auth";
 import { endpoint, body, json, HttpError } from "../../../lib/http";
 const dummy = "pbkdf2:00000000000000000000000000000000:" + "0".repeat(64);
 export const POST = endpoint(async (ctx) => {
   guard(ctx, false);
-  rateLimit("login-global", 40);
+  const scope = rateLimitScope(ctx);
+  rateLimit("login-global", 40, scope);
   const data = z
     .object({ username: z.string().max(80), password: z.string().max(128) })
     .parse(await body(ctx.request));
-  rateLimit(`login:${data.username.toLowerCase()}`);
+  rateLimit(`login:${data.username.toLowerCase()}`, 8, scope);
   const row = db.select().from(owner).get();
   const valid = await verifyPassword(data.password, row?.passwordHash ?? dummy);
   if (!row || row.username !== data.username || !valid)
@@ -27,7 +29,7 @@ export const POST = endpoint(async (ctx) => {
     latest.username !== row.username
   )
     throw new HttpError(409, "账号状态已变化，请重新登录");
-  clearLimit(`login:${data.username.toLowerCase()}`);
+  clearLimit(`login:${data.username.toLowerCase()}`, scope);
   createSession(ctx.cookies);
   return json({ redirect: "/admin" });
 });

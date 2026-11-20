@@ -1,18 +1,21 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
+import QuickComposer from "../components/QuickComposer.astro";
 import OwnerProfile from "../components/OwnerProfile.astro";
 import TimelineEntry from "../components/TimelineEntry.astro";
 import arrowUpToLine from "../../public/icons/lucide/arrow-up-to-line.svg?raw";
-import { timeline } from "../lib/posts/repo";
+import { timeline, timelineAttachments } from "../lib/posts/repo";
 const result = timeline(Astro.url.searchParams.get("cursor"));
+const attachments = timelineAttachments(result?.entries.map(({ id }) => id) ?? []);
 if (result.invalid) Astro.response.status = 400;
 ---
 
 <SiteLayout>
   <OwnerProfile />
+  {Astro.locals.owner && !Astro.url.searchParams.has("cursor") && <QuickComposer />}
   <div id="timeline">
     {result.entries.map((post) => (
-      <TimelineEntry post={post} />
+      <TimelineEntry post={post} attachments={attachments.get(post.id)} />
     ))}
   </div>
   {result.invalid ? (
@@ -31,7 +34,7 @@ if (result.invalid) Astro.response.status = 400;
   {result.cursor && (
     <div class="pagination">
       <a
-        class="button"
+        class="load-more-link"
         data-load-more
         href={`/?cursor=${encodeURIComponent(result.cursor)}`}
       >

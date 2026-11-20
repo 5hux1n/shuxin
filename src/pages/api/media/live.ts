@@ -24,8 +24,8 @@ export const POST = endpoint(async (ctx) => {
   )
     throw new HttpError(400, "请选择尚未发布的 Live Photo 封面");
   const video = uploadLiveVideo(await readUpload(ctx.request));
+  await promoteMedia(video.id);
   try {
-    await promoteMedia(video.id);
     sqlite
       .transaction(() => {
         const latest = db

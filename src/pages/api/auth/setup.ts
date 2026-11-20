@@ -6,12 +6,13 @@ import {
   passwordHash,
   createSession,
   rateLimit,
+  rateLimitScope,
 } from "../../../lib/auth";
 import { endpoint, body, json, HttpError } from "../../../lib/http";
 export const POST = endpoint(async (ctx) => {
   guard(ctx, false);
   if (db.select().from(owner).get()) throw new HttpError(409, "站点已经初始化");
-  rateLimit("setup", 12);
+  rateLimit("setup", 12, rateLimitScope(ctx));
   const data = z
     .object({
       username: z

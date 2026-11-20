@@ -4,12 +4,15 @@ import { eq } from "drizzle-orm";
 import { db, sqlite } from "../db";
 import { posts, media, owner, categories } from "../db/schema";
 import { HttpError } from "../http";
+import { passwordHash } from "../auth";
 import { getPost, siteSettings, postVideo } from "./repo";
 import { fileName } from "../downloads";
 import { markdownMediaIds } from "../media/references";
 export const postInput = z
   .object({
     body: z.string().max(100_000, "正文不能超过 100000 字"),
+    password: z.string().max(128, "访问密码不能超过 128 字").optional(),
+    passwordProtected: z.boolean().optional(),
     title: z.string().trim().max(120, "标题不能超过 120 字").optional(),
     categoryId: z.uuid().nullable().optional(),
     status: z.enum(["draft", "published"]),
@@ -67,6 +70,7 @@ export const postInput = z
   );
 export async function savePost(input: unknown, id?: string) {
   const data = postInput.parse(input);
+  const newPasswordHash = data.password ? await passwordHash(data.password) : undefined;
   let now = Date.now();
   const postId = id ?? randomUUID();
   sqlite
@@ -186,7 +190,12 @@ export async function savePost(input: unknown, id?: string) {
           throw new HttpError(400, "文件不存在或已用于其他内容");
         retained.add(row.id);
       }
+      const protectedHash = data.passwordProtected === false || data.password === ""
+        ? null : newPasswordHash ?? existing?.passwordHash ?? null;
+      if (data.passwordProtected && !protectedHash)
+        throw new HttpError(400, "请设置访问密码");
       const fields = {
+        passwordHash: protectedHash,
         body: data.body,
         title: data.title ?? existing?.title ?? "",
         categoryId,

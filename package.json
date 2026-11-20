@@ -1,6 +1,6 @@
 {
   "name": "shuxin",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -15,9 +15,6 @@
     "dev:worker": "SHUXIN_TARGET=cloudflare astro dev --port 4322",
     "deploy:worker": "npm run build:worker && wrangler deploy --config dist-worker/server/wrangler.json",
     "lint": "eslint src scripts *.mjs",
-    "test": "node scripts/acceptance.mjs",
-    "test:storage": "node scripts/storage-acceptance.mjs",
-    "test:worker": "node scripts/acceptance.mjs --worker",
     "prepare:media": "node scripts/prepare-audio-codec.mjs",
     "deploy": "npm run deploy:worker",
     "deploy:production": "SHUXIN_CONFIG=wrangler.production.jsonc npm run deploy:worker",
@@ -40,6 +37,7 @@
     "highlight.js": "11.12.0",
     "image-size": "^2.0.4",
     "marked": "^16.3.0",
+    "marked-footnote": "1.4.0",
     "mp4box": "^2.4.1",
     "music-metadata": "^12.1.0",
     "sanitize-html": "^2.17.0",
@@ -77,9 +75,6 @@
       },
       "SESSION_SECRET": {
         "description": "填写独立随机密钥，至少 32 字符，用于保护站长会话。"
-      },
-      "SETUP_KEY": {
-        "description": "填写另一份独立随机密钥。首次访问 /admin/setup 时输入此值创建站长。"
       }
     }
   }

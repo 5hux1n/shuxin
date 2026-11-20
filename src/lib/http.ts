@@ -35,7 +35,7 @@ export function endpoint(
     }
   };
 }
-export async function body(request: Request) {
+export async function body(request: Request, maxBytes = 256_000) {
   if (!request.headers.get("content-type")?.includes("application/json"))
     throw new HttpError(415, "请使用 JSON 请求");
   const reader = request.body?.getReader();
@@ -46,7 +46,7 @@ export async function body(request: Request) {
     const { done, value } = await reader.read();
     if (done) break;
     size += value.byteLength;
-    if (size > 256_000) {
+    if (size > maxBytes) {
       await reader.cancel();
       throw new HttpError(413, "请求内容过大");
     }

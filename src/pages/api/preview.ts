@@ -6,6 +6,6 @@ export const POST = endpoint(async (ctx) => {
   guard(ctx);
   const input = z
     .object({ body: z.string().max(100_000) })
-    .parse(await body(ctx.request));
+    .parse(await body(ctx.request, 1_000_000));
   return json({ html: renderMarkdown(input.body) });
 });

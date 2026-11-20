@@ -119,10 +119,15 @@ export function guard(ctx: APIContext, authenticated = true) {
   if (!sent || !saved || hash(sent) !== hash(saved))
     throw new HttpError(403, "页面已过期，请刷新后重试");
 }
-export function rateLimit(key: string, limit = 8) {
+export function rateLimitScope(ctx: APIContext) {
+  return workerContext.getStore()
+    ? ctx.clientAddress
+    : (ctx.cookies.get("shuxin_csrf")?.value ?? "");
+}
+export function rateLimit(key: string, limit = 8, scope = "") {
   const now = Date.now();
   sqlite.prepare("DELETE FROM login_limits WHERE expires_at < ?").run(now);
-  const k = hash(config.secret + key);
+  const k = hash(config.secret + (scope ? `${scope}\0${key}` : key));
   const row = sqlite
     .prepare("SELECT attempts FROM login_limits WHERE key=?")
     .get(k) as { attempts: number } | undefined;
@@ -134,10 +139,10 @@ export function rateLimit(key: string, limit = 8) {
     )
     .run(k, now + 15 * 60 * 1000);
 }
-export function clearLimit(key: string) {
+export function clearLimit(key: string, scope = "") {
   sqlite
     .prepare("DELETE FROM login_limits WHERE key=?")
-    .run(hash(config.secret + key));
+    .run(hash(config.secret + (scope ? `${scope}\0${key}` : key)));
 }
 export function logout(cookies: AstroCookies) {
   const token = cookies.get("shuxin_session")?.value;

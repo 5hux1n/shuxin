@@ -1,4 +1,4 @@
-import { fileName } from "../lib/downloads";
+import { fileName } from "../lib/file-name";
 export function csrf() {
   return (
     document.querySelector<HTMLMetaElement>('meta[name="csrf-token"]')
@@ -33,6 +33,7 @@ export async function api(url: string, payload?: unknown, method = "POST") {
   let data: {
     error?: string;
     redirect: string;
+    permalink?: string;
     message: string;
     html: string;
     category?: { id: string; name: string };

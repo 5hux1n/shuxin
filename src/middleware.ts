@@ -44,7 +44,7 @@ export const onRequest = defineMiddleware(async (ctx, next) => {
     "Content-Security-Policy",
     `default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'nonce-${ctx.locals.nonce}'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.music.126.net https://*.qq.com https://*.gtimg.cn https://*.byteimg.com https://*.douyinpic.com https:; media-src 'self' https:; frame-src https://music.163.com; worker-src 'self' blob:; connect-src 'self' ${backgroundConnect}; font-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'`,
   );
-  if (p !== "/api/background/bing")
+  if (p !== "/api/background/bing" && !(p.startsWith("/media/") && response.headers.get("Cache-Control") === "private, no-cache, must-revalidate"))
     response.headers.set("Cache-Control", "no-store");
   response.headers.set("Vary", "Cookie");
   if (p.startsWith("/admin") || p.startsWith("/api"))

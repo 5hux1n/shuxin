@@ -3,8 +3,9 @@ import { endpoint, json, body } from "../../../lib/http";
 import { savePost, deletePost } from "../../../lib/posts/service";
 export const PATCH = endpoint(async (ctx) => {
   guard(ctx);
+  const { passwordHash, ...post } = await savePost(await body(ctx.request, 1_000_000), ctx.params.id!);
   return json({
-    post: await savePost(await body(ctx.request), ctx.params.id!),
+    post: { ...post, passwordProtected: Boolean(passwordHash) },
     redirect: "/admin",
   });
 });

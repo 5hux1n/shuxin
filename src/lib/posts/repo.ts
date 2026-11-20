@@ -1,6 +1,6 @@
-import { and, desc, eq, lt, or, sql } from "drizzle-orm";
+import { and, desc, eq, isNull, inArray, lt, or, sql } from "drizzle-orm";
 import { db } from "../db";
-import { posts, media, owner, settings } from "../db/schema";
+import { posts, media, owner, settings, categories } from "../db/schema";
 import { z } from "zod";
 import { profileAvatarLink } from "../profile-link";
 import { browserBrandTitle } from "../branding";
@@ -14,7 +14,18 @@ const cursorSchema = z.tuple([
   z.number().int().nonnegative(),
   z.string().max(64),
 ]);
-export function timeline(cursor: string | null, query = "") {
+export function searchCategories(query: string) {
+  const term = query.trim().toLocaleLowerCase();
+  if (!term) return [];
+  return db.select({ id: categories.id, name: categories.name })
+    .from(categories).innerJoin(posts, eq(posts.categoryId, categories.id))
+    .where(publicRule).groupBy(categories.id, categories.name).all()
+    .filter(({ name }) => {
+      const label = name.toLocaleLowerCase();
+      return label.includes(term) || term.includes(label);
+    });
+}
+export function timeline(cursor: string | null, query = "", categoryId?: string) {
   let after;
   if (cursor) {
     try {
@@ -36,13 +47,14 @@ export function timeline(cursor: string | null, query = "") {
   }
   // Escape literal search operators before the parameterized LIKE query.
   const searchText = `%${query.replace(/[!%_]/g, "!$&")}%`;
+  const matchingCategories = query ? searchCategories(query).map(({ id }) => id) : [];
   const searchRule = query
-    ? or(sql`${posts.body} LIKE ${searchText} ESCAPE '!'`, sql`${posts.title} LIKE ${searchText} ESCAPE '!'`)
+    ? or(and(isNull(posts.passwordHash), sql`${posts.body} LIKE ${searchText} ESCAPE '!'`), sql`${posts.title} LIKE ${searchText} ESCAPE '!'`, matchingCategories.length ? inArray(posts.categoryId, matchingCategories) : undefined)
     : undefined;
   const rows = db
     .select()
     .from(posts)
-    .where(and(publicRule, after, searchRule))
+    .where(and(publicRule, after, searchRule, categoryId ? eq(posts.categoryId, categoryId) : undefined))
     .orderBy(desc(posts.pinned), desc(posts.publishedAt), desc(posts.id))
     .limit(21)
     .all();
@@ -67,6 +79,26 @@ export function readable(post: Post, authenticated: boolean) {
     authenticated ||
     (post.status === "published" && post.visibility !== "private")
   );
+}
+function groupPostMedia(rows: (typeof media.$inferSelect)[]) {
+  const liveIds = new Set(rows.map((row) => row.liveId).filter(Boolean));
+  return {
+    images: rows.filter((row) => row.mime.startsWith("image/")),
+    audio: rows.filter((row) => row.mime.startsWith("audio/")),
+    videos: rows.filter((row) => row.mime.startsWith("video/") && !liveIds.has(row.id)),
+    files: rows.filter((row) => row.mime === "application/octet-stream"),
+  };
+}
+export function postAttachments(id: string) {
+  return groupPostMedia(db.select().from(media).where(eq(media.postId, id)).orderBy(media.position, media.id).all());
+}
+export function timelineAttachments(ids: string[]) {
+  const grouped = new Map<string, (typeof media.$inferSelect)[]>(ids.map((id) => [id, []]));
+  if (ids.length) {
+    const rows = db.select().from(media).where(inArray(media.postId, ids)).orderBy(media.position, media.id).all();
+    for (const row of rows) grouped.get(row.postId!)!.push(row);
+  }
+  return new Map(Array.from(grouped, ([id, rows]) => [id, groupPostMedia(rows)]));
 }
 export function postMedia(id: string) {
   return db
@@ -126,7 +158,7 @@ export function publicPosts() {
   return db
     .select()
     .from(posts)
-    .where(publicRule)
+    .where(and(publicRule, isNull(posts.passwordHash)))
     .orderBy(desc(posts.publishedAt), desc(posts.id))
     .all();
 }

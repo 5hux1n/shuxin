@@ -1,3 +1,5 @@
+import type { AstroCookies } from "astro";
+import { unlockedPost } from "../posts/password";
 import { publicMediaReference } from "./references";
 import { animatedGif, liveVideo } from "./formats";
 import { randomUUID } from "node:crypto";
@@ -126,17 +128,18 @@ function storeMedia(
   }
   return { id, width, height, alt: "", url: `/media/${id}` };
 }
-export function accessibleMedia(id: string, authenticated: boolean) {
+export function accessibleMedia(id: string, authenticated: boolean, cookies?: AstroCookies) {
   const row = db.select().from(media).where(eq(media.id, id)).get();
   if (!row) return null;
   if (authenticated) return row;
   if (db.select().from(owner).get()?.avatarId === id) return row;
   if ([siteSettings().logoId, siteSettings().backgroundId].includes(id))
     return row;
-  if (publicMediaReference(id)) return row;
-  if (!row.postId) return null;
-  const post = getPost(row.postId);
-  return post && readable(post, false) ? row : null;
+  if (row.postId) {
+    const post = getPost(row.postId);
+    if (post && readable(post, false) && unlockedPost(post, cookies)) return row;
+  }
+  return publicMediaReference(id, cookies) ? row : null;
 }
 
 export function readMedia(key: string) {
@@ -170,4 +173,8 @@ export function writeChunk(key: string, offset: number, bytes: Buffer) {
 }
 export function renameMedia(from: string, to: string) {
   renameSync(mediaPath(from), mediaPath(to));
+}
+
+export async function imagePreview(bytes: Buffer, width: number) {
+  return sharp(bytes).resize({ width, withoutEnlargement: true }).webp({ quality: 80 }).toBuffer();
 }

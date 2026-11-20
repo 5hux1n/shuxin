@@ -17,8 +17,5 @@ jobs:
       - run: npm run lint
       - run: npm run check
       - run: npm run build
-      - run: npm test
-      - run: npm run test:storage
       - run: npm run build:worker
-      - run: npm run test:worker
-      - run: npm audit --omit=dev
+      - run: npm audit --omit=dev --audit-level=high

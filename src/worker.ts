@@ -9,6 +9,7 @@ import uploadsSql from "../drizzle/0003_uploads.sql?raw";
 import imageLinksSql from "../drizzle/0004_image_links.sql?raw";
 import objectStorageSql from "../drizzle/0005_object_storage.sql?raw";
 import postDetailsSql from "../drizzle/0006_post_details.sql?raw";
+import postPasswordSql from "../drizzle/0007_post_password.sql?raw";
 export class ShuxinSite {
   private database;
   constructor(
@@ -89,6 +90,10 @@ export class ShuxinSite {
         ctx.storage.sql.exec(postDetailsSql);
         ctx.storage.sql.exec("INSERT INTO schema_migrations VALUES (?,?)", "0006_post_details.sql", Date.now());
       }
+      if (!ctx.storage.sql.exec("SELECT 1 FROM schema_migrations WHERE name='0007_post_password.sql'").toArray().length) {
+        ctx.storage.sql.exec(postPasswordSql);
+        ctx.storage.sql.exec("INSERT INTO schema_migrations VALUES (?,?)", "0007_post_password.sql", Date.now());
+      }
       ctx.storage.sql.exec(
         "CREATE TABLE IF NOT EXISTS media_chunks (key TEXT NOT NULL, position INTEGER NOT NULL, bytes BLOB NOT NULL, PRIMARY KEY(key,position))",
       );
@@ -152,6 +157,8 @@ export default {
       url.pathname === "/favicon.svg" ||
       url.pathname === "/music-placeholder.webp" ||
       url.pathname.startsWith("/stickers/") ||
+      url.pathname.startsWith("/download-icons/") ||
+      url.pathname.startsWith("/icons/") ||
       [
         "/licenses/heic-to.txt",
         "/licenses/mp4box.txt",
@@ -168,7 +175,11 @@ export default {
       const limit =
         url.pathname === "/api/media" || url.pathname.startsWith("/api/media/")
           ? 10 * 1024 * 1024
-          : 256000;
+          : (url.pathname === "/api/posts" && request.method === "POST") ||
+              (/^\/api\/posts\/[^/]+$/.test(url.pathname) && request.method === "PATCH") ||
+              (url.pathname === "/api/preview" && request.method === "POST")
+            ? 1_000_000
+            : 256_000;
       const reader = request.body.getReader();
       const chunks: Uint8Array[] = [];
       let size = 0;

@@ -10,6 +10,7 @@ import imageLinksSql from "../../../drizzle/0004_image_links.sql?raw";
 import uploadsSql from "../../../drizzle/0003_uploads.sql?raw";
 import liveSql from "../../../drizzle/0002_live_media.sql?raw";
 import postDetailsSql from "../../../drizzle/0006_post_details.sql?raw";
+import postPasswordSql from "../../../drizzle/0007_post_password.sql?raw";
 function literal(value: unknown): string {
   if (value === null) return "NULL";
   if (typeof value === "number") return String(value);
@@ -46,6 +47,7 @@ export async function exportBackup() {
       imageLinksSql +
       objectStorageSql +
       postDetailsSql +
+      postPasswordSql +
       "\nCREATE TABLE schema_migrations (name TEXT PRIMARY KEY, applied_at INTEGER NOT NULL);\nINSERT INTO schema_migrations VALUES ('0001_initial.sql', " +
       Date.now() +
       ");\nINSERT INTO schema_migrations VALUES ('0002_live_media.sql', " +
@@ -57,6 +59,8 @@ export async function exportBackup() {
       ");\nINSERT INTO schema_migrations VALUES ('0005_object_storage.sql', " +
       Date.now() +
       ");\nINSERT INTO schema_migrations VALUES ('0006_post_details.sql', " +
+      Date.now() +
+      ");\nINSERT INTO schema_migrations VALUES ('0007_post_password.sql', " +
       Date.now() +
       ");\nDELETE FROM settings;\n";
     for (const table of ["owner", "categories", "posts", "media", "settings"])
